@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// A general purpose class for spawning 
+/// </summary>
 public class ObjectPooler : MonoBehaviour
 {
     [SerializeField] GameObject objToPool;
@@ -16,7 +20,9 @@ public class ObjectPooler : MonoBehaviour
         FillPool();
     }
 
-
+    /// <summary>
+    /// Instantiates objects into the pool
+    /// </summary>
     void FillPool()
     {
         int objsToSpawn = poolSize - (active.Count + inactive.Count);
@@ -30,6 +36,10 @@ public class ObjectPooler : MonoBehaviour
 
         }
     }
+    /// <summary>
+    /// Returns and enables an object from the pool
+    /// </summary>
+    /// <returns></returns>
     public GameObject SpawnObj()
     {
         GameObject obj;
@@ -50,6 +60,10 @@ public class ObjectPooler : MonoBehaviour
         obj.SetActive(true);
         return obj;
     }
+    /// <summary>
+    /// Disables and objects and returns it too the inactive pool;
+    /// </summary>
+    /// <param name="obj">the object to despawn</param>
     public void DespawnObj(GameObject obj)
     {
         if (active.Contains(obj))

@@ -8,6 +8,10 @@ public class PlayerAim : MonoBehaviour
     [SerializeField] float rotate;
 
     Vector3 hitPoint;
+
+    /// <summary>
+    /// Direction Player is aiming in
+    /// </summary>
     public Vector3 aimDir;
     // Start is called before the first frame update
     void Start()
