@@ -8,7 +8,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] float acceleration;
     [SerializeField] float counter;
 
-    Vector3 inputDir;
+    public Vector3 inputDir;
     Rigidbody rb;
 
 
@@ -49,7 +49,7 @@ public class PlayerMove : MonoBehaviour
             }
             if(rb.velocity.x + inputVel.x > idealVel.x)
             {
-                inputVel.x = Mathf.Clamp(idealVel.x - vel.x, 0, float.PositiveInfinity);
+                inputVel.x = inputVel.x - Mathf.Clamp(idealVel.x - vel.x, 0, float.PositiveInfinity);
                 
             }
         }
