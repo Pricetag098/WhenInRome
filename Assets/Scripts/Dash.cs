@@ -29,7 +29,7 @@ public class Dash : MonoBehaviour
         {
             
             StartCoroutine("PauseMv");
-            rb.AddForce(dashDir * dashForce);
+            rb.velocity = dashDir * dashForce;
         }
     }
 
