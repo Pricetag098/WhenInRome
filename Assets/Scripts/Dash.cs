@@ -24,6 +24,7 @@ public class Dash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         stamina = maxStamina;
         rb = GetComponent<Rigidbody>();
         mv = GetComponent<PlayerMove>();
@@ -35,7 +36,7 @@ public class Dash : MonoBehaviour
     {
         dashDir = dashOnMouse ? aim.aimDir : mv.inputDir;
         //dashDir = Vector3.one;
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !dashing && dashDir != Vector3.zero && stamina > staminaBurnedOnDash)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !dashing && dashDir != Vector3.zero && stamina >= staminaBurnedOnDash)
         {
             
             StartCoroutine("PauseMv");

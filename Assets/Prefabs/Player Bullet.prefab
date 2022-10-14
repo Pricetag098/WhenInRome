@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 648146001196954774}
   - component: {fileID: 747905411773586495}
   m_Layer: 8
-  m_Name: Test bullet
+  m_Name: Player Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 4
   m_CollisionDetection: 1
 --- !u!114 &648146001196954774

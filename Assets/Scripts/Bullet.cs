@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] float maxAge = 1;
     float age = 0;
     Rigidbody rb;
-
+    float damage;
     TrailRenderer trailRenderer;
     // Start is called before the first frame update
     void Awake()
@@ -15,10 +15,10 @@ public class Bullet : MonoBehaviour
         trailRenderer = GetComponent<TrailRenderer>();
         rb = GetComponent<Rigidbody>();
     }
-    
-    public void Init(Vector3 vel)
+
+    public void Init(Vector3 vel, float dmg)
     {
-       
+        damage = dmg;
         rb.velocity = vel;
         trailRenderer.enabled = true;
     }
@@ -31,6 +31,15 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if(collision.gameObject != GetComponent<PooledObj>().owner.GetComponentInParent<Holster>().playerAim.gameObject)
+        {
+            Health health = collision.gameObject.GetComponent<Health>();
+            if (health != null)
+            {
+                health.TakeDmg(damage);
+            }
+        }
+
         Despawn();
         
     }

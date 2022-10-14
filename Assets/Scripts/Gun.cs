@@ -99,7 +99,7 @@ public class Gun : MonoBehaviour
     {
         GameObject b = pooler.SpawnObj();
         b.transform.position = transform.position + aim.aimDir * .75f;
-        b.GetComponent<Bullet>().Init(dir);
+        b.GetComponent<Bullet>().Init(dir,damage);
     }
 
     Vector3 RandomVector()
