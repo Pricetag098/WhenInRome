@@ -27,37 +27,109 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
         Vector3 vel = rb.velocity;
         Vector3 idealVel = inputDir * maxSpeed;
         Vector3 maxVel = vel.normalized * maxSpeed;
         Vector3 inputVel = inputDir * acceleration;
-        
+
         //Control force in x component
 
-        if(inputDir.x == 0)
+        Vector3 counterX = Vector3.right * -rb.velocity.x * counter;
+        if (inputDir.x == 0)
         {
-            Vector3 counterX = Vector3.right * -rb.velocity.x * counter;
             rb.AddForce(counterX);
         }
-        if(inputDir.x > 0)
+        if (inputDir.x > 0)
         {
-            if(vel.x < 0)
+            if (vel.x < 0)
             {
-                Vector3 counterX = Vector3.right * -rb.velocity.x * counter;
                 rb.AddForce(counterX);
             }
-            if(rb.velocity.x + inputVel.x > idealVel.x)
+            if (vel.x > idealVel.x)
             {
-                inputVel.x = inputVel.x - Mathf.Clamp(idealVel.x - vel.x, 0, float.PositiveInfinity);
-                
+                rb.AddForce(Vector3.right * -vel.x * 2);
+                inputDir.x = 0;
             }
         }
-        if(inputDir.x < 0)
+        if (inputDir.x < 0)
         {
             if (vel.x > 0)
             {
-                Vector3 counterX = Vector3.right * -rb.velocity.x * counter;
+                rb.AddForce(counterX);
+            }
+            if (vel.x < idealVel.x)
+            {
+                rb.AddForce(Vector3.right * -vel.x * 2);
+                inputDir.x = 0;
+            }
+        }
+
+        Vector3 counterZ = Vector3.forward * -rb.velocity.z * counter;
+        if (inputDir.z == 0)
+        {
+            rb.AddForce(counterZ);
+        }
+
+        if (inputDir.z > 0)
+        {
+            if (vel.z < 0)
+            {
+                rb.AddForce(counterZ);
+            }
+            if (vel.z > idealVel.z)
+            {
+                rb.AddForce(Vector3.forward * -vel.z * 2);
+                inputDir.z = 0;
+            }
+        }
+        if (inputDir.z < 0)
+        {
+            if (vel.z > 0)
+            {
+                rb.AddForce(counterZ);
+            }
+            if (vel.z < idealVel.z)
+            {
+                rb.AddForce(Vector3.forward * -vel.z * 2);
+                inputDir.z = 0;
+            }
+        }
+
+        rb.AddForce(inputVel);
+
+    }
+}
+
+
+/*
+ Vector3 vel = rb.velocity;
+        Vector3 idealVel = inputDir * maxSpeed;
+        Vector3 maxVel = vel.normalized * maxSpeed;
+        Vector3 inputVel = inputDir * acceleration;
+
+        //Control force in x component
+
+        Vector3 counterX = Vector3.right * -rb.velocity.x * counter;
+        if (inputDir.x == 0)
+        {
+            rb.AddForce(counterX);
+        }
+        if (inputDir.x > 0)
+        {
+            if (vel.x < 0)
+            {
+                rb.AddForce(counterX);
+            }
+            if (rb.velocity.x + inputVel.x > idealVel.x)
+            {
+                inputVel.x = Mathf.Clamp(idealVel.x - vel.x, 0, float.PositiveInfinity);
+
+            }
+        }
+        if (inputDir.x < 0)
+        {
+            if (vel.x > 0)
+            {
                 rb.AddForce(counterX);
             }
             if (rb.velocity.x + inputVel.x < idealVel.x)
@@ -67,9 +139,9 @@ public class PlayerMove : MonoBehaviour
             }
         }
 
+        Vector3 counterZ = Vector3.forward * -rb.velocity.z * counter;
         if (inputDir.z == 0)
         {
-            Vector3 counterZ = Vector3.forward * -rb.velocity.z * counter;
             rb.AddForce(counterZ);
         }
 
@@ -77,7 +149,6 @@ public class PlayerMove : MonoBehaviour
         {
             if (vel.z < 0)
             {
-                Vector3 counterZ = Vector3.forward * -rb.velocity.z * counter;
                 rb.AddForce(counterZ);
             }
             if (rb.velocity.z + inputVel.z > idealVel.z)
@@ -90,7 +161,6 @@ public class PlayerMove : MonoBehaviour
         {
             if (vel.z > 0)
             {
-                Vector3 counterZ = Vector3.forward * -rb.velocity.z * counter;
                 rb.AddForce(counterZ);
             }
             if (rb.velocity.z + inputVel.z < idealVel.z)
@@ -101,5 +171,4 @@ public class PlayerMove : MonoBehaviour
         }
 
         rb.AddForce(inputVel);
-    }
-}
+ */
