@@ -392,6 +392,7 @@ GameObject:
   - component: {fileID: 2079166762963280807}
   - component: {fileID: 4233791001282976745}
   - component: {fileID: 2079166762963280801}
+  - component: {fileID: 7802646240913028833}
   - component: {fileID: 7617848033881388645}
   - component: {fileID: 2079166762963280806}
   - component: {fileID: 2079166762963280805}
@@ -472,6 +473,24 @@ MonoBehaviour:
     m_Bits: 64
   rotate: 10
   aimDir: {x: 0, y: 0, z: 0}
+--- !u!114 &7802646240913028833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079166762963280810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 773204f00225f364a9358747720ddf57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectRange: 5
+  enemy:
+    serializedVersion: 2
+    m_Bits: 128
+  soundTime: 0
+  timebetweenhits: 0.1
 --- !u!114 &7617848033881388645
 MonoBehaviour:
   m_ObjectHideFlags: 0
