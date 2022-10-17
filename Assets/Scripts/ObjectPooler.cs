@@ -55,11 +55,20 @@ public class ObjectPooler : MonoBehaviour
             poolSize *= 2;
             FillPool();
             obj = inactive[0];
+            inactive.RemoveAt(0);
             active.Add(obj);
         }
         obj.SetActive(true);
         return obj;
     }
+
+    public void DespawnAllActive()
+	{
+		foreach (GameObject obj in active)
+		{
+            DespawnObj(obj);
+		}
+	}
     /// <summary>
     /// Disables and objects and returns it too the inactive pool;
     /// </summary>
