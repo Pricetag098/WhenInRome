@@ -64,7 +64,9 @@ public class ObjectPooler : MonoBehaviour
 
     public void DespawnAllActive()
 	{
-		foreach (GameObject obj in active)
+        GameObject[] temp = new GameObject[active.Count];
+        active.CopyTo(temp, 0);
+		foreach (GameObject obj in temp)
 		{
             DespawnObj(obj);
 		}

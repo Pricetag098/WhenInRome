@@ -7,7 +7,7 @@ public class Execute : MonoBehaviour
     PlayerAim aim;
     [SerializeField] float detectRange,damage;
     [SerializeField] LayerMask enemy;
-    [SerializeField] float soundTime, timebetweenhits,timeBetweenDmg;
+    [SerializeField] float soundTime, timebetweenhits,timeAfterDmg;
     
     [SerializeField] ObjectPooler lines, particles;
     List<Health> healths = new List<Health>();
@@ -30,13 +30,15 @@ public class Execute : MonoBehaviour
 				{
                     healths.Add(hit.collider.gameObject.GetComponent<Health>());
                     StartCoroutine("Run");
-				}
+                    particles.DespawnAllActive();
+                }
 			}
 		}
     }
-    List<GameObject> lineList = new List<GameObject>();
+    //List<GameObject> lineList = new List<GameObject>();
     IEnumerator Run()
 	{
+        particles.DespawnAllActive();
         //playSound
 
         yield return new WaitForSecondsRealtime(soundTime);
@@ -44,11 +46,11 @@ public class Execute : MonoBehaviour
         
         Collider[] newHits;
         newHits = Physics.OverlapSphere(healths[0].transform.position, detectRange, enemy);
-        Debug.Log(newHits.Length);
+        
         
         while(newHits.Length > 1)
 		{
-            
+            yield return new WaitForSecondsRealtime(timebetweenhits);
             List<Collider> cols = new List<Collider>();
             for(int i = 0; i < newHits.Length; i++)
 			{
@@ -66,26 +68,29 @@ public class Execute : MonoBehaviour
                 cols.AddRange(tempCols);
             }
             newHits = cols.ToArray();
-            yield return new WaitForSecondsRealtime(timebetweenhits);
-		}
-        foreach (GameObject l in lineList)
-        {
-            lines.DespawnObj(l);
+            
         }
-        //lines.DespawnAllActive();
+
+
+        //yield return new WaitForSecondsRealtime(timebetweenhits);
+
         //dealDmg
-        foreach(Health h in healths)
+        GameObject g = null;
+        foreach (Health h in healths)
 		{
             h.TakeDmg(damage);
-            GameObject g = particles.SpawnObj();
+            g = particles.SpawnObj();
             g.transform.position = h.transform.position;
             g.GetComponent<ParticleSystem>().Play();
 		}
 
 
-        //spawn particle
 
-
+        
+        yield return new WaitForSecondsRealtime(timeAfterDmg);
+        lines.DespawnAllActive();
+        
+        
         healths.Clear();
         Time.timeScale = 1;
 	}
@@ -104,78 +109,8 @@ public class Execute : MonoBehaviour
         LineRenderer lr = line.GetComponent<LineRenderer>();
         lr.SetPosition(0, origin);
         lr.SetPosition(1, point);
-        lineList.Add(line);
+        //lineList.Add(line);
     }
 }
 
 
-/*
- 
- 
- 
- 
- //playSound
-
-        yield return new WaitForSecondsRealtime(soundTime);
-        Time.timeScale = 0;
-        
-        Collider[] newHits;
-        newHits = Physics.OverlapSphere(healths[0].transform.position, detectRange, enemy);
-        Debug.Log(newHits.Length);
-        
-        if (newHits.Length > 1)
-		{
-            
-			while (newHits.Length >1)
-			{
-                List<Collider> newhitList = new List<Collider>();
-                
-                foreach(Collider hit in newHits)
-				{
-                    Vector3 origin = hit.gameObject.transform.position;
-
-                    Collider[] a = Physics.OverlapSphere(hit.transform.position, detectRange, enemy);
-                    foreach(Collider b in a)
-					{
-                        Health health = b.GetComponent<Health>();
-						if (health)
-						{
-							if (!healths.Contains(health))
-							{
-                                healths.Add(health);
-                                newhitList.Add(b);
-                                SpawnLine(origin, b.transform.position);
-                                
-                            }
-                            
-						}
-					}
-                    newHits = newhitList.ToArray();
-                    
-                    //play hit sound
-
-                    yield return new WaitForSecondsRealtime(timebetweenhits);
-                }
-			}
-            
-
-            
-		}
-        foreach (GameObject l in lineList)
-        {
-            lines.DespawnObj(l);
-        }
-        //dealDmg
-
-        //spawn particle
-
-
-        healths.Clear();
-        Time.timeScale = 1;
- 
- 
- 
- 
- 
- 
- */
