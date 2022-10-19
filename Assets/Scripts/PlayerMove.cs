@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] float maxSpeed;
-    [SerializeField] float acceleration;
-    [SerializeField] float counter;
+    //[SerializeField] float acceleration;
+    //[SerializeField] float counter;
 
     public Vector3 inputDir;
     Rigidbody rb;
@@ -22,12 +22,17 @@ public class PlayerMove : MonoBehaviour
     {
         inputDir = new Vector3(Input.GetAxisRaw("Horizontal"),0 , Input.GetAxisRaw("Vertical"));
         inputDir = inputDir.normalized;
+        rb.velocity = inputDir*maxSpeed;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 vel = rb.velocity;
+    }
+}
+/*
+
+Vector3 vel = rb.velocity;
         Vector3 idealVel = inputDir * maxSpeed;
         Vector3 maxVel = vel.normalized * maxSpeed;
         Vector3 inputVel = inputDir * acceleration;
@@ -47,7 +52,7 @@ public class PlayerMove : MonoBehaviour
             }
             if (vel.x > idealVel.x)
             {
-                rb.AddForce(Vector3.right * -vel.x * 2);
+                rb.AddForce(Vector3.right * -(vel.x * vel.x));
                 inputDir.x = 0;
             }
         }
@@ -59,7 +64,7 @@ public class PlayerMove : MonoBehaviour
             }
             if (vel.x < idealVel.x)
             {
-                rb.AddForce(Vector3.right * -vel.x * 2);
+                rb.AddForce(Vector3.right * (vel.x * vel.x));
                 inputDir.x = 0;
             }
         }
@@ -98,10 +103,10 @@ public class PlayerMove : MonoBehaviour
         rb.AddForce(inputVel);
 
     }
-}
 
 
-/*
+
+
  Vector3 vel = rb.velocity;
         Vector3 idealVel = inputDir * maxSpeed;
         Vector3 maxVel = vel.normalized * maxSpeed;

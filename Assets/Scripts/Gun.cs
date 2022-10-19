@@ -88,8 +88,8 @@ public class Gun : MonoBehaviour
     {
         for(int i = 0; i< bulletsFired; i++)
         {
-            Vector3 dir = aim.aimDir * 10 + RandomVector() * spread;
-            dir.Normalize();
+            Vector3 dir = Quaternion.Euler(0, (Random.value - .5f) * spread, 0) * aim.aimDir;
+            //dir.Normalize();
 
             ShootBullet(dir * bulletVel);
         }
