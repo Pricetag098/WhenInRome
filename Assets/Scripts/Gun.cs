@@ -55,11 +55,20 @@ public class Gun : MonoBehaviour
 
         bool fire = (auto && Input.GetMouseButton(0)) || (!auto && Input.GetMouseButtonDown(0));
 
-        if (fire && ammo > 0 && fireTimer > fireRate && !isReloading)
+        if (fire && fireTimer > fireRate && !isReloading)
         {
-            Fire();
-            ammo--;
-            fireTimer = 0;
+            if(ammo <= 0)
+            {
+                reloadTime = 0;
+                isReloading = true;
+            }
+            else
+            {
+                Fire();
+                ammo--;
+                fireTimer = 0;
+            }
+            
         }
         fireTimer += Time.deltaTime;
 
