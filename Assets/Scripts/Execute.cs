@@ -47,10 +47,10 @@ public class Execute : MonoBehaviour
 	{
         running = true;
         particles.DespawnAllActive();
-        volume.SetActive(true);
-        //playSound
-
         
+        //playSound
+        yield return new WaitForSecondsRealtime(soundTime);
+        volume.SetActive(true);
         Time.timeScale = 0;
         
         Collider[] newHits;
@@ -59,7 +59,7 @@ public class Execute : MonoBehaviour
         
         while(newHits.Length > 1)
 		{
-            yield return new WaitForSecondsRealtime(timebetweenhits);
+           
             List<Collider> cols = new List<Collider>();
             for(int i = 0; i < newHits.Length; i++)
 			{
@@ -80,7 +80,7 @@ public class Execute : MonoBehaviour
             newHits = cols.ToArray();
             if (newHits.Length > 0)
             {
-                yield return new WaitForSecondsRealtime(soundTime);
+                yield return new WaitForSecondsRealtime(timebetweenhits);
             }
         }
 
@@ -96,12 +96,12 @@ public class Execute : MonoBehaviour
             g.transform.position = h.transform.position;
             g.GetComponent<ParticleSystem>().Play();
 		}
-
-
-
-        
-        yield return new WaitForSecondsRealtime(timeAfterDmg);
         lines.DespawnAllActive();
+
+
+
+        yield return new WaitForSecondsRealtime(timeAfterDmg);
+        particles.DespawnAllActive();
         
         
         healths.Clear();
