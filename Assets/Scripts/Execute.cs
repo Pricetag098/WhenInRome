@@ -75,13 +75,13 @@ public class Execute : MonoBehaviour
                     SpawnLine(newHits[i].transform.position, c.transform.position);
 				}
                 cols.AddRange(tempCols);
-                if(tempCols.Length > 0)
-                {
-                    yield return new WaitForSecondsRealtime(soundTime);
-                }
+                
             }
             newHits = cols.ToArray();
-            
+            if (newHits.Length > 0)
+            {
+                yield return new WaitForSecondsRealtime(soundTime);
+            }
         }
 
 
