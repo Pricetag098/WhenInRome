@@ -8,6 +8,11 @@ using UnityEngine;
 /// </summary>
 public class ObjectPooler : MonoBehaviour
 {
+
+    
+
+    public GameObject owner;
+
     [SerializeField] GameObject objToPool;
     [SerializeField] int poolSize;
     GameObject container;
@@ -55,11 +60,22 @@ public class ObjectPooler : MonoBehaviour
             poolSize *= 2;
             FillPool();
             obj = inactive[0];
+            inactive.RemoveAt(0);
             active.Add(obj);
         }
         obj.SetActive(true);
         return obj;
     }
+
+    public void DespawnAllActive()
+	{
+        GameObject[] temp = new GameObject[active.Count];
+        active.CopyTo(temp, 0);
+		foreach (GameObject obj in temp)
+		{
+            DespawnObj(obj);
+		}
+	}
     /// <summary>
     /// Disables and objects and returns it too the inactive pool;
     /// </summary>

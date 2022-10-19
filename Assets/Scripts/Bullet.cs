@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
     Rigidbody rb;
     float damage;
     TrailRenderer trailRenderer;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -31,12 +32,25 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject != GetComponent<PooledObj>().owner.GetComponentInParent<Holster>().playerAim.gameObject)
+        GameObject owner = GetComponent<PooledObj>().owner.owner;
+        if (collision.gameObject != owner)
         {
             Health health = collision.gameObject.GetComponent<Health>();
+
+            //check if we hit a valid target
             if (health != null)
             {
                 health.TakeDmg(damage);
+
+                //reflect any on-hit effects 
+                if(owner != null)
+                {
+                    OnHit onHit = owner.GetComponent<OnHit>();
+                    if (onHit != null)
+                    {
+                        onHit.Hit();
+                    }
+                }
             }
         }
 

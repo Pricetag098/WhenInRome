@@ -15,6 +15,7 @@ public class Holster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //change the selected weapon
         if(Input.mouseScrollDelta.y > 0)
         {
             selectedWeapon++;
