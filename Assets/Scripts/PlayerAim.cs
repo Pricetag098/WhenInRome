@@ -90,10 +90,10 @@ public class PlayerAim : MonoBehaviour
             Vector3 dir = (h - p);
             dir.Normalize();
             float dist = Vector3.Distance(h, p);
-            float ang = Vector3.Distance(aimDir, dir);
+            //float ang = Vector3.Distance(aimDir, dir);
 
 
-            float val = (ang * ang);
+            float val = Vector3.Dot(aimDir,dir);
 
             if(val < bestVal)
             {
