@@ -2,26 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Execute : MonoBehaviour
 {
     PlayerAim aim;
     [SerializeField] float detectRange,damage;
     [SerializeField] LayerMask enemy;
     [SerializeField] float soundTime, timebetweenhits,timeAfterDmg;
-    
+    [SerializeField] GameObject volume;
     [SerializeField] ObjectPooler lines, particles;
     List<Health> healths = new List<Health>();
+    bool running = false;
+
+    CombatMeter cm;
     // Start is called before the first frame update
     void Start()
     {
         aim = GetComponent<PlayerAim>();
+        cm = GetComponent<CombatMeter>();
     }
 
     // Update is called once per frame
     void Update()
     {
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.Space) && !running && cm.meter >= cm.maxMeter)
 		{
+            
             healths.Clear();
             RaycastHit hit;
             if(Physics.Raycast(transform.position, aim.aimDir, out hit, float.PositiveInfinity))
@@ -31,6 +37,7 @@ public class Execute : MonoBehaviour
                     healths.Add(hit.collider.gameObject.GetComponent<Health>());
                     StartCoroutine("Run");
                     particles.DespawnAllActive();
+                    cm.meter = 0;
                 }
 			}
 		}
@@ -38,10 +45,12 @@ public class Execute : MonoBehaviour
     //List<GameObject> lineList = new List<GameObject>();
     IEnumerator Run()
 	{
+        running = true;
         particles.DespawnAllActive();
+        volume.SetActive(true);
         //playSound
 
-        yield return new WaitForSecondsRealtime(soundTime);
+        
         Time.timeScale = 0;
         
         Collider[] newHits;
@@ -66,6 +75,10 @@ public class Execute : MonoBehaviour
                     SpawnLine(newHits[i].transform.position, c.transform.position);
 				}
                 cols.AddRange(tempCols);
+                if(tempCols.Length > 0)
+                {
+                    yield return new WaitForSecondsRealtime(soundTime);
+                }
             }
             newHits = cols.ToArray();
             
@@ -93,7 +106,9 @@ public class Execute : MonoBehaviour
         
         healths.Clear();
         Time.timeScale = 1;
-	}
+        running = false;
+        volume.SetActive(false);
+    }
 	private void OnDrawGizmos()
 	{
 		Gizmos.color = Color.yellow;

@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &279864055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 279864056}
+  - component: {fileID: 279864057}
+  m_Layer: 0
+  m_Name: PPVolumeForExecute
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &279864056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279864055}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2079166762963280811}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &279864057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279864055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 4a4f41ce1daa3b041b9fa885c7d1cdb6, type: 2}
 --- !u!1 &331608809
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,6 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 671431ba5f0d225428100b0cbdd49561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   objToPool: {fileID: 4442156439625692270, guid: ed52be2bda28172449bc2d71b29dfaca, type: 3}
   poolSize: 20
 --- !u!1 &542517046
@@ -310,6 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 671431ba5f0d225428100b0cbdd49561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   objToPool: {fileID: 3677907858275256694, guid: 678d2da9a83c39a4b94472486d3f6255, type: 3}
   poolSize: 20
 --- !u!1 &1628097078
@@ -515,6 +565,8 @@ GameObject:
   - component: {fileID: 4233791001282976745}
   - component: {fileID: 2079166762963280801}
   - component: {fileID: 7802646240913028833}
+  - component: {fileID: 750278157464416794}
+  - component: {fileID: 6759999802242010130}
   - component: {fileID: 7617848033881388645}
   - component: {fileID: 2079166762963280806}
   - component: {fileID: 2079166762963280805}
@@ -541,6 +593,7 @@ Transform:
   - {fileID: 2079166764313586815}
   - {fileID: 2079166762983008527}
   - {fileID: 1131652587}
+  - {fileID: 279864056}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -615,9 +668,60 @@ MonoBehaviour:
     m_Bits: 128
   soundTime: 0
   timebetweenhits: 0.3
-  timeBetweenDmg: 0
+  timeAfterDmg: 1
+  volume: {fileID: 279864055}
   lines: {fileID: 331608811}
   particles: {fileID: 1469788053}
+--- !u!114 &750278157464416794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079166762963280810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73563f1713fd274fad5310ad5bd4aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6759999802242010130}
+        m_TargetAssemblyTypeName: CombatMeter, Assembly-CSharp
+        m_MethodName: Charge
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  timeSinceLastHit: 0
+--- !u!114 &6759999802242010130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079166762963280810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce2895d71f27f141a335e2fbbaacad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meter: 0
+  maxMeter: 100
+  decayRate: 1
+  decayDelay: 1
+  chargePerHit: 10
+  inCombat: 0
+  enemyDetectRad: 100
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &7617848033881388645
 MonoBehaviour:
   m_ObjectHideFlags: 0

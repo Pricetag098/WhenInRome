@@ -229,7 +229,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -500,6 +500,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499343625}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &840990684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2079166762963280810, guid: e1e4595e33681d640aebcaa4f538a9ab, type: 3}
+  m_PrefabInstance: {fileID: 2079166763144057532}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1141955577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,10 +1604,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7802646240913028833, guid: e1e4595e33681d640aebcaa4f538a9ab, type: 3}
-      propertyPath: timeAfterDmg
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 2079166764301939101, guid: e1e4595e33681d640aebcaa4f538a9ab, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 840990684}
+    - target: {fileID: 8354612960886764204, guid: e1e4595e33681d640aebcaa4f538a9ab, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 840990684}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1e4595e33681d640aebcaa4f538a9ab, type: 3}
 --- !u!1001 &3677907858066462347
