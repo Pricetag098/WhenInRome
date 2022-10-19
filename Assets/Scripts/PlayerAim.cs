@@ -93,11 +93,12 @@ public class PlayerAim : MonoBehaviour
             //float ang = Vector3.Distance(aimDir, dir);
 
 
-            float val = Vector3.Dot(aimDir,dir);
+            float val = Vector3.Angle(aimDir,dir);
 
             if(val < bestVal)
             {
                 targetdir = dir;
+                bestVal = val;
             }
         }
         return targetdir;
