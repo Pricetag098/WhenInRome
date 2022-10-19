@@ -8,11 +8,11 @@ using UnityEngine;
 /// </summary>
 public class ObjectPooler : MonoBehaviour
 {
-<<<<<<< HEAD
-    [SerializeField] GameObject owner;
-=======
+
+    
+
     public GameObject owner;
->>>>>>> StyleBar
+
     [SerializeField] GameObject objToPool;
     [SerializeField] int poolSize;
     GameObject container;

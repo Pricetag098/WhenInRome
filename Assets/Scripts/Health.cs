@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-<<<<<<< HEAD
+
 using UnityEngine.Events;
 
 public class Health : MonoBehaviour
@@ -30,22 +30,6 @@ public class Health : MonoBehaviour
     public void Heal(float amount)
     {
         health += amount;
-=======
 
-public class Health : MonoBehaviour
-{
-
-    public float health;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
->>>>>>> Guns
     }
 }
