@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72eb8448b2543f9419c355751cd2ecab, type: 3}
-  m_Name: MoveToPlayer
+  m_Script: {fileID: 11500000, guid: 73fb70fb831ba6a42b9f5108b11da863, type: 3}
+  m_Name: ShootInCircle
   m_EditorClassIdentifier: 
-  passThrough: {fileID: 11400000, guid: 6794b01b8a1b2434e88bc6ee400b10d4, type: 2}
-  stoppingDist: 9
-  speed: 6
+  passThrough: {fileID: 0}
+  fireRate: 1
+  bulletsFired: 100
+  bulletVel: 10
+  damage: 10
