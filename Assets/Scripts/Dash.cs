@@ -6,7 +6,7 @@ public class Dash : MonoBehaviour
 {
     [Header("Dash Variables")]
     [SerializeField] float dashForce;
-    [SerializeField] float dashDuration;
+    [SerializeField] float dashDuration,iFrames;
     [SerializeField] bool dashOnMouse;
 
     [Header("Stamina")]
@@ -15,7 +15,7 @@ public class Dash : MonoBehaviour
     [SerializeField] float staminaBurnedOnDash = 33;
     [SerializeField] float stamina;
 
-
+    Health health;
     Vector3 dashDir;
     bool dashing;
     Rigidbody rb;
@@ -29,6 +29,7 @@ public class Dash : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         mv = GetComponent<PlayerMove>();
         aim = GetComponent<PlayerAim>();
+        health = GetComponent<Health>();
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class Dash : MonoBehaviour
         //dashDir = Vector3.one;
         if (Input.GetKeyDown(KeyCode.LeftShift) && !dashing && dashDir != Vector3.zero && stamina >= staminaBurnedOnDash)
         {
-            
+            health.AddIFrames(iFrames);
             StartCoroutine("PauseMv");
             rb.velocity = dashDir * dashForce;
             stamina -= staminaBurnedOnDash;
