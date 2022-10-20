@@ -9,17 +9,27 @@ public class Health : MonoBehaviour
     
     public float health;
     public float maxHealth;
+    public float iFrames = 0;
 
     public UnityEvent onHit;
     public UnityEvent onDeath;
 
+    public Collider col;
+
     private void Start()
     {
+        col = GetComponent<Collider>();
         health = maxHealth;
+    }
+    public void Update()
+    {
+        iFrames = Mathf.Clamp(iFrames - Time.deltaTime, 0, float.PositiveInfinity);
+        col.enabled = !(iFrames > 0);
     }
 
     public void TakeDmg(float dmg)
     {
+        if(iFrames > 0) { return; }
         health -= dmg;
         onHit.Invoke();
         if(health <= 0)
@@ -31,5 +41,9 @@ public class Health : MonoBehaviour
     {
         health += amount;
 
+    }
+    public void AddIFrames(float amount)
+    {
+        iFrames += amount;
     }
 }

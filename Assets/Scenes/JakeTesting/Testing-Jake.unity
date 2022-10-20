@@ -276,6 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -294,6 +295,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!195 &426599090
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -428,6 +430,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1400036668115291764, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
   m_PrefabInstance: {fileID: 1847456570}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &459036991 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7354178792284838843, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+  m_PrefabInstance: {fileID: 1847456570}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459036986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8848f534ed391f45934749337929efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &477931474
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -494,6 +508,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!65 &477931477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -604,6 +619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -622,6 +638,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!65 &499343628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -732,6 +749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -750,6 +768,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!65 &806788398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -864,6 +883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -882,6 +902,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!195 &869714749
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1242,6 +1263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -1260,6 +1282,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!65 &1014846958
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1432,6 +1455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -1450,6 +1474,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!1 &1184484747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,6 +1523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -1516,6 +1542,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!65 &1184484750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1721,6 +1748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -1739,6 +1767,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!65 &1451305914
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1942,6 +1971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -1960,6 +1990,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!65 &1508695879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2169,6 +2200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -2187,6 +2219,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!195 &1607462307
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2349,6 +2382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -2367,6 +2401,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!65 &1643629450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2523,6 +2558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -2541,6 +2577,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!65 &1769961899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2717,6 +2754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -2735,6 +2773,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!65 &1828824274
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2947,41 +2986,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1400036668115291774, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: m_CollisionDetection
+    - target: {fileID: 7354178792284838843, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: onHit.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1400036668115291775, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: assistRays
-      value: 101
+    - target: {fileID: 7354178792284838843, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: onHit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1400036668115291775, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: debugAngle
-      value: 10
+    - target: {fileID: 7354178792284838843, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: onHit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 459036991}
+    - target: {fileID: 7354178792284838843, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: onHit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1400036668115291775, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: enemyLayer.m_Bits
-      value: 128
+    - target: {fileID: 7354178792284838843, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: onHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddIFrames
       objectReference: {fileID: 0}
-    - target: {fileID: 1400036668115291775, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: targetableLayers.m_Bits
-      value: 129
+    - target: {fileID: 7354178792284838843, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: onHit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Health, Assembly-CSharp
       objectReference: {fileID: 0}
-    - target: {fileID: 1400036668923370562, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: aimAssistAngle
-      value: 15
+    - target: {fileID: 7354178792284838843, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: onHit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0.1
       objectReference: {fileID: 0}
-    - target: {fileID: 7205710627008502591, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: damage
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7205710627008502591, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: soundTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8955072439616184179, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: spread
-      value: 90
+    - target: {fileID: 7354178792284838843, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: onHit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
@@ -3038,6 +3073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -3056,6 +3092,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!65 &2038176346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3273,6 +3310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -3291,6 +3329,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!65 &2135222061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3401,6 +3440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  iFrames: 0
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -3419,6 +3459,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  col: {fileID: 0}
 --- !u!65 &2138636023
 BoxCollider:
   m_ObjectHideFlags: 0
