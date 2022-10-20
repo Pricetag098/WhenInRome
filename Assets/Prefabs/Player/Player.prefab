@@ -751,7 +751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d1ea29e79476c418dc1c645ca506fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 20
+  maxSpeed: 15
   inputDir: {x: 0, y: 0, z: 0}
 --- !u!114 &3852320075814450743
 MonoBehaviour:
@@ -788,6 +788,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   rotate: 10
+  targetableLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  assistRays: 20
   aimDir: {x: 0, y: 0, z: 0}
 --- !u!114 &7205710627008502591
 MonoBehaviour:
