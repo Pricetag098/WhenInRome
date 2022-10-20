@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ShootInCircle", menuName = "Ai/Attack/ShootInCircle")]
-public class ActShootInCircle : TreeNode
+[CreateAssetMenu(fileName = "ShootInArc", menuName = "Ai/Attack/ShootInArc")]
+public class ActShootInArc : TreeNode
 {
     public TreeNode passThrough;
 
@@ -16,11 +16,12 @@ public class ActShootInCircle : TreeNode
     [SerializeField] int bulletsFired;
     [SerializeField] float bulletVel;
     [SerializeField] float damage;
+    [SerializeField] float arc;
 
     ObjectPooler pooler;
     public override void Run()
     {
-
+        
         if (fireTimer > fireRate)
         {
             Vector3 dir = ai.player.transform.position - ai.transform.position;
@@ -38,6 +39,7 @@ public class ActShootInCircle : TreeNode
     }
     public override void Innit(Ai owner)
     {
+        arc = Mathf.Clamp(arc, 0, 360);
         ai = owner;
         pooler = ai.GetComponent<ObjectPooler>();
         if (bulletsFired < 1)
@@ -54,11 +56,12 @@ public class ActShootInCircle : TreeNode
     void Fire(Vector3 dir)
     {
         Vector3 shootDir = dir;
-        float angle = (float)360 /  (float)bulletsFired;
+        float angle = (float)arc /  (float)bulletsFired;
 
-        for (int i = 0; i < bulletsFired; i++)
+        int halfBullets = bulletsFired / 2;
+        for (int i = -halfBullets; i < halfBullets; i++)
         {
-            Vector3 tempDir = Quaternion.Euler(0, angle*i, 0) * Vector3.forward;
+            Vector3 tempDir = Quaternion.Euler(0, angle*i, 0) * dir;
             //dir.Normalize();
 
             ShootBullet(tempDir * bulletVel);
