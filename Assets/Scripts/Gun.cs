@@ -12,6 +12,7 @@ public class Gun : MonoBehaviour
     public int ammo;
     [SerializeField] float spread;
     [SerializeField] bool auto;
+    [SerializeField] float aimAssistAngle = 0;
 
     [SerializeField] float reloadDuration;
     float reloadTime;
@@ -54,11 +55,20 @@ public class Gun : MonoBehaviour
 
         bool fire = (auto && Input.GetMouseButton(0)) || (!auto && Input.GetMouseButtonDown(0));
 
-        if (fire && ammo > 0 && fireTimer > fireRate && !isReloading)
+        if (fire && fireTimer > fireRate && !isReloading)
         {
-            Fire();
-            ammo--;
-            fireTimer = 0;
+            if(ammo <= 0)
+            {
+                reloadTime = 0;
+                isReloading = true;
+            }
+            else
+            {
+                Fire();
+                ammo--;
+                fireTimer = 0;
+            }
+            
         }
         fireTimer += Time.deltaTime;
 
@@ -86,9 +96,15 @@ public class Gun : MonoBehaviour
 
     void Fire()
     {
+        Vector3 shootDir = aim.aimDir;
+        if(aimAssistAngle > 0)
+        {
+            shootDir = aim.GetAssistedDir(aimAssistAngle);
+        }
+
         for(int i = 0; i< bulletsFired; i++)
         {
-            Vector3 dir = Quaternion.Euler(0, (Random.value - .5f) * spread, 0) * aim.aimDir;
+            Vector3 dir = Quaternion.Euler(0, (Random.value - .5f) * spread, 0) * shootDir;
             //dir.Normalize();
 
             ShootBullet(dir * bulletVel);

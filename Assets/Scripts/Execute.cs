@@ -30,7 +30,7 @@ public class Execute : MonoBehaviour
             
             healths.Clear();
             RaycastHit hit;
-            if(Physics.Raycast(transform.position, aim.aimDir, out hit, float.PositiveInfinity))
+            if(Physics.Raycast(transform.position, aim.GetAssistedDir(15), out hit, float.PositiveInfinity))
 			{
                 if(hit.collider.gameObject != gameObject && hit.collider.gameObject.GetComponent<Health>())
 				{
