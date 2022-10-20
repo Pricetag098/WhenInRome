@@ -27,7 +27,7 @@ public class CombatMeter : MonoBehaviour
         if (inCombat)
         {
             timeSinceLastHit += Time.deltaTime;
-            if (timeSinceLastHit > decayDelay)
+            if (timeSinceLastHit > decayDelay && meter <maxMeter)
             {
 
                 meter = Mathf.Clamp(meter - timeSinceLastHit * timeSinceLastHit  * decayRate * Time.deltaTime, 0, maxMeter);
