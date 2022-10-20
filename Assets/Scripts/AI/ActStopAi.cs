@@ -1,23 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
-public class Ai : MonoBehaviour
-{
-    public GameObject player;
-    public NavMeshAgent agent;
 
-    public TreeNode firstNode;
+public class ActStopAi : MonoBehaviour
+{
     // Start is called before the first frame update
     void Start()
     {
-        firstNode.Innit(this);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        firstNode.Run();
+        
     }
-
 }
