@@ -25,12 +25,12 @@ public class Execute : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (Input.GetKeyDown(KeyCode.Space) && !running && cm.meter >= cm.maxMeter)
+		if (Input.GetKey(KeyCode.Space) && !running && cm.meter >= cm.maxMeter)
 		{
             
             healths.Clear();
             RaycastHit hit;
-            if(Physics.Raycast(transform.position, aim.aimDir, out hit, float.PositiveInfinity))
+            if(Physics.Raycast(transform.position, aim.GetAssistedDir(20), out hit, float.PositiveInfinity))
 			{
                 if(hit.collider.gameObject != gameObject && hit.collider.gameObject.GetComponent<Health>())
 				{
