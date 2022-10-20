@@ -9,12 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73fb70fb831ba6a42b9f5108b11da863, type: 3}
-  m_Name: ShootInCircle
+  m_Script: {fileID: 11500000, guid: 39caa5f3c1a152a4aa97e6fa3d0941b7, type: 3}
+  m_Name: CanSeePlayer
   m_EditorClassIdentifier: 
-  passThrough: {fileID: 0}
-  fireRate: 1
-  bulletsFired: 100
-  bulletVel: 10
-  damage: 10
-  arc: 0
+  dist: 10000
+  fov: 360
+  validLayers:
+    serializedVersion: 2
+    m_Bits: 9
+  yes: {fileID: 11400000, guid: 85b4a880d075e334b83891c983f5c72d, type: 2}
+  no: {fileID: 0}
+  rays: 360
