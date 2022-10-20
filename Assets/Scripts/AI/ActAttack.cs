@@ -33,11 +33,13 @@ public class ActAttack : TreeNode
 
         }
         fireTimer += Time.deltaTime;
+        if(passThrough != null)
+            passThrough.Run();
     }
     public override void Innit(Ai owner)
     {
         ai = owner;
-
+        pooler = ai.GetComponent<ObjectPooler>();
         if (bulletsFired < 1)
         {
             bulletsFired = 1;
@@ -66,7 +68,7 @@ public class ActAttack : TreeNode
     void ShootBullet(Vector3 dir)
     {
         GameObject b = pooler.SpawnObj();
-        b.transform.position = ai.transform.position + dir * .75f;
+        b.transform.position = ai.transform.position; //+ dir * .75f;
         b.GetComponent<Bullet>().Init(dir, damage);
     }
 }

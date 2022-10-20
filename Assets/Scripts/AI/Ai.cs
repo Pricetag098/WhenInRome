@@ -11,7 +11,12 @@ public class Ai : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        firstNode.Innit(this);
+        if(firstNode != null)
+        {
+            firstNode = Instantiate(firstNode);
+            firstNode.Innit(this);
+        }
+        
     }
 
     // Update is called once per frame

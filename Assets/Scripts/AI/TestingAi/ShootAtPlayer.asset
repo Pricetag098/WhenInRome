@@ -9,6 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72eb8448b2543f9419c355751cd2ecab, type: 3}
-  m_Name: MoveToPlayer
+  m_Script: {fileID: 11500000, guid: fbcd6c84659db54448bc5ba8b2e4f5ea, type: 3}
+  m_Name: ShootAtPlayer
   m_EditorClassIdentifier: 
+  passThrough: {fileID: 0}
+  fireRate: 0
+  spread: 0
+  bulletsFired: 0
+  bulletVel: 0
+  damage: 0
