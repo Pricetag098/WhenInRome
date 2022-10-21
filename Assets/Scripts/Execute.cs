@@ -72,6 +72,7 @@ public class Execute : MonoBehaviour
                 Collider[] tempCols = Physics.OverlapSphere(newHits[i].transform.position, detectRange, enemy);
                 foreach(Collider c in tempCols)
 				{
+                    //if(!healths.Contains(c.gameObject.GetComponent<Health>()))
                     SpawnLine(newHits[i].transform.position, c.transform.position);
 				}
                 cols.AddRange(tempCols);
