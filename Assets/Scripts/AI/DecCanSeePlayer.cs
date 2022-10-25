@@ -56,4 +56,17 @@ public class DecCanSeePlayer : TreeNode
             no.Innit(owner);
         }
     }
+    public override void Tick()
+    {
+        if (yes != null)
+        {
+            
+            yes.Tick();
+        }
+        if (yes != null)
+        {
+            
+            yes.Tick();
+        }
+    }
 }

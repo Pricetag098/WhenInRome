@@ -17,4 +17,8 @@ public class TreeNode : ScriptableObject
     {
 
     }
+    public virtual void Tick()
+    {
+
+    }
 }
