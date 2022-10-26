@@ -6,15 +6,15 @@ public class Ai : MonoBehaviour
 {
     public GameObject player;
     public NavMeshAgent agent;
-
-    public TreeNode firstNode;
+    public Rigidbody rb;
+    public TreeNode root;
     // Start is called before the first frame update
     void Start()
     {
-        if(firstNode != null)
+        if(root != null)
         {
-            firstNode = Instantiate(firstNode);
-            firstNode.Innit(this);
+            root = Instantiate(root);
+            root.Innit(this);
         }
         
     }
@@ -22,8 +22,8 @@ public class Ai : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        firstNode.Run();
-        firstNode.Tick();
+        root.Run();
+        root.Tick();
     }
 
 }
