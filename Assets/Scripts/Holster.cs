@@ -6,6 +6,7 @@ public class Holster : MonoBehaviour
 {
     public PlayerAim playerAim;
     int selectedWeapon;
+    int last = -1;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,10 +33,20 @@ public class Holster : MonoBehaviour
                 selectedWeapon = transform.childCount-1;
             }
         }
-        for(int i = 0; i< transform.childCount; i++)
+        if(selectedWeapon != last)
         {
-            transform.GetChild(i).gameObject.SetActive(i == selectedWeapon);
-            
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).gameObject.SetActive(i == selectedWeapon);
+                if (i == selectedWeapon)
+                {
+                    Gun gun = transform.GetChild(i).GetComponent<Gun>();
+                    gun.Equip();
+                }
+
+            }
         }
+        last = selectedWeapon;
+        
     }
 }

@@ -28,12 +28,12 @@ public class ActShootInArc : TreeNode
             dir.y = 0;
             dir.Normalize();
             Fire(dir);
-
+            
             fireTimer = 0;
 
 
         }
-        fireTimer += Time.deltaTime;
+        
         if (passThrough != null)
             passThrough.Run();
     }
@@ -65,6 +65,14 @@ public class ActShootInArc : TreeNode
             //dir.Normalize();
 
             ShootBullet(tempDir * bulletVel);
+        }
+    }
+    public override void Tick()
+    {
+        fireTimer += Time.deltaTime;
+        if (passThrough != null)
+        {
+            passThrough.Tick();
         }
     }
 

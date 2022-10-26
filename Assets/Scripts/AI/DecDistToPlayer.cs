@@ -36,4 +36,15 @@ public class DecDistToPlayer : TreeNode
             less.Innit(owner);
         }
     }
+    public override void Tick()
+    {
+        if (greater != null)
+        {
+            greater.Tick();
+        }
+        if (less != null)
+        {
+            less.Tick();
+        }
+    }
 }

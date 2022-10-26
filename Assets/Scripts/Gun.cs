@@ -6,6 +6,7 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     [Header("Gun Settings")]
+    [SerializeField] float equipTime;
     [SerializeField] float fireRate;
     float fireTimer;
     public int maxAmmo;
@@ -23,6 +24,12 @@ public class Gun : MonoBehaviour
     [SerializeField] int bulletsFired;
     [SerializeField] float bulletVel;
     [SerializeField] float damage;
+
+    [Header("Sounds")]
+    [SerializeField] SoundPlayer shoot;
+    [SerializeField] SoundPlayer reload;
+    [SerializeField] SoundPlayer equip;
+    [SerializeField] SoundPlayer empty;
 
 
     Holster holster;
@@ -47,6 +54,12 @@ public class Gun : MonoBehaviour
 
     }
     
+    public void Equip()
+    {
+        equip.Play();
+
+        fireTimer = equipTime;
+    }
 
     // Update is called once per frame
     void Update()
@@ -55,28 +68,30 @@ public class Gun : MonoBehaviour
 
         bool fire = (auto && Input.GetMouseButton(0)) || (!auto && Input.GetMouseButtonDown(0));
 
-        if (fire && fireTimer > fireRate && !isReloading)
+        if (fire && fireTimer < 0 && !isReloading)
         {
             if(ammo <= 0)
             {
                 reloadTime = 0;
                 isReloading = true;
+                reload.Play();
             }
             else
             {
                 Fire();
                 ammo--;
-                fireTimer = 0;
+                fireTimer = fireRate;
             }
             
         }
-        fireTimer += Time.deltaTime;
+        fireTimer -= Time.deltaTime;
 
 
         if (Input.GetKeyDown(KeyCode.R) && !isReloading && ammo != maxAmmo)
         {
             reloadTime = 0;
             isReloading = true;
+            reload.Play();
         }
 
         if (isReloading)
@@ -96,7 +111,12 @@ public class Gun : MonoBehaviour
 
     void Fire()
     {
-    
+        shoot.Play();
+        if(ammo == 1)
+        {
+            empty.Play();
+        }
+        Vector3 shootDir = aim.aimDir;
         if(aimAssistAngle > 0)
         {
             shootDir = aim.GetAssistedDir(aimAssistAngle);

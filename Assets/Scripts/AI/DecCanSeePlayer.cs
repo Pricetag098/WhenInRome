@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "DistToPlayer", menuName = "Ai/Decision/DistanceToPlayerGreaterThen")]
+[CreateAssetMenu(fileName = "CanSeePlayer", menuName = "Ai/Decision/CanSeePlayer")]
 public class DecCanSeePlayer : TreeNode
 {
     public float dist,fov;
@@ -11,7 +11,7 @@ public class DecCanSeePlayer : TreeNode
     public TreeNode yes;
     public TreeNode no;
 
-    const int rays = 20;
+    public int rays = 20;
     public override void Run()
     {
         bool hitPlayer = false;
@@ -20,7 +20,7 @@ public class DecCanSeePlayer : TreeNode
         for(int i = -halfRays; i < halfRays; i++)
         {
             RaycastHit hit;
-            if(Physics.Raycast(ai.transform.position,Vector3.forward, out hit,dist, validLayers))
+            if(Physics.Raycast(ai.transform.position,Quaternion.Euler(0,i*angle,0) * ai.transform.forward, out hit,dist, validLayers))
             {
                 if (hit.collider.gameObject.GetComponent<PlayerAim>())
                 {
@@ -29,7 +29,7 @@ public class DecCanSeePlayer : TreeNode
                 }
             }
         }
-
+        Debug.Log(hitPlayer);
 
         if (hitPlayer)
         {
@@ -54,6 +54,19 @@ public class DecCanSeePlayer : TreeNode
         {
             no = Instantiate(no);
             no.Innit(owner);
+        }
+    }
+    public override void Tick()
+    {
+        if (yes != null)
+        {
+            
+            yes.Tick();
+        }
+        if (yes != null)
+        {
+            
+            yes.Tick();
         }
     }
 }
