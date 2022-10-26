@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 887137185}
   - component: {fileID: 887137184}
   - component: {fileID: 887137186}
+  - component: {fileID: 6965671351160598252}
   m_Layer: 3
   m_Name: Walk
   m_TagString: Untagged
@@ -149,6 +150,21 @@ MonoBehaviour:
   pitchRange: 0.5
   basePitch: 1
 --- !u!114 &887137186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887137182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 069c9dafa6716c34fac59a093c8e89dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1400036668115291774}
+  timeBetween: 0.25
+  player: {fileID: 887137184}
+--- !u!114 &6965671351160598252
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

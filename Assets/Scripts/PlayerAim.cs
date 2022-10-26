@@ -16,7 +16,7 @@ public class PlayerAim : MonoBehaviour
     /// </summary>
     public Vector3 aimDir;
 
-    [SerializeField]
+    
     float angleConstant = 1;
     
     // Start is called before the first frame update
