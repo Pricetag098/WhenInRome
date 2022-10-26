@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealPickup : MonoBehaviour
 {
-    public GameObject medikBag;
+    
     public float healAmount;
     public void OnTriggerEnter(Collider coll)
     {
@@ -12,7 +12,7 @@ public class HealPickup : MonoBehaviour
         {
             coll.gameObject.GetComponent<Health>().Heal(healAmount);
             Debug.Log("healed");
-            Destroy(medikBag);
+            Destroy(gameObject);
         }
 
     }
