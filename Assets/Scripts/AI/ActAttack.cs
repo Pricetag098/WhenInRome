@@ -32,7 +32,7 @@ public class ActAttack : TreeNode
             
 
         }
-        fireTimer += Time.deltaTime;
+
         if(passThrough != null)
             passThrough.Run();
     }
@@ -62,6 +62,14 @@ public class ActAttack : TreeNode
             //dir.Normalize();
 
             ShootBullet(tempDir * bulletVel);
+        }
+    }
+    public override void Tick()
+    {
+        fireTimer += Time.deltaTime;
+        if (passThrough != null)
+        {
+            passThrough.Tick();
         }
     }
 

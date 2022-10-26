@@ -23,6 +23,7 @@ public class Ai : MonoBehaviour
     void Update()
     {
         firstNode.Run();
+        firstNode.Tick();
     }
 
 }

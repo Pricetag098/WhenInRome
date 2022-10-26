@@ -21,6 +21,7 @@ public class Bullet : MonoBehaviour
     {
         damage = dmg;
         rb.velocity = vel;
+        if(trailRenderer != null)
         trailRenderer.enabled = true;
     }
 
@@ -59,7 +60,8 @@ public class Bullet : MonoBehaviour
     }
     void Despawn()
     {
-        trailRenderer.enabled = false;
+        if (trailRenderer != null)
+            trailRenderer.enabled = false;
         age = 0;
         rb.velocity = Vector3.zero;
         PooledObj obj = GetComponent<PooledObj>();

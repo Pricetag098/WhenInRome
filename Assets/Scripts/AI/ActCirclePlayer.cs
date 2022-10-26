@@ -37,4 +37,11 @@ public class ActCirclePlayer : TreeNode
             passThrough.Innit(owner);
         }
     }
+    public override void Tick()
+    {
+        if (passThrough != null)
+        {
+            passThrough.Tick();
+        }
+    }
 }
