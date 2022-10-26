@@ -15,25 +15,33 @@ public class PlayerAim : MonoBehaviour
     /// Direction Player is aiming in
     /// </summary>
     public Vector3 aimDir;
+
+    [SerializeField]
+    float angleConstant = 1;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        angleConstant = Camera.main.transform.rotation.eulerAngles.x;
+        angleConstant = Mathf.Tan(angleConstant * Mathf.Deg2Rad);
+        angleConstant = 1/angleConstant;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        float y = 0;
         RaycastHit hit;
         if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, float.PositiveInfinity,floorLayer))
         {
             hitPoint = hit.point;
+            y = hitPoint.y;
             hitPoint.y = 0;
         }
         Vector3 playerPos = transform.position;
         playerPos.y = 0;
-        aimDir = (hitPoint - playerPos - Vector3.forward * transform.position.y).normalized;
+        aimDir = (hitPoint - playerPos - Vector3.forward * (transform.position.y - y) * angleConstant).normalized;
 
         if (rotate > 0)
             transform.forward = Vector3.Slerp(transform.forward,aimDir,rotate * Time.deltaTime);
