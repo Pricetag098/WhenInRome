@@ -96,7 +96,7 @@ public class Gun : MonoBehaviour
 
     void Fire()
     {
-        Vector3 shootDir = aim.aimDir;
+    
         if(aimAssistAngle > 0)
         {
             shootDir = aim.GetAssistedDir(aimAssistAngle);

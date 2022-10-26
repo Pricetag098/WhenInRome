@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132447262861412712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.451, y: 0.176, z: 0.372}
+  m_LocalPosition: {x: 0, y: 0.176, z: 0.372}
   m_LocalScale: {x: 0.15812898, y: 0.15812898, z: 0.5997516}
   m_Children: []
   m_Father: {fileID: 8010534977331479528}
@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132447263492676595}
   m_LocalRotation: {x: -0.18778087, y: -0, z: -0, w: 0.982211}
-  m_LocalPosition: {x: 0.451, y: 0.104, z: 0.115}
+  m_LocalPosition: {x: 0, y: 0.104, z: 0.115}
   m_LocalScale: {x: 0.11718464, y: 0.11718464, z: 0.22077556}
   m_Children: []
   m_Father: {fileID: 8010534977331479528}
@@ -171,10 +171,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8010534977331479528}
-  - component: {fileID: 8010534977331479511}
   - component: {fileID: 8010534977331479510}
   m_Layer: 3
-  m_Name: Test-Gun
+  m_Name: PickUPGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -196,29 +195,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8010534977331479511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8010534977331479529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 060abc21e5a33c4439ceb8fbf45795ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireRate: 0.1
-  maxAmmo: 30
-  ammo: 0
-  spread: 0.1
-  auto: 1
-  aimAssistAngle: 15
-  reloadDuration: 1
-  reloadProgress: 0
-  bulletsFired: 1
-  bulletVel: 30
-  damage: 0
 --- !u!114 &8010534977331479510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 671431ba5f0d225428100b0cbdd49561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: {fileID: 0}
+  owner: {fileID: 1400036668115291764, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
   objToPool: {fileID: 1034762760585791817, guid: 6dadcbb352e5eae489c1142d9f1d2918, type: 3}
   poolSize: 100
