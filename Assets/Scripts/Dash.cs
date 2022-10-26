@@ -15,6 +15,8 @@ public class Dash : MonoBehaviour
     [SerializeField] float staminaBurnedOnDash = 33;
     [SerializeField] float stamina;
 
+    [Header("Sound")]
+    [SerializeField] SoundPlayer soundPlayer;
     Health health;
     Vector3 dashDir;
     bool dashing;
@@ -43,6 +45,7 @@ public class Dash : MonoBehaviour
             StartCoroutine("PauseMv");
             rb.velocity = dashDir * dashForce;
             stamina -= staminaBurnedOnDash;
+            soundPlayer.Play();
         }
 
 
