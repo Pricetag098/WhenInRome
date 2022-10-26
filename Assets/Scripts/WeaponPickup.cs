@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class WeaponPickup : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject weapon;
+    public GameObject player;
+    public Transform holster;
+    [ContextMenu("Test")]
+    public void SpawnGun()
     {
-        
+        GameObject newWeapon = Instantiate(weapon, holster);
+        newWeapon.GetComponent<ObjectPooler>().owner = player;
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
