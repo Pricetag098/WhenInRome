@@ -29,6 +29,7 @@ public class Gun : MonoBehaviour
     [SerializeField] SoundPlayer shoot;
     [SerializeField] SoundPlayer reload;
     [SerializeField] SoundPlayer equip;
+    [SerializeField] SoundPlayer empty;
 
 
     Holster holster;
@@ -73,6 +74,7 @@ public class Gun : MonoBehaviour
             {
                 reloadTime = 0;
                 isReloading = true;
+                reload.Play();
             }
             else
             {
@@ -89,6 +91,7 @@ public class Gun : MonoBehaviour
         {
             reloadTime = 0;
             isReloading = true;
+            reload.Play();
         }
 
         if (isReloading)
@@ -108,6 +111,11 @@ public class Gun : MonoBehaviour
 
     void Fire()
     {
+        shoot.Play();
+        if(ammo == 1)
+        {
+            empty.Play();
+        }
         Vector3 shootDir = aim.aimDir;
         if(aimAssistAngle > 0)
         {
