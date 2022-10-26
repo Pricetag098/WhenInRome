@@ -35,6 +35,11 @@ public class Holster : MonoBehaviour
         for(int i = 0; i< transform.childCount; i++)
         {
             transform.GetChild(i).gameObject.SetActive(i == selectedWeapon);
+            if(i== selectedWeapon)
+            {
+                Gun gun = transform.GetChild(i).GetComponent<Gun>();
+                gun.Equip();
+            }
             
         }
     }
