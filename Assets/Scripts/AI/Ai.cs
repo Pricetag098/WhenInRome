@@ -8,15 +8,22 @@ public class Ai : MonoBehaviour
     public NavMeshAgent agent;
     public Rigidbody rb;
     public TreeNode root;
+    public Health health;
     // Start is called before the first frame update
     void Start()
     {
-        if(root != null)
+        health = GetComponent<Health>();
+        Reset();
+        
+    }
+    public void Reset()
+    {
+        if (root != null)
         {
             root = Instantiate(root);
             root.Innit(this);
+            health.health = health.maxHealth;
         }
-        
     }
 
     // Update is called once per frame
