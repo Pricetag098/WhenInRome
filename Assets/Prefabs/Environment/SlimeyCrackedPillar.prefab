@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5380696407948075279}
   - component: {fileID: 3337083206611338792}
   - component: {fileID: 6627743862155191910}
+  - component: {fileID: 3613264631308719857}
   m_Layer: 0
   m_Name: pillar_cracked
   m_TagString: Untagged
@@ -81,6 +82,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3613264631308719857
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093009733229575923}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8443566273855783449, guid: 04679513fbdf65d4c94f32a76ee65baa, type: 3}
 --- !u!1 &2048464416587895688
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1668103330096711986}
   m_Layer: 0
-  m_Name: pillar cracked (1)
+  m_Name: SlimeyCrackedPillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,11 +119,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2048464416587895688}
-  m_LocalRotation: {x: -0, y: 0.38268274, z: -0, w: 0.9238798}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 117.37973, y: 0.99583364, z: -49.711395}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 5380696407948075279}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

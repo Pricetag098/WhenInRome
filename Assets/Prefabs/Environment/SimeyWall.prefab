@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3015458240080537763}
   m_Layer: 0
-  m_Name: wall (64)
+  m_Name: SimeyWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 1462911562393493759}
   - component: {fileID: 5856823580417507530}
   - component: {fileID: 8335991352998874834}
+  - component: {fileID: 6170671397745482607}
   m_Layer: 0
   m_Name: wall
   m_TagString: Untagged
@@ -112,3 +113,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6170671397745482607
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7267135609528491143}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 500, y: 500.00003, z: 32.555298}
+  m_Center: {x: -7.402218e-12, y: 250.00002, z: 16.277649}
