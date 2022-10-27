@@ -36,6 +36,10 @@ public class Health : MonoBehaviour
         {
             onDeath.Invoke();
         }
+        if (health <= 0)
+        {
+            health = 0;
+        }
     }
     public void Heal(float amount)
     {
