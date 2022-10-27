@@ -6962,6 +6962,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2065030540314731657, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: pitchRange
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065030540314731657, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: clips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065030540314731657, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6be45db08f3202e42a15b1213dfbc5de, type: 3}
+    - target: {fileID: 2065030540314731657, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: aa5c8fce08f43564d985421543e86096, type: 3}
+    - target: {fileID: 2065030540314731657, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: e36980a26459e7d4ea2fa60a42e44303, type: 3}
     - target: {fileID: 2684019968491096471, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
       propertyPath: pitchRange
       value: 0.1
