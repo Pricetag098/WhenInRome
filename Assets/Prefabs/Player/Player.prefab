@@ -601,7 +601,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4461669710439978799}
+  - {fileID: 1720327475611873884}
   m_Father: {fileID: 1400036668115291765}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1144,7 +1144,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e6fd965775cf7ed45b5e08acdd7f5428, type: 3}
   pitchRange: 0.5
   basePitch: 1
---- !u!1001 &6329118162474276225
+--- !u!1001 &9070626921684218098
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1199,10 +1199,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun
       objectReference: {fileID: 0}
+    - target: {fileID: 7655701113825755823, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
---- !u!4 &4461669710439978799 stripped
+--- !u!4 &1720327475611873884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7655701113825755822, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
-  m_PrefabInstance: {fileID: 6329118162474276225}
+  m_PrefabInstance: {fileID: 9070626921684218098}
   m_PrefabAsset: {fileID: 0}

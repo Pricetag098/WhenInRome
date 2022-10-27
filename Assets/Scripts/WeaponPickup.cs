@@ -20,9 +20,9 @@ public class WeaponPickup : MonoBehaviour
     {
 
     }
-    public void OnTriggerEnter(Collider coll)
+    public void OnTriggerStay(Collider coll)
     {
-        if (coll.gameObject.tag == "Player")
+        if (Input.GetKeyDown(KeyCode.E))
         {
             SpawnGun();
             Destroy(gameObject);
