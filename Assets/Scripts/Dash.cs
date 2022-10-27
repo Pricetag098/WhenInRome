@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dash : MonoBehaviour
 {
@@ -10,10 +11,10 @@ public class Dash : MonoBehaviour
     [SerializeField] bool dashOnMouse;
 
     [Header("Stamina")]
-    [SerializeField] float maxStamina = 100;
+    public float maxStamina = 100;
     [SerializeField] float staminaGainRate = 5;
     [SerializeField] float staminaBurnedOnDash = 33;
-    [SerializeField] float stamina;
+     public float stamina;
 
     [Header("Sound")]
     [SerializeField] SoundPlayer soundPlayer;
@@ -23,6 +24,7 @@ public class Dash : MonoBehaviour
     Rigidbody rb;
     PlayerMove mv;
     PlayerAim aim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,9 +49,8 @@ public class Dash : MonoBehaviour
             stamina -= staminaBurnedOnDash;
             soundPlayer.Play();
         }
-
-
         stamina = Mathf.Clamp(stamina + staminaGainRate * Time.deltaTime, 0, maxStamina);
+
     }
 
     public IEnumerator PauseMv()
