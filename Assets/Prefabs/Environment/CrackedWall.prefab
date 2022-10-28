@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8107041477391604011}
   - component: {fileID: 3858229277843831070}
   - component: {fileID: 1685422604526532358}
+  - component: {fileID: 8067815974333856411}
   m_Layer: 0
   m_Name: wall
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8067815974333856411
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6399435194492243}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 500, y: 500.00003, z: 32.555298}
+  m_Center: {x: 0, y: 250.00002, z: 16.277649}
 --- !u!1 &5070612222715644877
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5554555030965064055}
   m_Layer: 0
-  m_Name: wall FLR2
+  m_Name: CrackedWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1898978272919617488}
   m_Layer: 0
-  m_Name: wall FLR3
+  m_Name: StandardWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 2868449604910593932}
   - component: {fileID: 7116839581795899321}
   - component: {fileID: 4624328337688451489}
+  - component: {fileID: 4721987952830018455}
   m_Layer: 0
   m_Name: wall
   m_TagString: Untagged
@@ -112,3 +113,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4721987952830018455
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6294207854769409012}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 500, y: 500.00003, z: 32.555298}
+  m_Center: {x: 0, y: 250.00002, z: 16.277649}

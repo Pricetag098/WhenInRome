@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7515096408377563796}
   - component: {fileID: 3672162860923595316}
   - component: {fileID: 3590262165034854989}
+  - component: {fileID: 6133080200982026050}
   m_Layer: 0
   m_Name: hole
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6133080200982026050
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858480077817924355}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 500, y: 499.99994, z: 0}
+  m_Center: {x: 0.000015258789, y: 0.000022888184, z: -0.0000071210143}
 --- !u!1 &5702101907272813132
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4929822929839100150}
   m_Layer: 0
-  m_Name: hole wall FLR3
+  m_Name: StandardHoleWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6264436617535853647}
   m_Layer: 0
-  m_Name: hole side FLr3
+  m_Name: StandardHoleSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 3807678651617197533}
   - component: {fileID: 8114310516214236632}
   - component: {fileID: 3803714741712028532}
+  - component: {fileID: 4035495362637771321}
   m_Layer: 0
   m_Name: holesSide_1
   m_TagString: Untagged
@@ -143,3 +144,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4035495362637771321
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6770508896358020807}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5312415314447675578, guid: f6c07b2f971d4614a8c37c749912d268, type: 3}

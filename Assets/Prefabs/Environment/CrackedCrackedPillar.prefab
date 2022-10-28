@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3307052941708504962}
   - component: {fileID: 5262071885804898469}
   - component: {fileID: 4373954096370821355}
+  - component: {fileID: 7251725796382019593}
   m_Layer: 0
   m_Name: pillar_cracked
   m_TagString: Untagged
@@ -81,6 +82,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7251725796382019593
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7521635287226937470}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8443566273855783449, guid: a77f86ec3b05b9a4d9b25257c003daf2, type: 3}
 --- !u!1 &8873369407011347717
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8101794151089735615}
   m_Layer: 0
-  m_Name: pillar cracked FLR2
+  m_Name: CrackedCrackedPillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
