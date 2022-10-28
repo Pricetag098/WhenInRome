@@ -5,14 +5,19 @@ using UnityEngine.AI;
 public class Ai : MonoBehaviour
 {
     public GameObject player;
+    [HideInInspector]
     public NavMeshAgent agent;
+    [HideInInspector]
     public Rigidbody rb;
     public TreeNode root;
+    [HideInInspector]
     public Health health;
     // Start is called before the first frame update
     void Start()
     {
         health = GetComponent<Health>();
+        agent = GetComponent<NavMeshAgent>();
+        rb = GetComponent<Rigidbody>();
         Reset();
         
     }
