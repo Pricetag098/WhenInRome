@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72eb8448b2543f9419c355751cd2ecab, type: 3}
-  m_Name: MoveToPlayer
+  m_Script: {fileID: 11500000, guid: c4f5f2dc922c0f7488de55fb935852b0, type: 3}
+  m_Name: RootHealth
   m_EditorClassIdentifier: 
-  passThrough: {fileID: 0}
-  stoppingDist: 0
-  speed: 5
+  val: 50
+  greater: {fileID: 11400000, guid: 660bf2b5cdb0f3148b4b8fa98ef961e6, type: 2}
+  less: {fileID: 11400000, guid: eebd9913d65258543b4c843aa3a002e9, type: 2}
