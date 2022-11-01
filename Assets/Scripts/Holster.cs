@@ -5,7 +5,7 @@ using UnityEngine;
 public class Holster : MonoBehaviour
 {
     public PlayerAim playerAim;
-    int selectedWeapon;
+    public int selectedWeapon;
     int last = -1;
     // Start is called before the first frame update
     void Start()
