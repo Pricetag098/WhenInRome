@@ -49,10 +49,10 @@ public class DecColliding : TreeNode
 
             yes.Tick();
         }
-        if (yes != null)
+        if (no != null)
         {
 
-            yes.Tick();
+            no.Tick();
         }
     }
 }

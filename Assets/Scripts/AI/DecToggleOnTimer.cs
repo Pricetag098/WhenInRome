@@ -16,11 +16,11 @@ public class DecToggleOnTimer : TreeNode
     {
         if(time > timer)
         {
+            
             toggle = !toggle;
             time = 0;
         }
-
-
+        
         if (toggle)
         {
             if (left != null)
@@ -28,6 +28,7 @@ public class DecToggleOnTimer : TreeNode
         }
         else
         {
+            
             if (right != null)
                 right.Run();
         }
@@ -55,10 +56,10 @@ public class DecToggleOnTimer : TreeNode
 
             left.Tick();
         }
-        if (left != null)
+        if (right != null)
         {
 
-            left.Tick();
+            right.Tick();
         }
     }
 }
