@@ -7,6 +7,7 @@ public class Destructable : MonoBehaviour
     GameObject pot;
     ParticleSystem particle;
     Collider col;
+    SoundPlayer audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -14,17 +15,14 @@ public class Destructable : MonoBehaviour
         pot = transform.GetChild(0).gameObject;
         particle = GetComponent<ParticleSystem>();
         col = GetComponent<Collider>();
+        audioSource = GetComponent<SoundPlayer>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter(Collider other)
     {
         pot.SetActive(false);
         particle.Play();
+        audioSource.Play();
         col.enabled = false;
         enabled = false;
     }

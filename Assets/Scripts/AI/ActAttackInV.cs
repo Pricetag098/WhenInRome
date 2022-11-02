@@ -46,10 +46,7 @@ public class ActAttackInV : TreeNode
         {
             bulletsFired = 1;
         }
-        if(bulletsFired % 2 == 0)
-        {
-            bulletsFired++;
-        }
+        
         if (passThrough != null)
         {
             passThrough = Instantiate(passThrough);
@@ -63,20 +60,28 @@ public class ActAttackInV : TreeNode
         Vector3 origin = dir * offset + ai.transform.position;
         Vector3 leftVect = Quaternion.Euler(0, 180 + angle, 0) * dir;
         Vector3 rightVect = Quaternion.Euler(0,- (180 + angle), 0) * dir;
-
-        int bullets = bulletsFired - 1;
+        int bullets = bulletsFired;
+        float spacingOffset = 0;
+        if (bulletsFired % 2 != 0)
+        {
+            bullets -= 1;
+            ShootBullet(origin, dir);
+            spacingOffset = -10;
+        }
+        
         bullets = bullets / 2;
 
-        ShootBullet(origin,dir);
+        
+        
 
         if(bullets == 0) { return; }
         for(int i = 1; i < bullets+1; i++)
         {
-            ShootBullet(i * spacing * leftVect + origin, dir);
+            ShootBullet(i * (spacing + spacingOffset) * leftVect + origin, dir);
         }
         for (int i = 1; i < bullets+1; i++)
         {
-            ShootBullet(i * spacing * rightVect + origin, dir);
+            ShootBullet(i * (spacing + spacingOffset) * rightVect + origin, dir);
         }
         Debug.DrawRay(ai.transform.position,dir * offset);
         Debug.DrawRay(origin, leftVect * offset);
