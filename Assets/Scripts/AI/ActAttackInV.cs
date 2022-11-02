@@ -61,7 +61,7 @@ public class ActAttackInV : TreeNode
         Vector3 leftVect = Quaternion.Euler(0, 180 + angle, 0) * dir;
         Vector3 rightVect = Quaternion.Euler(0,- (180 + angle), 0) * dir;
         int bullets = bulletsFired;
-        float spacingOffset = 0;
+        float spacingOffset = spacing/2;
         if (bulletsFired % 2 != 0)
         {
             bullets -= 1;
@@ -77,7 +77,7 @@ public class ActAttackInV : TreeNode
         if(bullets == 0) { return; }
         for(int i = 1; i < bullets+1; i++)
         {
-            ShootBullet(i * (spacing + spacingOffset) * leftVect + origin, dir);
+            ShootBullet((i * spacing + spacingOffset) * leftVect + origin, dir);
         }
         for (int i = 1; i < bullets+1; i++)
         {

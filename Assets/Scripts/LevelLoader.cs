@@ -64,7 +64,7 @@ public class LevelLoader : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(level + 1);
+            SceneManager.LoadScene(0);
         }
             
     }
