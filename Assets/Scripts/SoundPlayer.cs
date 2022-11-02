@@ -6,7 +6,7 @@ using UnityEngine;
 public class SoundPlayer : MonoBehaviour
 {
     public List<AudioClip> clips = new List<AudioClip>();
-    public float pitchRange = .5f;
+    public float pitchRange = 0f;
     public float basePitch = 1;
     AudioSource source;
     // Start is called before the first frame update
