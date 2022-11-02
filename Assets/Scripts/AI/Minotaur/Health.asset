@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 922d51a9f8ce53746a303194ea263ebe, type: 3}
-  m_Name: TooCloseToPlayer
+  m_Script: {fileID: 11500000, guid: c4f5f2dc922c0f7488de55fb935852b0, type: 3}
+  m_Name: Health
   m_EditorClassIdentifier: 
-  dist: 5
-  greater: {fileID: 11400000, guid: e0224aa90b3c80f4b871014819eb9a64, type: 2}
-  less: {fileID: 11400000, guid: c0fb19cce2c50e846af6060c09750e88, type: 2}
+  val: 0
+  greater: {fileID: 0}
+  less: {fileID: 0}

@@ -77,11 +77,11 @@ public class ActAttackInV : TreeNode
         if(bullets == 0) { return; }
         for(int i = 1; i < bullets+1; i++)
         {
-            ShootBullet((i * spacing + spacingOffset) * leftVect + origin, dir);
+            ShootBullet((i * spacing - spacingOffset) * leftVect + origin, dir);
         }
         for (int i = 1; i < bullets+1; i++)
         {
-            ShootBullet(i * (spacing + spacingOffset) * rightVect + origin, dir);
+            ShootBullet((i * spacing - spacingOffset) * rightVect + origin, dir);
         }
         Debug.DrawRay(ai.transform.position,dir * offset);
         Debug.DrawRay(origin, leftVect * offset);

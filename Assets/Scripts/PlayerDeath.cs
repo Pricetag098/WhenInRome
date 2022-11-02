@@ -6,12 +6,12 @@ public class PlayerDeath : MonoBehaviour
 {
     PlayerMove move;
     LevelLoader levelLoader;
-    Rigidbody rigidbody;
+    Rigidbody rb;
     private void Start()
     {
         move = GetComponent<PlayerMove>();
         levelLoader = GetComponent<LevelLoader>();
-        rigidbody = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
         
     }
 
@@ -19,7 +19,7 @@ public class PlayerDeath : MonoBehaviour
     {
         move.enabled = false;
         levelLoader.Reload();
-        rigidbody.velocity = Vector3.zero;
+        rb.velocity = Vector3.zero;
     }
 
 }

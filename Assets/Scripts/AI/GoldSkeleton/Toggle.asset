@@ -12,9 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6cf77b9ee9c2b43b4f394fa0d62cc6, type: 3}
   m_Name: Toggle
   m_EditorClassIdentifier: 
-  validLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  left: {fileID: 0}
-  right: {fileID: 0}
-  timer: 0
+  left: {fileID: 11400000, guid: 56987ff0515eb0249b45ea1ac185d5f4, type: 2}
+  right: {fileID: 11400000, guid: afc7e85c898f7a643946259e1191493c, type: 2}
+  timer: 0.5
