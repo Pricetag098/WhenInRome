@@ -6,7 +6,12 @@ using UnityEngine.UI;
 public class StaminaBar : MonoBehaviour
 {
     public Dash dash;
-    public Image bar;
+    Image bar;
+
+    private void Start()
+    {
+        bar = GetComponent<Image>();
+    }
 
     // Update is called once per frame
     void Update()

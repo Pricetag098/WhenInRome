@@ -6,8 +6,12 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public Health health;
-    public Image bar;
- 
+    Image bar;
+
+    private void Start()
+    {
+        bar = GetComponent<Image>();
+    }
     private void Update()
     {
      

@@ -6,8 +6,12 @@ using UnityEngine.UI;
 public class ChargeMeter : MonoBehaviour
 {
     public CombatMeter exe;
-    public Image bar;
+    Image bar;
 
+    private void Start()
+    {
+        bar = GetComponent<Image>();
+    }
     // Update is called once per frame
     void Update()
     {
