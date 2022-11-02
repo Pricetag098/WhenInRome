@@ -12,13 +12,13 @@ public class PlayerDeath : MonoBehaviour
         move = GetComponent<PlayerMove>();
         levelLoader = GetComponent<LevelLoader>();
         rigidbody = GetComponent<Rigidbody>();
-        levelLoader.level = SceneManager.GetActiveScene().buildIndex-1;
+        
     }
 
     public void Die()
     {
         move.enabled = false;
-        levelLoader.Load();
+        levelLoader.Reload();
         rigidbody.velocity = Vector3.zero;
     }
 
