@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5113111146796311601}
   - component: {fileID: 5113111146796311608}
   - component: {fileID: 9044453736972665399}
+  - component: {fileID: 4966187089102001136}
   m_Layer: 7
   m_Name: GoldSkelly
   m_TagString: Untagged
@@ -173,6 +174,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4966187089102001136}
+        m_TargetAssemblyTypeName: SpawnOnDeath, Assembly-CSharp
+        m_MethodName: Run
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   col: {fileID: 0}
 --- !u!114 &5113111146796311608
 MonoBehaviour:
@@ -205,3 +218,19 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &4966187089102001136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5113111146796311600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8a246c1062b65408a828bc6d06bf07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 3837191207125801888, guid: 0e0a37e88b3ca3c4c857051481177db1, type: 3}
+  spawnRandom: 0
+  spawnRad: 0.5
