@@ -59,7 +59,14 @@ public class LevelLoader : MonoBehaviour
         //todo check if the level is unlocked
 
         if (SceneManager.sceneCountInBuildSettings > level + 1)
+        {
             SceneManager.LoadScene(level + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene(level + 1);
+        }
+            
     }
 
     public void Reload()

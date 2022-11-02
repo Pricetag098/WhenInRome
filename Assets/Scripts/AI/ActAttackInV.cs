@@ -66,7 +66,7 @@ public class ActAttackInV : TreeNode
         {
             bullets -= 1;
             ShootBullet(origin, dir);
-            spacingOffset = -10;
+            spacingOffset = 0;
         }
         
         bullets = bullets / 2;
