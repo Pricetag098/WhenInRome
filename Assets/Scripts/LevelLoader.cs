@@ -9,7 +9,7 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] float transitionTime;
     float transitionTimer = 0;
     bool transitionOut = false,transitionIn = false;
-
+    bool reloading = false;
     public int level;
 
     private void Start()
@@ -58,6 +58,12 @@ public class LevelLoader : MonoBehaviour
     {
         //todo check if the level is unlocked
 
+        if (reloading)
+        {
+            SceneManager.LoadScene(level);
+            return;
+        }
+
         if (SceneManager.sceneCountInBuildSettings > level + 1)
         {
             SceneManager.LoadScene(level + 1);
@@ -72,7 +78,8 @@ public class LevelLoader : MonoBehaviour
     public void Reload()
     {
         transitionOut = true;
-        level = level - 1;
+        //level = level - 1;
+        reloading = true;
     }
 
 }
