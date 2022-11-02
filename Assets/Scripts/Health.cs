@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
-    
     public float health;
     public float maxHealth;
     public float iFrames = 0;
@@ -25,6 +25,7 @@ public class Health : MonoBehaviour
     {
         iFrames = Mathf.Clamp(iFrames - Time.deltaTime, 0, float.PositiveInfinity);
         col.enabled = !(iFrames > 0);
+        
     }
 
     public void TakeDmg(float dmg)
@@ -35,6 +36,10 @@ public class Health : MonoBehaviour
         if(health <= 0)
         {
             onDeath.Invoke();
+        }
+        if (health <= 0)
+        {
+            health = 0;
         }
     }
     public void Heal(float amount)

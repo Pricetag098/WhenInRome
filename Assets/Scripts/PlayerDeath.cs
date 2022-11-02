@@ -17,6 +17,7 @@ public class PlayerDeath : MonoBehaviour
 
     public void Die()
     {
+        enabled = false;
         move.enabled = false;
         levelLoader.Reload();
         rb.velocity = Vector3.zero;
