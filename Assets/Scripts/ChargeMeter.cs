@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ChargeMeter : MonoBehaviour
 {
-    public CombatMeter exe;
-    Image bar;
+    public CombatMeter cm;
+    public Image bar,filled;
 
     private void Start()
     {
@@ -15,6 +15,7 @@ public class ChargeMeter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bar.fillAmount = exe.meter / exe.maxMeter;
+        bar.fillAmount = cm.meter / cm.maxMeter;
+        filled.enabled = cm.meter >= cm.maxMeter;
     }
 }
