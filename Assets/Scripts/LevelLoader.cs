@@ -61,6 +61,13 @@ public class LevelLoader : MonoBehaviour
         if (SceneManager.sceneCountInBuildSettings > level + 1)
             SceneManager.LoadScene(level + 1);
     }
+
+    public void Reload()
+    {
+        transitionOut = true;
+        level = level - 1;
+    }
+
 }
 
 
