@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 290c0ed71d5275a45801c2d9cf914392
+guid: 9dc30c7cd6c735948a0485e47a41b559
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert3
-    second: {fileID: 2100000, guid: fac302d6d015c264f8bc31eb904d2d07, type: 2}
+      name: Machine_Gun_material
+    second: {fileID: 2100000, guid: c93f7be2871e7dc4a80e0d522078113c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: c086e098615cdab46896976f3cd69182, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -91,7 +96,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: Erah_Skeleton
+    rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
