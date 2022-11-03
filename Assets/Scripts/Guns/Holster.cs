@@ -6,6 +6,7 @@ public class Holster : MonoBehaviour
 {
     public PlayerAim playerAim;
     public int selectedWeapon;
+    public float VertOffset;
     int last = -1;
     // Start is called before the first frame update
     void Start()
