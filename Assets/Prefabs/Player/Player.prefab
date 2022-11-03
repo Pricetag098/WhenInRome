@@ -1676,6 +1676,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1400036668003026129}
     m_Modifications:
+    - target: {fileID: 6594644037759670926, guid: dfe51aa76cf2e8d449ac015a3b47f1c7, type: 3}
+      propertyPath: maxAmmo
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594644037759670926, guid: dfe51aa76cf2e8d449ac015a3b47f1c7, type: 3}
+      propertyPath: fireRate
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594644037759670926, guid: dfe51aa76cf2e8d449ac015a3b47f1c7, type: 3}
+      propertyPath: bulletVel
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594644037759670926, guid: dfe51aa76cf2e8d449ac015a3b47f1c7, type: 3}
+      propertyPath: equipTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594644037759670926, guid: dfe51aa76cf2e8d449ac015a3b47f1c7, type: 3}
+      propertyPath: reloadDuration
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6594644037759670927, guid: dfe51aa76cf2e8d449ac015a3b47f1c7, type: 3}
       propertyPath: owner
       value: 
@@ -1746,6 +1766,30 @@ PrefabInstance:
       propertyPath: owner
       value: 
       objectReference: {fileID: 1400036668115291764}
+    - target: {fileID: 2956315850933622549, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
+      propertyPath: damage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956315850933622549, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
+      propertyPath: maxAmmo
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956315850933622549, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
+      propertyPath: bulletVel
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956315850933622549, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
+      propertyPath: equipTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956315850933622549, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
+      propertyPath: bulletsFired
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956315850933622549, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
+      propertyPath: reloadDuration
+      value: 1.7
+      objectReference: {fileID: 0}
     - target: {fileID: 2956315850933622570, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1808,6 +1852,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1400036668003026129}
     m_Modifications:
+    - target: {fileID: 7159960700880074500, guid: ef08787392688c24e966e4de798be4bc, type: 3}
+      propertyPath: damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159960700880074500, guid: ef08787392688c24e966e4de798be4bc, type: 3}
+      propertyPath: maxAmmo
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159960700880074500, guid: ef08787392688c24e966e4de798be4bc, type: 3}
+      propertyPath: bulletVel
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159960700880074500, guid: ef08787392688c24e966e4de798be4bc, type: 3}
+      propertyPath: equipTime
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159960700880074500, guid: ef08787392688c24e966e4de798be4bc, type: 3}
+      propertyPath: reloadDuration
+      value: 2.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7159960700880074501, guid: ef08787392688c24e966e4de798be4bc, type: 3}
       propertyPath: owner
       value: 
