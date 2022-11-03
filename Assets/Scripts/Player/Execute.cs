@@ -47,11 +47,11 @@ public class Execute : MonoBehaviour
 	{
         running = true;
         particles.DespawnAllActive();
-        
+        Time.timeScale = 0;
         //playSound
         yield return new WaitForSecondsRealtime(soundTime);
         volume.SetActive(true);
-        Time.timeScale = 0;
+        
         
         Collider[] newHits;
         newHits = Physics.OverlapSphere(healths[0].transform.position, detectRange, enemy);
