@@ -135,7 +135,7 @@ public class Gun : MonoBehaviour
     void ShootBullet(Vector3 dir)
     {
         GameObject b = pooler.SpawnObj();
-        b.transform.position = transform.position + aim.aimDir * .75f;
+        b.transform.position = holster.playerAim.transform.position + aim.aimDir * .75f + holster.VertOffset * Vector3.up;
         b.GetComponent<Bullet>().Init(dir,damage);
     }
 
