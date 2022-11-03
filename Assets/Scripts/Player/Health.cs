@@ -16,6 +16,7 @@ public class Health : MonoBehaviour
 
     public Collider col;
 
+    bool dead;
     private void Start()
     {
         col = GetComponent<Collider>();
@@ -30,12 +31,17 @@ public class Health : MonoBehaviour
 
     public void TakeDmg(float dmg)
     {
+        if (dead)
+        {
+            return;
+        }
         if(iFrames > 0) { return; }
         health -= dmg;
         onHit.Invoke();
         if(health <= 0)
         {
             onDeath.Invoke();
+            dead = true;
         }
         if (health <= 0)
         {
