@@ -41,6 +41,10 @@ public class Health : MonoBehaviour
         if(health <= 0)
         {
             onDeath.Invoke();
+            if (GetComponent<AiDeath>())
+            {
+                GetComponent<AiDeath>().Die();
+            }
             dead = true;
         }
         if (health <= 0)

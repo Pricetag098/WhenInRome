@@ -11,15 +11,15 @@ public class ActChargePlayer : TreeNode
     public float vel;
     public override void Run()
     {
-        //ai.rb.isKinematic = false;
-        //ai.agent.enabled = false;
+        ai.rb.isKinematic = false;
+        ai.agent.enabled = false;
         if(dir == Vector3.zero)
         {
             dir = ai.player.transform.position - ai.transform.position;
             dir.y = 0;
             dir.Normalize();
         }
-        ai.agent.velocity = dir * vel;
+        ai.rb.velocity = dir * vel;
         if (passthrough != null)
         {
             ai.root = passthrough;
