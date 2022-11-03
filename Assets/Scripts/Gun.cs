@@ -57,7 +57,8 @@ public class Gun : MonoBehaviour
     public void Equip()
     {
         equip.Play();
-
+        isReloading = false;
+        reloadTime = reloadDuration;
         fireTimer = equipTime;
     }
 
