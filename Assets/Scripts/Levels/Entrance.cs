@@ -9,5 +9,6 @@ public class Entrance : MonoBehaviour
     {
         room.Spawn();
         enabled = false;
+        GetComponent<Collider>().enabled = false;
     }
 }

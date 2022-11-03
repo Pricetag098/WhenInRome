@@ -5,7 +5,7 @@ using UnityEngine;
 public class Room : MonoBehaviour
 {
     public List<GameObject> enemys = new List<GameObject>();
-    public bool complete;
+    public bool complete = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,7 @@ public class Room : MonoBehaviour
 
     public void Spawn()
     {
-        if(complete) return;
+        //if (complete == true) { return; }
         foreach (GameObject enemy in enemys)
         {
             enemy.SetActive(true);
