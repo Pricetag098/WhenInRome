@@ -1700,78 +1700,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4251982014075360451, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: level
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251982014075360451, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: fadeObj
-      value: 
-      objectReference: {fileID: 722742950}
-    - target: {fileID: 4251982014075360451, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: transitionTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4461669710439978768, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: damage
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4461669710439978768, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: bulletVel
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 4461669710439978768, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: equipTime
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4461669710439978768, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: aimAssistAngle
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655701112638488264, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: damage
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655701112638488264, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: spread
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655701112638488264, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: maxAmmo
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655701112638488264, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: equipTime
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655701112638488264, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: bulletsFired
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655701113255094451, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: damage
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655701113255094451, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: maxAmmo
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655701113255094451, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: fireRate
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655701113255094451, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: equipTime
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655701113255094451, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: aimAssistAngle
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655701113255094451, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: reloadDuration
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
 --- !u!4 &88649223 stripped
@@ -19525,11 +19453,6 @@ Transform:
 --- !u!224 &722742949 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6701155285679287674, guid: ad41537b8b221c847be1d726a0249878, type: 3}
-  m_PrefabInstance: {fileID: 1292653938}
-  m_PrefabAsset: {fileID: 0}
---- !u!225 &722742950 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 6701155285679287669, guid: ad41537b8b221c847be1d726a0249878, type: 3}
   m_PrefabInstance: {fileID: 1292653938}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &723195895 stripped
