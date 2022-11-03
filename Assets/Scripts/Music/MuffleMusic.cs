@@ -2,21 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class MuffleMusic : MonoBehaviour
 {
     private AudioMixer output;
-    private bool muffled;
+    private AudioSource music;
+    private bool muffled = true;
     public float highpass;
     public float lowpass;
     public float frequencyGain;
     public float transitionTime;
+    public float volumeTime;
+    private bool loud;
+    public AudioClip[] songs;
     // Start is called before the first frame update
     void Start()
     {
         output = GetComponent<AudioSource>().outputAudioMixerGroup.audioMixer;
-        
-        StartCoroutine(Muffle());
+        music = GetComponent<AudioSource>();
+        StartCoroutine(VolumeChange());
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -26,6 +32,17 @@ public class MuffleMusic : MonoBehaviour
         {
             StartCoroutine(Muffle());
         }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            StartCoroutine(VolumeChange());
+        }
+
+        
+    }
+
+    public void changeSong(int floor)
+    {
+        music.clip = songs[floor];
     }
 
     public IEnumerator Muffle()
@@ -38,6 +55,7 @@ public class MuffleMusic : MonoBehaviour
                 timer += Time.deltaTime / transitionTime;
                 output.SetFloat("Lowpass Simple", Mathf.Lerp(lowpass, 22000, 1 - timer));
                 output.SetFloat("Highpass Simple", Mathf.Lerp(highpass, 0, 1 - timer));
+                output.SetFloat("FrequencyGain", Mathf.Lerp(frequencyGain, 1, 1 - timer));
                 yield return null;
             }
             muffled = true;
@@ -49,10 +67,38 @@ public class MuffleMusic : MonoBehaviour
                 timer += Time.deltaTime / transitionTime;
                 output.SetFloat("Lowpass Simple", Mathf.Lerp(lowpass, 22000, timer));
                 output.SetFloat("Highpass Simple", Mathf.Lerp(highpass, 0, timer));
+                output.SetFloat("FrequencyGain", Mathf.Lerp(frequencyGain, 1, timer));
                 yield return null;
             }
             muffled = false;
         }
        
+    }
+
+    
+    public IEnumerator VolumeChange()
+    {
+        float timer = 0;
+        if (!loud)
+        {
+            while (timer < 1)
+            {
+                timer += Time.deltaTime / volumeTime;
+                music.volume = Mathf.Lerp(0, 1, timer);
+                yield return null;
+            }
+            loud = true;
+        }
+        else
+        {
+            while (timer < 1)
+            {
+                timer += Time.deltaTime / volumeTime;
+                music.volume = Mathf.Lerp(0, 1, 1 - timer);
+                yield return null;
+            }
+            loud = false;
+        }
+
     }
 }

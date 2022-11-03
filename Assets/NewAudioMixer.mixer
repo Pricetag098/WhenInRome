@@ -94,6 +94,8 @@ AudioMixerController:
     name: Highpass Simple
   - guid: ad2e8a61ce6be214a8064d3751948161
     name: Lowpass Simple
+  - guid: 130da2c938f2cde4a8bf8d4d5e53087e
+    name: FrequencyGain
   m_AudioMixerGroupViews:
   - guids:
     - 0df789a86d67b0c489749f2ffaacc4dd
@@ -146,7 +148,7 @@ AudioMixerSnapshotController:
   m_SnapshotID: 36b1a8fd469589642b6b2802607dc890
   m_FloatValues:
     6a552e10e7416b6499065dca1d4adab0: 0.518
-    ad2e8a61ce6be214a8064d3751948161: 22000
+    ad2e8a61ce6be214a8064d3751948161: 3500
     83fd25c192445dd4aae5a19399a5a37f: 0
     c1566b223e2e7954481005ec0768a297: 22000
     7b5b5c22bbd628f4692c2088ed36e56d: 6420
@@ -159,13 +161,13 @@ AudioMixerSnapshotController:
     62d5fc27741576d47be7d80c0c037bb5: 1
     fe568228cf6643b42b31683578d2d90f: 50
     d2c61f381804ac74f816cbb3119a7576: 0
-    130da2c938f2cde4a8bf8d4d5e53087e: 1
+    130da2c938f2cde4a8bf8d4d5e53087e: 0.37
     d01fe7aaab5c10940969a7b928627719: 200
     34ad18aa28bd2ed42a3befb358cee67a: 90
     e284df6be8586cf4594aefadccc27433: 0
     4451d80c9c56237498c0779187249aee: 0
     9871e03c0798b594d829ff411276146d: 1
-    9144bfacd974d6c41be06f2a98af721a: 10
+    9144bfacd974d6c41be06f2a98af721a: 3500
     0bc550bcb65ac034a88bf143880bf722: 0
     ead629dceb59f0b48ba25eb63aa8fd10: 1
     b0350b2d5e7f96942837023cb13040b9: 0.2
