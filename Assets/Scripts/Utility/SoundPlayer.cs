@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class SoundPlayer : MonoBehaviour
 {
+    public bool playOnAwake = false;
     public List<AudioClip> clips = new List<AudioClip>();
     public float pitchRange = 0f;
     public float basePitch = 1;
@@ -13,6 +14,10 @@ public class SoundPlayer : MonoBehaviour
     void Start()
     {
         source = GetComponent<AudioSource>();
+        if (playOnAwake)
+        {
+            Play();
+        }
     }
 
     // Update is called once per frame
