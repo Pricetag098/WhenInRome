@@ -1704,6 +1704,10 @@ PrefabInstance:
       propertyPath: level
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4251982014075360451, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: fadeObj
+      value: 
+      objectReference: {fileID: 1292653939}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
 --- !u!4 &88649223 stripped
@@ -36101,6 +36105,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad41537b8b221c847be1d726a0249878, type: 3}
+--- !u!225 &1292653939 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 6701155285679287669, guid: ad41537b8b221c847be1d726a0249878, type: 3}
+  m_PrefabInstance: {fileID: 1292653938}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1294019717 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3015458240080537763, guid: 130d4662487219146b447503611e9450, type: 3}
