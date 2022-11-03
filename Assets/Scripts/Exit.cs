@@ -6,6 +6,11 @@ public class Exit : MonoBehaviour
 {
     public LevelLoader LevelLoader;
     SoundPlayer sound;
+
+    public void Start()
+    {
+        sound = GetComponent<SoundPlayer>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         LevelLoader.Load();
