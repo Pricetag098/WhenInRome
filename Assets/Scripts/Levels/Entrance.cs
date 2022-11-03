@@ -7,7 +7,7 @@ public class Entrance : MonoBehaviour
     public Room room;
     private void OnTriggerEnter(Collider other)
     {
-        room.Spawn();
+        room.Enter();
         enabled = false;
         GetComponent<Collider>().enabled = false;
     }
