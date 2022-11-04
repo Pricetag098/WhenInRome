@@ -15,64 +15,56 @@ public class MuffleMusic : MonoBehaviour
     public float transitionTime;
     public float volumeTime;
     private bool loud;
-    public AudioClip[] songs;
+    //public AudioClip[] songs;
     // Start is called before the first frame update
     void Start()
     {
         output = GetComponent<AudioSource>().outputAudioMixerGroup.audioMixer;
         music = GetComponent<AudioSource>();
         StartCoroutine(VolumeChange());
-        DontDestroyOnLoad(gameObject);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            StartCoroutine(Muffle());
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            StartCoroutine(VolumeChange());
-        }
-
         
     }
 
-    public void changeSong(int floor)
+    public void Muffle()
     {
-        music.clip = songs[floor];
+        StopCoroutine("UnMuffleIE");
+        StartCoroutine("MuffleIE");
+    }
+    public void UnMuffle()
+    {
+        StopCoroutine("MuffleIE");
+        StartCoroutine("UnMuffleIE");
     }
 
-    public IEnumerator Muffle()
+    IEnumerator MuffleIE()
     {
         float timer = 0;
-        if (!muffled)
+        
+        while (timer < 1)
         {
-            while (timer < 1)
-            {
-                timer += Time.deltaTime / transitionTime;
-                output.SetFloat("Lowpass Simple", Mathf.Lerp(lowpass, 22000, 1 - timer));
-                output.SetFloat("Highpass Simple", Mathf.Lerp(highpass, 0, 1 - timer));
-                output.SetFloat("FrequencyGain", Mathf.Lerp(frequencyGain, 1, 1 - timer));
-                yield return null;
-            }
-            muffled = true;
+            timer += Time.deltaTime / transitionTime;
+            output.SetFloat("Lowpass Simple", Mathf.Lerp(lowpass, 22000, 1 - timer));
+            output.SetFloat("Highpass Simple", Mathf.Lerp(highpass, 0, 1 - timer));
+            output.SetFloat("FrequencyGain", Mathf.Lerp(frequencyGain, 1, 1 - timer));
+            yield return null;
         }
-        else
-        {
-            while (timer < 1)
-            {
-                timer += Time.deltaTime / transitionTime;
-                output.SetFloat("Lowpass Simple", Mathf.Lerp(lowpass, 22000, timer));
-                output.SetFloat("Highpass Simple", Mathf.Lerp(highpass, 0, timer));
-                output.SetFloat("FrequencyGain", Mathf.Lerp(frequencyGain, 1, timer));
-                yield return null;
-            }
-            muffled = false;
-        }
+        muffled = true;
+        
+        
        
+    }
+    IEnumerator UnMuffleIE()
+    {
+        float timer = 0;
+        while (timer < 1)
+        {
+            timer += Time.deltaTime / transitionTime;
+            output.SetFloat("Lowpass Simple", Mathf.Lerp(lowpass, 22000, timer));
+            output.SetFloat("Highpass Simple", Mathf.Lerp(highpass, 0, timer));
+            output.SetFloat("FrequencyGain", Mathf.Lerp(frequencyGain, 1, timer));
+            yield return null;
+        }
+        muffled = false;
     }
 
     

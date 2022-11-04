@@ -1217,6 +1217,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   rotate: 10
+  offset: 0.75
   targetableLayers:
     serializedVersion: 2
     m_Bits: 129
@@ -1268,7 +1269,7 @@ MonoBehaviour:
   decayDelay: 1
   chargePerHit: 10
   inCombat: 0
-  enemyDetectRad: 100
+  enemyDetectRad: 25
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
