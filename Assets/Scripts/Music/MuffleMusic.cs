@@ -21,7 +21,7 @@ public class MuffleMusic : MonoBehaviour
     {
         output = GetComponent<AudioSource>().outputAudioMixerGroup.audioMixer;
         music = GetComponent<AudioSource>();
-        StartCoroutine(VolumeChange());
+        //StartCoroutine(VolumeChange());
         
     }
 
@@ -67,30 +67,39 @@ public class MuffleMusic : MonoBehaviour
         muffled = false;
     }
 
+    public void VolUp()
+    {
+        StopCoroutine("VolumeDown");
+        StartCoroutine("VolumeUp");
+    }
+    public void VolDown()
+    {
+        StopCoroutine("VolumeUp");
+        StartCoroutine("VolumeDown");
+    }
     
-    public IEnumerator VolumeChange()
+    IEnumerator VolumeUp()
     {
         float timer = 0;
-        if (!loud)
+        
+        while (timer < 1)
         {
-            while (timer < 1)
-            {
-                timer += Time.deltaTime / volumeTime;
-                music.volume = Mathf.Lerp(0, 1, timer);
-                yield return null;
-            }
-            loud = true;
+            timer += Time.deltaTime / volumeTime;
+            music.volume = Mathf.Lerp(0, 1, timer);
+            yield return null;
         }
-        else
-        {
-            while (timer < 1)
-            {
-                timer += Time.deltaTime / volumeTime;
-                music.volume = Mathf.Lerp(0, 1, 1 - timer);
-                yield return null;
-            }
-            loud = false;
-        }
+        loud = true;
+    }
+    IEnumerator VolumeDown()
+    {
+        float timer = 0;
 
+        while (timer < 1)
+        {
+            timer += Time.deltaTime / volumeTime;
+            music.volume = Mathf.Lerp(0, 1, 1 - timer);
+            yield return null;
+        }
+        loud = false;
     }
 }
