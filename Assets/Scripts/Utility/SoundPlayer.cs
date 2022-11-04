@@ -14,6 +14,7 @@ public class SoundPlayer : MonoBehaviour
     void Start()
     {
         source = GetComponent<AudioSource>();
+        
         if (playOnAwake)
         {
             Play();
@@ -37,4 +38,5 @@ public class SoundPlayer : MonoBehaviour
         source.Play();
      
     }
+
 }
