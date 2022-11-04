@@ -14,9 +14,9 @@ public class ActMoveToRandomSpot : TreeNode
     public override void Run()
     {
         target.y = ai.transform.position.y;
-        if (Vector3.Distance(ai.transform.position,target) <= 0.1f || Vector3.Distance(ai.transform.position, target) > roamDist)
+        if (Vector3.Distance(ai.transform.position,target) <= 0.75f || Vector3.Distance(ai.transform.position, target) > roamDist)
         {
-            GetNewTarget(0,10);
+            GetNewTarget(0,20);
         }
         ai.agent.destination = target;
         ai.agent.speed = speed;
@@ -29,7 +29,7 @@ public class ActMoveToRandomSpot : TreeNode
     public override void Innit(Ai owner)
     {
         ai = owner;
-        GetNewTarget(0,10);
+        GetNewTarget(0,20);
         if (passThrough != null)
         {
             passThrough = Instantiate(passThrough);
