@@ -18,7 +18,13 @@ public class AmmoDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(holster.transform.childCount == 0)
+        {
+            text.text = "";
+            return;
+        }
         gun = holster.transform.GetChild(holster.selectedWeapon).GetComponent<Gun>();
+        
         text.text = gun.ammo + " / " + gun.maxAmmo;
     }
 }

@@ -17,6 +17,11 @@ public class ReloadBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(holster.transform.childCount == 0)
+        {
+            bar.enabled = false;
+            return;
+        }
         gun = holster.transform.GetChild(holster.selectedWeapon).GetComponent<Gun>();
         bar.fillAmount = gun.reloadProgress;
         bar.enabled = bar.fillAmount != 1f;
