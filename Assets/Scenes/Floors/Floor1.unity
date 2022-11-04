@@ -9748,7 +9748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &359218814
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9875,6 +9875,8 @@ MonoBehaviour:
   lowpass: 3500
   frequencyGain: 0
   transitionTime: 2
+  volumeTime: 0
+  songs: []
 --- !u!43 &359463536
 Mesh:
   m_ObjectHideFlags: 0
