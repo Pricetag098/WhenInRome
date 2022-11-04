@@ -40,10 +40,12 @@ public class Floor : MonoBehaviour
 
     void OnEnterCombat()
     {
-        musicPlayer.muffler.UnMuffle();
+        if(musicPlayer != null)
+            musicPlayer.muffler.UnMuffle();
     }
     void OnExitCombat()
     {
-        musicPlayer.muffler.Muffle();
+        if (musicPlayer != null)
+            musicPlayer.muffler.Muffle();
     }
 }
