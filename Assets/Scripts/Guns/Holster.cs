@@ -6,6 +6,7 @@ public class Holster : MonoBehaviour
 {
     public PlayerAim playerAim;
     public int selectedWeapon;
+    [HideInInspector]
     public float VertOffset;
     int last = -1;
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class Holster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        VertOffset = playerAim.offset;
         //change the selected weapon
         if(Input.mouseScrollDelta.y > 0)
         {
