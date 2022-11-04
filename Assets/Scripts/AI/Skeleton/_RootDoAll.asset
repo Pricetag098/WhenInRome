@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 922d51a9f8ce53746a303194ea263ebe, type: 3}
-  m_Name: _RootDistToPlayer
+  m_Script: {fileID: 11500000, guid: 377ef770e990c3c4ca6d6b896687291f, type: 3}
+  m_Name: _RootDoAll
   m_EditorClassIdentifier: 
-  dist: 50
-  greater: {fileID: 11400000, guid: 4d780a688e75a534d97642b17a59f061, type: 2}
-  less: {fileID: 11400000, guid: 3c665947537118e4aa838b88bb2714c3, type: 2}
+  nodes:
+  - {fileID: 11400000, guid: 1925815393cacb340bd1f7930302ba4b, type: 2}
+  - {fileID: 11400000, guid: 33f84256d36c040438afb28227d37ea5, type: 2}

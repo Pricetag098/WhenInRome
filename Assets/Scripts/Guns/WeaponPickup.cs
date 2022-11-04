@@ -4,28 +4,38 @@ using UnityEngine;
 
 public class WeaponPickup : MonoBehaviour
 {
+
+    SoundPlayer sound;
     public GameObject weapon;
-    public GameObject player;
-    public Transform holster;
+    
+    public Holster holster;
     float MaxPickUPDist = 5;
     bool isholding = false;
+    
+    private void Start()
+    {
+        sound = GetComponent<SoundPlayer>();
+    }
+
     [ContextMenu("Test")]
     public void SpawnGun()
     {
-        GameObject newWeapon = Instantiate(weapon, holster);
-        newWeapon.GetComponent<ObjectPooler>().owner = player;
+        GameObject newWeapon = Instantiate(weapon, holster.transform);
+        newWeapon.GetComponent<ObjectPooler>().owner = holster.playerAim.gameObject;
 
     }
-    public void PickUpGun()
+    public void OnTriggerStay(Collider coll)
     {
-
-    }
-    public void OnTriggerEnter(Collider coll)
-    {
-        if (coll.gameObject.tag == "Player")
+        if (Input.GetKeyDown(KeyCode.E))
         {
             SpawnGun();
-            Destroy(gameObject);
+            GetComponent<Collider>().enabled = false;
+            //GetComponent<MeshRenderer>().enabled = false;
+            transform.GetChild(0).gameObject.SetActive(false);
+            GetComponent<ObjectSpin>().enabled = false;
+            sound.Play();
+            holster.Equip();
+            enabled = false;
         }
 
     }

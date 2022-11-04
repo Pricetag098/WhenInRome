@@ -14,12 +14,14 @@ public class Execute : MonoBehaviour
     List<Health> healths = new List<Health>();
     bool running = false;
 
+    [SerializeField] SoundPlayer use, chain, hit;
+
     CombatMeter cm;
     // Start is called before the first frame update
     void Start()
     {
-        aim = GetComponent<PlayerAim>();
-        cm = GetComponent<CombatMeter>();
+        aim = GetComponentInParent<PlayerAim>();
+        cm = GetComponentInParent<CombatMeter>();
     }
 
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class Execute : MonoBehaviour
             
             healths.Clear();
             RaycastHit hit;
-            if(Physics.Raycast(transform.position, aim.GetAssistedDir(20), out hit, float.PositiveInfinity))
+            if(Physics.Raycast(transform.position + Vector3.up * aim.offset, aim.GetAssistedDir(20), out hit, float.PositiveInfinity))
 			{
                 if(hit.collider.gameObject != gameObject && hit.collider.gameObject.GetComponent<Health>())
 				{
@@ -47,17 +49,18 @@ public class Execute : MonoBehaviour
 	{
         running = true;
         particles.DespawnAllActive();
-        
-        //playSound
-        yield return new WaitForSecondsRealtime(soundTime);
-        volume.SetActive(true);
         Time.timeScale = 0;
+        volume.SetActive(true);
+        use.Play();
+        yield return new WaitForSecondsRealtime(soundTime);
+        
+        
         
         Collider[] newHits;
         newHits = Physics.OverlapSphere(healths[0].transform.position, detectRange, enemy);
-        
-        
-        while(newHits.Length > 1)
+
+        chain.Play();
+        while (newHits.Length > 1)
 		{
            
             List<Collider> cols = new List<Collider>();
@@ -74,13 +77,17 @@ public class Execute : MonoBehaviour
 				{
                     //if(!healths.Contains(c.gameObject.GetComponent<Health>()))
                     SpawnLine(newHits[i].transform.position, c.transform.position);
+                    
 				}
+
                 cols.AddRange(tempCols);
                 
             }
             newHits = cols.ToArray();
+            
             if (newHits.Length > 0)
             {
+                chain.Play();
                 yield return new WaitForSecondsRealtime(timebetweenhits);
             }
         }
@@ -98,7 +105,7 @@ public class Execute : MonoBehaviour
             g.GetComponent<ParticleSystem>().Play();
 		}
         lines.DespawnAllActive();
-
+        hit.Play();
 
 
         yield return new WaitForSecondsRealtime(timeAfterDmg);

@@ -6,6 +6,7 @@ public class PlayerAim : MonoBehaviour
 {
     [SerializeField] LayerMask floorLayer = 64;
     [SerializeField] float rotate;
+    public float offset = 0.75f;
     float debugAngle = 1;
 
     Vector3 hitPoint;
@@ -41,7 +42,7 @@ public class PlayerAim : MonoBehaviour
         }
         Vector3 playerPos = transform.position;
         playerPos.y = 0;
-        aimDir = (hitPoint - playerPos - Vector3.forward * (transform.position.y - y) * angleConstant).normalized;
+        aimDir = (hitPoint - playerPos - Vector3.forward * ((transform.position.y + offset) - y) * angleConstant).normalized;
 
         if (rotate > 0)
             transform.forward = Vector3.Slerp(transform.forward,aimDir,rotate * Time.deltaTime);
@@ -55,7 +56,7 @@ public class PlayerAim : MonoBehaviour
         playerPos.y = 0;
         float aimDist = Vector3.Distance(hitPoint, playerPos);
         DrawVector(aimDir * aimDist);
-        Gizmos.DrawLine(transform.position + aimDir * aimDist, transform.position + aimDir * aimDist + Vector3.down * transform.position.y);
+        Gizmos.DrawLine(transform.position + Vector3.up * offset + aimDir * aimDist, transform.position + Vector3.up * offset + aimDir * aimDist + Vector3.down * transform.position.y);
 
         Gizmos.color = Color.red;
         DrawVector(GetAssistedDir(debugAngle) * aimDist);
@@ -73,7 +74,7 @@ public class PlayerAim : MonoBehaviour
         {
             Vector3 dir = Quaternion.Euler(0, i * localAngle,0) * aimDir;
             RaycastHit hit;
-            if(Physics.Raycast(transform.position,dir,out hit,float.PositiveInfinity,targetableLayers))
+            if(Physics.Raycast(transform.position + Vector3.up * offset, dir,out hit,float.PositiveInfinity,targetableLayers))
             {
                 if(hit.collider.gameObject.GetComponent<Health>() != null)
                 {
@@ -114,6 +115,6 @@ public class PlayerAim : MonoBehaviour
     }
     void DrawVector(Vector3 vect)
     {
-        Gizmos.DrawLine(transform.position, transform.position + vect);
+        Gizmos.DrawLine(transform.position + Vector3.up * offset, transform.position + Vector3.up * offset + vect);
     }
 }
