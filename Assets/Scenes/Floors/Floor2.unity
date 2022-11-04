@@ -2859,6 +2859,7 @@ MonoBehaviour:
   - {fileID: 1609115610}
   - {fileID: 1600113540}
   complete: 0
+  started: 0
   enterance: {fileID: 275106042}
   exit: {fileID: 157465292}
 --- !u!1001 &90458159
@@ -14565,6 +14566,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8180628075883201251, guid: c44fe63e3d89be84bb2df803ecccb6b1, type: 3}
   m_PrefabInstance: {fileID: 1605800517}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &548628681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 548628683}
+  - component: {fileID: 548628682}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &548628682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548628681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7922048f01a414a95ec8e9bb5d580c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rooms:
+  - {fileID: 1629013207}
+  - {fileID: 1658256189}
+  - {fileID: 1203587478}
+  - {fileID: 83684959}
+  inCombat: 0
+--- !u!4 &548628683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548628681}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -114.86427, y: -75.73277, z: -3.1512184}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &548925229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24579,6 +24629,10 @@ PrefabInstance:
       propertyPath: fadeObj
       value: 
       objectReference: {fileID: 157490419}
+    - target: {fileID: 5937744080861241804, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: floor
+      value: 
+      objectReference: {fileID: 548628682}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
 --- !u!114 &924032868 stripped
@@ -32933,6 +32987,7 @@ MonoBehaviour:
   - {fileID: 614801402}
   - {fileID: 92230772}
   complete: 0
+  started: 0
   enterance: {fileID: 1208753499}
   exit: {fileID: 744041472}
 --- !u!1001 &1204289495
@@ -44635,6 +44690,7 @@ MonoBehaviour:
   - {fileID: 2024885020}
   - {fileID: 870473494}
   complete: 0
+  started: 0
   enterance: {fileID: 877627781}
   exit: {fileID: 1017073014}
 --- !u!4 &1631892042 stripped
@@ -46149,6 +46205,7 @@ MonoBehaviour:
   - {fileID: 244435057}
   - {fileID: 617615212}
   complete: 0
+  started: 0
   enterance: {fileID: 1331674696}
   exit: {fileID: 880382129}
 --- !u!4 &1658660837 stripped
