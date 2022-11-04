@@ -5,25 +5,37 @@ using UnityEngine.AI;
 public class Ai : MonoBehaviour
 {
     public GameObject player;
+    [HideInInspector]
     public NavMeshAgent agent;
-
-    public TreeNode firstNode;
+    [HideInInspector]
+    public Rigidbody rb;
+    public TreeNode root;
+    [HideInInspector]
+    public Health health;
     // Start is called before the first frame update
     void Start()
     {
-        if(firstNode != null)
-        {
-            firstNode = Instantiate(firstNode);
-            firstNode.Innit(this);
-        }
+        health = GetComponent<Health>();
+        agent = GetComponent<NavMeshAgent>();
+        rb = GetComponent<Rigidbody>();
+        Reset();
         
+    }
+    public void Reset()
+    {
+        if (root != null)
+        {
+            root = Instantiate(root);
+            root.Innit(this);
+            health.health = health.maxHealth;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        firstNode.Run();
-        firstNode.Tick();
+        root.Run();
+        root.Tick();
     }
 
 }
