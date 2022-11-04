@@ -6,9 +6,14 @@ using TMPro;
 
 public class AmmoDisplay : MonoBehaviour
 {
-    public Text text;
+    TextMeshProUGUI text;
     Gun gun;
     public Holster holster;
+
+    private void Start()
+    {
+        text = GetComponent<TextMeshProUGUI>();
+    }
 
     // Update is called once per frame
     void Update()

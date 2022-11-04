@@ -8,8 +8,12 @@ public class ReloadBar : MonoBehaviour
 
     Gun gun;
     public Holster holster;
-    public Image bar;
+    Image bar;
 
+    private void Start()
+    {
+        bar = GetComponent<Image>();
+    }
     // Update is called once per frame
     void Update()
     {
