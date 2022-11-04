@@ -15,34 +15,14 @@ public class MuffleMusic : MonoBehaviour
     public float transitionTime;
     public float volumeTime;
     private bool loud;
-    public AudioClip[] songs;
+    //public AudioClip[] songs;
     // Start is called before the first frame update
     void Start()
     {
         output = GetComponent<AudioSource>().outputAudioMixerGroup.audioMixer;
         music = GetComponent<AudioSource>();
         StartCoroutine(VolumeChange());
-        DontDestroyOnLoad(gameObject);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            StartCoroutine(Muffle());
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            StartCoroutine(VolumeChange());
-        }
-
         
-    }
-
-    public void changeSong(int floor)
-    {
-        music.clip = songs[floor];
     }
 
     public IEnumerator Muffle()
