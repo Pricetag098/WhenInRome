@@ -9876,7 +9876,6 @@ MonoBehaviour:
   frequencyGain: 0
   transitionTime: 2
   volumeTime: 0
-  songs: []
 --- !u!43 &359463536
 Mesh:
   m_ObjectHideFlags: 0
@@ -15304,6 +15303,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1854532579, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: holster
+      value: 
+      objectReference: {fileID: 1774496416}
     - target: {fileID: 354247763071470067, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: cm
       value: 
@@ -15404,6 +15407,10 @@ PrefabInstance:
       propertyPath: dash
       value: 
       objectReference: {fileID: 77994260}
+    - target: {fileID: 6217790812377984174, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: holster
+      value: 
+      objectReference: {fileID: 1774496416}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3712255652d91c646b4b077742c45565, type: 3}
 --- !u!1001 &528966346
