@@ -31,10 +31,12 @@ public class Floor : MonoBehaviour
         if(inCombat && !wasInCombat)
         {
             OnEnterCombat();
+            wasInCombat = true;
         }
         if(!inCombat && wasInCombat)
         {
             OnExitCombat();
+            wasInCombat = false;
         }
     }
 
