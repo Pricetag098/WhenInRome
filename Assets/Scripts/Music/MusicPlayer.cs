@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MusicPlayer : MonoBehaviour
 {
-    MuffleMusic muffler;
+    CombatMeter inCombat;
+    [HideInInspector]
+    public MuffleMusic muffler;
     AudioSource musicSource;
     public AudioClip[] songs;
     int lastLvl = -1;
+    int currentScene = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +28,17 @@ public class MusicPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(SceneManager.GetActiveScene().buildIndex != lastLvl)
+        currentScene = SceneManager.GetActiveScene().buildIndex;
+        if (currentScene != lastLvl)
         {
-
+            if(songs.Length > currentScene)
+            {
+                musicSource.clip = songs[currentScene];
+                if(musicSource.clip != null)
+                musicSource.Play();
+                lastLvl = currentScene;
+                
+            }
         }
         
     }
