@@ -36,24 +36,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: damage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: spread
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: maxAmmo
-      value: 6
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: fireRate
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: bulletVel
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: equipTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: bulletsFired
-      value: 5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: aimAssistAngle
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: reloadDuration
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755822, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: m_RootOrder
