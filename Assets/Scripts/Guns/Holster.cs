@@ -50,4 +50,9 @@ public class Holster : MonoBehaviour
         last = selectedWeapon;
         
     }
+    public void Equip()
+    {
+        last = -1;
+        selectedWeapon = transform.childCount-1;
+    }
 }
