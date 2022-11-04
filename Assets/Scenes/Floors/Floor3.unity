@@ -18928,6 +18928,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1898978272919617488, guid: e663b5dd514e93d459ab8ed85510b993, type: 3}
   m_PrefabInstance: {fileID: 2135910489}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &498269109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498269111}
+  - component: {fileID: 498269110}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &498269110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498269109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7922048f01a414a95ec8e9bb5d580c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rooms:
+  - {fileID: 1698466452}
+  - {fileID: 751322213}
+  - {fileID: 517267492}
+  - {fileID: 810339726}
+  inCombat: 0
+--- !u!4 &498269111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498269109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -114.86427, y: -75.73277, z: -3.1512184}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &498864336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19750,6 +19799,7 @@ MonoBehaviour:
   - {fileID: 263741745}
   - {fileID: 775591073}
   complete: 0
+  started: 0
   enterance: {fileID: 53118690}
   exit: {fileID: 915446365}
 --- !u!4 &517267493
@@ -30717,6 +30767,7 @@ MonoBehaviour:
   - {fileID: 982837842}
   - {fileID: 780215091}
   complete: 0
+  started: 0
   enterance: {fileID: 1708995985}
   exit: {fileID: 504717874}
 --- !u!4 &751322214
@@ -32420,6 +32471,7 @@ MonoBehaviour:
   - {fileID: 95722967}
   - {fileID: 1291352256}
   complete: 0
+  started: 0
   enterance: {fileID: 939926053}
   exit: {fileID: 1696082677}
 --- !u!4 &810339727
@@ -52660,6 +52712,10 @@ PrefabInstance:
       propertyPath: damage
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5937744080861241804, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: floor
+      value: 
+      objectReference: {fileID: 498269110}
     - target: {fileID: 7655701112638488264, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
       propertyPath: damage
       value: 4
@@ -66769,6 +66825,7 @@ MonoBehaviour:
   - {fileID: 576200023}
   - {fileID: 123663891}
   complete: 0
+  started: 0
   enterance: {fileID: 1365801375}
   exit: {fileID: 1195928946}
 --- !u!4 &1698466453
