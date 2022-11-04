@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MusicPlayer : MonoBehaviour
 {
-    CombatMeter inCombat;
+    
     [HideInInspector]
     public MuffleMusic muffler;
     AudioSource musicSource;
