@@ -43,7 +43,7 @@ public class Room : MonoBehaviour
             bool allDead = true;
             foreach (GameObject enemy in enemys)
             {
-                if (enemy.activeSelf)
+                if (enemy.GetComponent<MeshRenderer>().enabled)
                 {
                     allDead = false;
                 }
