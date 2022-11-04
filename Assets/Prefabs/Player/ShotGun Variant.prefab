@@ -18,15 +18,15 @@ PrefabInstance:
     - target: {fileID: 5439782351993991432, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: clips.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 85fcad503ec5bea44aabaccb4545a623, type: 3}
+      objectReference: {fileID: 8300000, guid: d56e12f3a88b3c94c8f7512c9f813e78, type: 3}
     - target: {fileID: 5439782351993991432, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: clips.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: eea2b8c279bf38645a2500812a47f688, type: 3}
+      objectReference: {fileID: 8300000, guid: 0344feedd50578c4f9e477d6aacd5945, type: 3}
     - target: {fileID: 5439782351993991432, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: clips.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: aadfd8775704bf848971312fae53d984, type: 3}
+      objectReference: {fileID: 8300000, guid: c3ee0b7fa7e9721439f1b5f6c5f96a14, type: 3}
     - target: {fileID: 7655701113825755792, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: owner
       value: 
@@ -36,24 +36,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: damage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: spread
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: maxAmmo
-      value: 6
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: fireRate
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: bulletVel
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: equipTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: bulletsFired
-      value: 5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: aimAssistAngle
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: reloadDuration
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755822, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: m_RootOrder
