@@ -37,6 +37,7 @@ public class MusicPlayer : MonoBehaviour
                 if(musicSource.clip != null)
                 musicSource.Play();
                 lastLvl = currentScene;
+                muffler.VolUp();
                 
             }
         }

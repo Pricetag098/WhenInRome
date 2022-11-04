@@ -67,6 +67,7 @@ public class LevelLoader : MonoBehaviour
         if (SceneManager.sceneCountInBuildSettings > level + 1)
         {
             SceneManager.LoadScene(level + 1);
+            FindObjectOfType<MuffleMusic>().VolDown();
         }
         else
         {
