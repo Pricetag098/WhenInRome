@@ -1752,6 +1752,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8847215280623970583, guid: dfe51aa76cf2e8d449ac015a3b47f1c7, type: 3}
+      propertyPath: clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f0522bda81cfc9342a14f9f2d8cad5d4, type: 3}
+    - target: {fileID: 8847215280623970583, guid: dfe51aa76cf2e8d449ac015a3b47f1c7, type: 3}
+      propertyPath: clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1e27b8ca9d0e7474aac41cf30821b837, type: 3}
+    - target: {fileID: 8847215280623970583, guid: dfe51aa76cf2e8d449ac015a3b47f1c7, type: 3}
+      propertyPath: clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: fa3909921c46016489d3d071e37b45b1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfe51aa76cf2e8d449ac015a3b47f1c7, type: 3}
 --- !u!4 &7655701113255094412 stripped
@@ -1766,6 +1778,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1400036668003026129}
     m_Modifications:
+    - target: {fileID: 596040003976340620, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
+      propertyPath: clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: d56e12f3a88b3c94c8f7512c9f813e78, type: 3}
+    - target: {fileID: 596040003976340620, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
+      propertyPath: clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0344feedd50578c4f9e477d6aacd5945, type: 3}
+    - target: {fileID: 596040003976340620, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
+      propertyPath: clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: c3ee0b7fa7e9721439f1b5f6c5f96a14, type: 3}
     - target: {fileID: 2956315850933622548, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
       propertyPath: owner
       value: 
@@ -1773,6 +1797,10 @@ PrefabInstance:
     - target: {fileID: 2956315850933622549, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
       propertyPath: damage
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956315850933622549, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
+      propertyPath: spread
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2956315850933622549, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
       propertyPath: maxAmmo
@@ -1842,6 +1870,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShotGun
       objectReference: {fileID: 0}
+    - target: {fileID: 3798905140064249028, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 1668777612277560830, guid: 1302a876e7971634d9b1124a73282664, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
 --- !u!4 &7655701112638488311 stripped
@@ -1856,6 +1888,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1400036668003026129}
     m_Modifications:
+    - target: {fileID: 4764303666227791005, guid: ef08787392688c24e966e4de798be4bc, type: 3}
+      propertyPath: clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: cb7d71142df3f7446b447526d5343404, type: 3}
+    - target: {fileID: 4764303666227791005, guid: ef08787392688c24e966e4de798be4bc, type: 3}
+      propertyPath: clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: e24d2930b78cdf247944947b9fd8693b, type: 3}
+    - target: {fileID: 4764303666227791005, guid: ef08787392688c24e966e4de798be4bc, type: 3}
+      propertyPath: clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7dcf3755457c98449b5e8d24d1962956, type: 3}
     - target: {fileID: 7159960700880074500, guid: ef08787392688c24e966e4de798be4bc, type: 3}
       propertyPath: damage
       value: 3
