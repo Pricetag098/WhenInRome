@@ -18,15 +18,15 @@ PrefabInstance:
     - target: {fileID: 5439782351993991432, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: clips.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 6be45db08f3202e42a15b1213dfbc5de, type: 3}
+      objectReference: {fileID: 8300000, guid: cb7d71142df3f7446b447526d5343404, type: 3}
     - target: {fileID: 5439782351993991432, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: clips.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: aa5c8fce08f43564d985421543e86096, type: 3}
+      objectReference: {fileID: 8300000, guid: e24d2930b78cdf247944947b9fd8693b, type: 3}
     - target: {fileID: 5439782351993991432, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: clips.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: e36980a26459e7d4ea2fa60a42e44303, type: 3}
+      objectReference: {fileID: 8300000, guid: 7dcf3755457c98449b5e8d24d1962956, type: 3}
     - target: {fileID: 7655701113825755792, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: owner
       value: 
@@ -34,6 +34,22 @@ PrefabInstance:
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: damage
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: maxAmmo
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: bulletVel
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: equipTime
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: reloadDuration
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755822, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: m_RootOrder
