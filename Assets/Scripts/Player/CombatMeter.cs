@@ -37,16 +37,20 @@ public class CombatMeter : MonoBehaviour
                 meter = Mathf.Clamp(meter - timeSinceLastHit * timeSinceLastHit  * decayRate * Time.deltaTime, 0, maxMeter);
             }
         }
-        if(inCombat && !wasInCombat)
+        if(music != null)
         {
-            wasInCombat = true;
-            music.muffler.UnMuffle();
+            if (inCombat && !wasInCombat)
+            {
+                wasInCombat = true;
+                music.muffler.UnMuffle();
+            }
+            if (!inCombat && wasInCombat)
+            {
+                wasInCombat = false;
+                music.muffler.Muffle();
+            }
         }
-        if(!inCombat && wasInCombat)
-        {
-            wasInCombat= false;
-            music.muffler.Muffle();
-        }
+        
 
         
     }

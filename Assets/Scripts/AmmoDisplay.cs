@@ -2,23 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
-public class ReloadBar : MonoBehaviour
+public class AmmoDisplay : MonoBehaviour
 {
-
+    TextMeshProUGUI text;
     Gun gun;
     public Holster holster;
-    Image bar;
 
     private void Start()
     {
-        bar = GetComponent<Image>();
+        text = GetComponent<TextMeshProUGUI>();
     }
+
     // Update is called once per frame
     void Update()
     {
         gun = holster.transform.GetChild(holster.selectedWeapon).GetComponent<Gun>();
-        bar.fillAmount = gun.reloadProgress;
-        bar.enabled = bar.fillAmount != 1f;
+        text.text = gun.ammo + " / " + gun.maxAmmo;
     }
 }
