@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &199445869
 RectTransform:
   m_ObjectHideFlags: 0
@@ -611,6 +611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed55792a2e4972940844f2150ab9d42f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  muffledVol: 1
+  unMuffledVol: 0.3
   highpass: 3500
   lowpass: 3500
   frequencyGain: 0.37
@@ -816,7 +818,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &592430301
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1369,7 +1371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1152537659
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1517,7 +1519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1248853949
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1957,7 +1959,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1803719540
 RectTransform:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MusicPlayer : MonoBehaviour
 {
-    CombatMeter inCombat;
+    
     [HideInInspector]
     public MuffleMusic muffler;
     AudioSource musicSource;
@@ -37,6 +37,7 @@ public class MusicPlayer : MonoBehaviour
                 if(musicSource.clip != null)
                 musicSource.Play();
                 lastLvl = currentScene;
+                muffler.VolUp();
                 
             }
         }

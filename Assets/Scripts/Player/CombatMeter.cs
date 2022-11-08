@@ -9,24 +9,24 @@ public class CombatMeter : MonoBehaviour
     [SerializeField] float decayRate = 1, decayDelay = 1;
     [SerializeField] float chargePerHit = 10;
     public bool inCombat;
-    bool wasInCombat = false;
+    
     [SerializeField] float enemyDetectRad = 100;
     [SerializeField] LayerMask enemyLayer = 8;
     OnHit oh;
     float timeSinceLastHit;
-    MusicPlayer music;
+    public Floor floor;
     // Start is called before the first frame update
     void Start()
     {
         oh = GetComponent<OnHit>();
-        music = FindObjectOfType<MusicPlayer>();
+        //music = FindObjectOfType<MusicPlayer>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        inCombat = Physics.CheckSphere(transform.position, enemyDetectRad, enemyLayer);
+        inCombat = floor.inCombat; //Physics.CheckSphere(transform.position, enemyDetectRad, enemyLayer);
 
         if (inCombat)
         {
@@ -37,6 +37,7 @@ public class CombatMeter : MonoBehaviour
                 meter = Mathf.Clamp(meter - timeSinceLastHit * timeSinceLastHit  * decayRate * Time.deltaTime, 0, maxMeter);
             }
         }
+        /*
         if(music != null)
         {
             if (inCombat && !wasInCombat)
@@ -50,7 +51,7 @@ public class CombatMeter : MonoBehaviour
                 music.muffler.Muffle();
             }
         }
-        
+        */
 
         
     }
