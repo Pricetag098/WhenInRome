@@ -6,7 +6,7 @@ public class Room : MonoBehaviour
 {
     public List<GameObject> enemys = new List<GameObject>();
     public bool complete = false;
-    bool started = false;
+    public bool started = false;
     public Door enterance,exit;
     // Start is called before the first frame update
     void Start()
@@ -43,7 +43,7 @@ public class Room : MonoBehaviour
             bool allDead = true;
             foreach (GameObject enemy in enemys)
             {
-                if (enemy.activeSelf)
+                if (enemy.GetComponent<MeshRenderer>().enabled)
                 {
                     allDead = false;
                 }
