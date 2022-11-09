@@ -1267,7 +1267,7 @@ MonoBehaviour:
   maxMeter: 100
   decayRate: 1
   decayDelay: 1
-  chargePerHit: 10
+  chargePerHit: 3.5
   inCombat: 0
   enemyDetectRad: 25
   enemyLayer:
@@ -1358,7 +1358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeObj: {fileID: 0}
   transitionTime: 1
-  level: 1
+  level: 2
 --- !u!136 &1400036668115291770
 CapsuleCollider:
   m_ObjectHideFlags: 0
