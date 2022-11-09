@@ -39,7 +39,7 @@ public class Bullet : MonoBehaviour
             HitData hitData = new HitData();
             hitData.damage = 0;
             ContactPoint contactPoint = collision.GetContact(0);
-
+            hitData.hitObject = collision.gameObject;
             hitData.position = contactPoint.point;
             hitData.dir = contactPoint.normal;
             Health health = collision.gameObject.GetComponent<Health>();

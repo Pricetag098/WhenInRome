@@ -8,7 +8,7 @@ public class AiDeath : MonoBehaviour
     NavMeshAgent agent;
     Health health;
     MeshRenderer mr;
-    Collider collider;
+    Collider col;
     public SoundPlayer deathSound;
 
     // Start is called before the first frame update
@@ -18,14 +18,14 @@ public class AiDeath : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         health = GetComponent<Health>();
         mr = GetComponent<MeshRenderer>();
-        collider = GetComponent<Collider>();
+        col = GetComponent<Collider>();
     }
     public void Die()
     {
         ai.enabled = false;
         health.enabled = false;
         mr.enabled = false;
-        collider.enabled = false;
+        col.enabled = false;
         deathSound.Play();
     }
 
