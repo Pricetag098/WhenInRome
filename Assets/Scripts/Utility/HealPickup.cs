@@ -6,16 +6,17 @@ public class HealPickup : MonoBehaviour
 {
     SoundPlayer sound;
     public float healAmount;
-
+    [SerializeField] LayerMask playerLayer;
     private void Start()
     {
         sound = GetComponent<SoundPlayer>();
     }
     public void OnTriggerEnter(Collider coll)
     {
-        if (coll.gameObject.tag == "Player")
-        {
-            Health health = coll.gameObject.GetComponent<Health>();
+        //if (coll.gameObject.tag == "Player")
+        //{
+            
+            Health health = coll.gameObject.GetComponentInParent<Health>();
             if(health.health == health.maxHealth)
             {
                 return;
@@ -28,7 +29,7 @@ public class HealPickup : MonoBehaviour
             sound.Play();
             enabled = false;
             Destroy(gameObject,2);
-        }
+        //}
 
     }
 }
