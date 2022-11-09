@@ -7,11 +7,13 @@ public class OnHit : MonoBehaviour
 {
     //public UnityEvent onHit;
     CombatMeter meter; 
+    SpawnParticlesOnHit spawnParticlesOnHit;
     public float timeSinceLastHit = 0;
     // Start is called before the first frame update
     void Start()
     {
         meter = GetComponent<CombatMeter>();
+        spawnParticlesOnHit = GetComponent<SpawnParticlesOnHit>();
     }
     
     // Update is called once per frame
@@ -24,5 +26,7 @@ public class OnHit : MonoBehaviour
         timeSinceLastHit = 0;
         if (meter != null)
             meter.Charge(data);
+        if(spawnParticlesOnHit != null)
+            spawnParticlesOnHit.Hit(data);
     }
 }

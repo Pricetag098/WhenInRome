@@ -173,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playOnAwake: 0
   clips:
-  - {fileID: 8300000, guid: 40ea23fd109876f4aa371c8177206100, type: 3}
+  - {fileID: 8300000, guid: 2c68493b4370705409b7a8ab3173f2bc, type: 3}
   pitchRange: 0
   basePitch: 1
 --- !u!1 &887137182
@@ -221,7 +221,7 @@ AudioSource:
   m_GameObject: {fileID: 887137182}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -9052829776348844273, guid: 1302a876e7971634d9b1124a73282664, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.2
@@ -607,7 +607,7 @@ AudioSource:
   m_GameObject: {fileID: 1412141490}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 5689402459319525083, guid: 1302a876e7971634d9b1124a73282664, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1039,7 +1039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  objToPool: {fileID: 3677907858275256694, guid: 678d2da9a83c39a4b94472486d3f6255, type: 3}
+  objToPool: {fileID: 7429829595890173289, guid: 1109199fe987dd745b4beb6ad3cf7879, type: 3}
   poolSize: 20
 --- !u!1 &1132447264506284084
 GameObject:
@@ -1070,6 +1070,7 @@ Transform:
   m_Children:
   - {fileID: 1132447263158886196}
   - {fileID: 1132447264160744010}
+  - {fileID: 9056647772183617877}
   m_Father: {fileID: 1400036668115291765}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1138,6 +1139,7 @@ GameObject:
   - component: {fileID: 4251982014075360451}
   - component: {fileID: 1400036668115291770}
   - component: {fileID: 1400036668115291774}
+  - component: {fileID: 4148925933547006761}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -1235,21 +1237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73563f1713fd274fad5310ad5bd4aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5937744080861241804}
-        m_TargetAssemblyTypeName: CombatMeter, Assembly-CSharp
-        m_MethodName: Charge
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   timeSinceLastHit: 0
 --- !u!114 &5937744080861241804
 MonoBehaviour:
@@ -1267,9 +1254,8 @@ MonoBehaviour:
   maxMeter: 100
   decayRate: 1
   decayDelay: 1
-  chargePerHit: 3.5
+  chargePerDamage: 10
   inCombat: 0
-  enemyDetectRad: 25
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -1358,7 +1344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeObj: {fileID: 0}
   transitionTime: 1
-  level: 2
+  level: 1
 --- !u!136 &1400036668115291770
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1389,6 +1375,19 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 116
   m_CollisionDetection: 1
+--- !u!114 &4148925933547006761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400036668115291764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d41ef2b578b25954fb2f30df8d43dba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitWall: {fileID: 1384711176938624223}
 --- !u!1 &6156829336171405706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,7 +1429,7 @@ AudioSource:
   m_GameObject: {fileID: 6156829336171405706}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -945896886581331661, guid: 1302a876e7971634d9b1124a73282664, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1531,9 +1530,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playOnAwake: 0
   clips:
-  - {fileID: 8300000, guid: c560d317d02574e41926618c901186ef, type: 3}
+  - {fileID: 8300000, guid: e6fd965775cf7ed45b5e08acdd7f5428, type: 3}
   pitchRange: 0.5
   basePitch: 1
+--- !u!1 &6539287911006432950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9056647772183617877}
+  m_Layer: 3
+  m_Name: HitParticles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9056647772183617877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6539287911006432950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 9171752463051757104}
+  m_Father: {fileID: 1132447264506284085}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7900927388381094988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,11 +1611,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectRange: 7
-  damage: 70
+  damage: 100
   enemy:
     serializedVersion: 2
     m_Bits: 128
-  soundTime: 0.6
+  soundTime: 1
   timebetweenhits: 0.3
   timeAfterDmg: 1
   volume: {fileID: 1132447263103078185}
@@ -1594,6 +1624,52 @@ MonoBehaviour:
   use: {fileID: 8558148591205726842}
   chain: {fileID: 2554728859753793058}
   hit: {fileID: 6014261207678226350}
+--- !u!1 &9182989062113245283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9171752463051757104}
+  - component: {fileID: 1384711176938624223}
+  m_Layer: 3
+  m_Name: Walls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9171752463051757104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9182989062113245283}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9056647772183617877}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1384711176938624223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9182989062113245283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671431ba5f0d225428100b0cbdd49561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  objToPool: {fileID: 237098348762987699, guid: 72b9ad879ea070747acb03009815160c, type: 3}
+  poolSize: 10
 --- !u!1001 &1010754262
 PrefabInstance:
   m_ObjectHideFlags: 0
