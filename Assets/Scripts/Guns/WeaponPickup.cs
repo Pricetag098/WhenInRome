@@ -10,8 +10,8 @@ public class WeaponPickup : MonoBehaviour
     public GameObject weaponHint;
     
     public Holster holster;
-    float MaxPickUPDist = 5;
-    bool isholding = false;
+    //float MaxPickUPDist = 5;
+    //bool isholding = false;
     
     private void Start()
     {
