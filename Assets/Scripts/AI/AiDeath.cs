@@ -23,6 +23,7 @@ public class AiDeath : MonoBehaviour
     public void Die()
     {
         ai.enabled = false;
+        agent.enabled = false;
         health.enabled = false;
         mr.enabled = false;
         col.enabled = false;
