@@ -39976,6 +39976,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GunPickupDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 7160605136715452966, guid: cb83e8a6b14a61a44b4b50cb0f778f2f, type: 3}
+      propertyPath: startOpen
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7160605136715452967, guid: cb83e8a6b14a61a44b4b50cb0f778f2f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -53565,6 +53569,10 @@ PrefabInstance:
       propertyPath: holster
       value: 
       objectReference: {fileID: 1774496416}
+    - target: {fileID: 2028665617799138323, guid: f310291f7e228af4e933508066f64f7f, type: 3}
+      propertyPath: weaponHint
+      value: 
+      objectReference: {fileID: 2031415561}
     - target: {fileID: 2028665617799138543, guid: f310291f7e228af4e933508066f64f7f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -73477,6 +73485,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b74f146c894dede488e40f6edd511b64, type: 3}
+--- !u!1 &2031415561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 378601716498535984, guid: f310291f7e228af4e933508066f64f7f, type: 3}
+  m_PrefabInstance: {fileID: 1460750782}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2034526643
 PrefabInstance:
   m_ObjectHideFlags: 0
