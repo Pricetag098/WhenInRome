@@ -15,7 +15,6 @@ public class WeaponPickup : MonoBehaviour
     private void Start()
     {
         sound = GetComponent<SoundPlayer>();
-        door.Close();
 
     }
 
