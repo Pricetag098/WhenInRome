@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7549654432452448152}
   - component: {fileID: 1575970627308836230}
   - component: {fileID: 5739827238116529365}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 7744363418891942340}
   - component: {fileID: 1796818241}
   - component: {fileID: 1796818240}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Health Pickup
   m_TagString: Healing
   m_Icon: {fileID: 0}
@@ -275,6 +275,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 10
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &7744363418891942340
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -52,6 +52,7 @@ public class Execute : MonoBehaviour
         Time.timeScale = 0;
         volume.SetActive(true);
         use.Play();
+        SpawnLine(transform.position, healths[0].transform.position);
         yield return new WaitForSecondsRealtime(soundTime);
         
         
