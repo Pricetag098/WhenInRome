@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
+    
     Collider col;
     [SerializeField] SoundPlayer open,close;
     [SerializeField] Animator animator;
