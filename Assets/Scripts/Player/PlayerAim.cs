@@ -9,7 +9,7 @@ public class PlayerAim : MonoBehaviour
     public float offset = 0.75f;
     float debugAngle = 1;
 
-    Vector3 hitPoint;
+    public Vector3 hitPoint;
     [SerializeField] LayerMask targetableLayers;
     [SerializeField] int assistRays = 20;
     /// <summary>
@@ -50,7 +50,7 @@ public class PlayerAim : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        
+        Gizmos.DrawWireSphere(hitPoint, 1);
 
         Vector3 playerPos = transform.position;
         playerPos.y = 0;
