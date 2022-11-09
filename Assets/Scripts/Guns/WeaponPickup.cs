@@ -7,6 +7,7 @@ public class WeaponPickup : MonoBehaviour
     public Door door;
     SoundPlayer sound;
     public GameObject weapon;
+    public GameObject weaponHint;
     
     public Holster holster;
     float MaxPickUPDist = 5;
@@ -15,7 +16,7 @@ public class WeaponPickup : MonoBehaviour
     private void Start()
     {
         sound = GetComponent<SoundPlayer>();
-
+        weaponHint.SetActive(false);
     }
 
     [ContextMenu("Test")]
@@ -27,6 +28,7 @@ public class WeaponPickup : MonoBehaviour
     }
     public void OnTriggerStay(Collider coll)
     {
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
             SpawnGun();
@@ -37,7 +39,24 @@ public class WeaponPickup : MonoBehaviour
             sound.Play();
             holster.Equip();
             enabled = false;
+            weaponHint.SetActive(false);
         }
-        
+
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        EnbleHint();
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        DisableHint();
+    }
+    public void EnbleHint()
+    {
+        weaponHint.SetActive(true);
+    }
+    public void DisableHint()
+    {
+        weaponHint.SetActive(false);
     }
 }
