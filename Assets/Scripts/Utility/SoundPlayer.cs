@@ -13,8 +13,13 @@ public class SoundPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        source = GetComponent<AudioSource>();
         
+        
+        
+    }
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
         if (playOnAwake)
         {
             Play();

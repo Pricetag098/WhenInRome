@@ -818,7 +818,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &592430301
 RectTransform:
   m_ObjectHideFlags: 0
@@ -848,12 +848,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 592430300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd20288cab04fde4dbe86fd57c4f623a, type: 3}
+  m_Script: {fileID: 11500000, guid: afe52d611607ce94cafb18ae9bf4cd30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeObj: {fileID: 1302257768}
-  transitionTime: 2
-  level: 0
+  Level: 1
 --- !u!114 &592430303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -899,7 +897,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 592430302}
-        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_TargetAssemblyTypeName: LoadSpecificLevel, Assembly-CSharp
         m_MethodName: Load
         m_Mode: 1
         m_Arguments:
@@ -1371,7 +1369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1152537659
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1401,12 +1399,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1152537658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd20288cab04fde4dbe86fd57c4f623a, type: 3}
+  m_Script: {fileID: 11500000, guid: afe52d611607ce94cafb18ae9bf4cd30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeObj: {fileID: 1302257768}
-  transitionTime: 2
-  level: 0
+  Level: 2
 --- !u!114 &1152537661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1452,7 +1448,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1152537660}
-        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_TargetAssemblyTypeName: LoadSpecificLevel, Assembly-CSharp
         m_MethodName: Load
         m_Mode: 1
         m_Arguments:
@@ -1513,13 +1509,14 @@ GameObject:
   - component: {fileID: 1248853952}
   - component: {fileID: 1248853951}
   - component: {fileID: 1248853950}
+  - component: {fileID: 1248853953}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1248853949
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1583,7 +1580,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1248853951}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1248853953}
+        m_TargetAssemblyTypeName: ExitButton, Assembly-CSharp
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1248853951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,6 +1631,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248853948}
   m_CullTransparentMesh: 1
+--- !u!114 &1248853953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248853948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6e98deebe753448af1b90c55ab93d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1302257767 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6701155285679287674, guid: ad41537b8b221c847be1d726a0249878, type: 3}
@@ -1959,7 +1980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1803719540
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1989,12 +2010,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1803719539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd20288cab04fde4dbe86fd57c4f623a, type: 3}
+  m_Script: {fileID: 11500000, guid: afe52d611607ce94cafb18ae9bf4cd30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeObj: {fileID: 1302257768}
-  transitionTime: 2
-  level: 0
+  Level: 3
 --- !u!114 &1803719542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2040,7 +2059,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1803719541}
-        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_TargetAssemblyTypeName: LoadSpecificLevel, Assembly-CSharp
         m_MethodName: Load
         m_Mode: 1
         m_Arguments:

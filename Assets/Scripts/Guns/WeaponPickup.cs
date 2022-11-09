@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponPickup : MonoBehaviour
 {
-    Door door;
+    public Door door;
     SoundPlayer sound;
     public GameObject weapon;
     
@@ -16,6 +16,7 @@ public class WeaponPickup : MonoBehaviour
     {
         sound = GetComponent<SoundPlayer>();
         door.Close();
+
     }
 
     [ContextMenu("Test")]
@@ -23,8 +24,7 @@ public class WeaponPickup : MonoBehaviour
     {
         GameObject newWeapon = Instantiate(weapon, holster.transform);
         newWeapon.GetComponent<ObjectPooler>().owner = holster.playerAim.gameObject;
-        
-        
+        door.Open();
     }
     public void OnTriggerStay(Collider coll)
     {
@@ -38,8 +38,7 @@ public class WeaponPickup : MonoBehaviour
             sound.Play();
             holster.Equip();
             enabled = false;
-            door.Open();
         }
-
+        
     }
 }
