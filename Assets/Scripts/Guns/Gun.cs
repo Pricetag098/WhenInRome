@@ -72,19 +72,19 @@ public class Gun : MonoBehaviour
 
         if (fire && fireTimer < 0 && !isReloading)
         {
-            if(ammo <= 0)
+            
+            
+            
+            Fire();
+            ammo--;
+            fireTimer = fireRate;
+            if (ammo <= 0)
             {
                 reloadTime = 0;
                 isReloading = true;
                 reload.Play();
             }
-            else
-            {
-                Fire();
-                ammo--;
-                fireTimer = fireRate;
-            }
-            
+
         }
         fireTimer -= Time.deltaTime;
 
