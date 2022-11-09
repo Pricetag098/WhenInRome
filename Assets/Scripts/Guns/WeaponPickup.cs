@@ -9,12 +9,12 @@ public class WeaponPickup : MonoBehaviour
     public GameObject weapon;
     
     public Holster holster;
-    float MaxPickUPDist = 5;
-    bool isholding = false;
+    
     
     private void Start()
     {
         sound = GetComponent<SoundPlayer>();
+        if(door != null)
         door.Close();
 
     }
@@ -24,7 +24,8 @@ public class WeaponPickup : MonoBehaviour
     {
         GameObject newWeapon = Instantiate(weapon, holster.transform);
         newWeapon.GetComponent<ObjectPooler>().owner = holster.playerAim.gameObject;
-        door.Open();
+        if (door != null)
+            door.Open();
     }
     public void OnTriggerStay(Collider coll)
     {
