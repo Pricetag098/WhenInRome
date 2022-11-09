@@ -17,7 +17,7 @@ public class WalkSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(rb.velocity.sqrMagnitude > 0 && timer > timeBetween)
+        if(rb.velocity != Vector3.zero && timer > timeBetween)
         {
             player.Play();
             timer = 0;
