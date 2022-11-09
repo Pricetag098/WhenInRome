@@ -36827,7 +36827,7 @@ PrefabInstance:
       objectReference: {fileID: 2010655815}
     - target: {fileID: 6445665427350494816, guid: 3041bfc8da37cd94db5756f8b03323a3, type: 3}
       propertyPath: guns.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6445665427350494816, guid: 3041bfc8da37cd94db5756f8b03323a3, type: 3}
       propertyPath: guns.Array.data[0]
@@ -36837,6 +36837,10 @@ PrefabInstance:
       propertyPath: guns.Array.data[1]
       value: 
       objectReference: {fileID: 2956315850933622571, guid: 4cd501ea49b34384d89e6b1384ca3ca5, type: 3}
+    - target: {fileID: 6445665427350494816, guid: 3041bfc8da37cd94db5756f8b03323a3, type: 3}
+      propertyPath: guns.Array.data[2]
+      value: 
+      objectReference: {fileID: 7159960700880074554, guid: ef08787392688c24e966e4de798be4bc, type: 3}
     - target: {fileID: 6445665427350494817, guid: 3041bfc8da37cd94db5756f8b03323a3, type: 3}
       propertyPath: m_Name
       value: EquipOnPlay
