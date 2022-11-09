@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class SpawnParticlesOnHit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public ObjectPooler hitWall;
+    public void Hit(HitData data)
     {
-        
+        if(data.damage == 0)
+        {
+            GameObject go = hitWall.SpawnObj();
+            go.transform.position = data.position;
+            go.transform.forward = data.dir;
+            go.GetComponent<FxPlayer>().Play();
+        }
     }
 }
