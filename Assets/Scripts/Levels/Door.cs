@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    
+    WeaponPickup pickup;
     Collider col;
     public SoundPlayer open,close;
     private void Start()
