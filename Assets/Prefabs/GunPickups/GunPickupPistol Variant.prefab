@@ -82,6 +82,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4034824387911185022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5609458943856368072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e4d06a734559948a87cea68815c93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreePerSec: 15
+  amplitude: 0.5
+  frequency: 1
 --- !u!1001 &2146056520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -297,6 +312,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9494e1ac506a20f4f9584a174ff2bd27, type: 3}
+--- !u!1 &5609458943856368072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9494e1ac506a20f4f9584a174ff2bd27, type: 3}
+  m_PrefabInstance: {fileID: 4690961775686804633}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4690961776773643041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -318,7 +338,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: bd5e9a7821bf4ac428ad67f16b4288e0, type: 3}
     - target: {fileID: 6719054261099984689, guid: 243045209936d1a4ca5b65b24601c278, type: 3}
       propertyPath: m_Name
-      value: GunPickupPistol Variant
+      value: GunPickupPistol
       objectReference: {fileID: 0}
     - target: {fileID: 6719054261099984689, guid: 243045209936d1a4ca5b65b24601c278, type: 3}
       propertyPath: m_Layer
@@ -338,15 +358,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6719054261099984846, guid: 243045209936d1a4ca5b65b24601c278, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.035
+      value: 6.035
       objectReference: {fileID: 0}
     - target: {fileID: 6719054261099984846, guid: 243045209936d1a4ca5b65b24601c278, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.526
+      value: 1.46
       objectReference: {fileID: 0}
     - target: {fileID: 6719054261099984846, guid: 243045209936d1a4ca5b65b24601c278, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.822
+      value: 6.274
       objectReference: {fileID: 0}
     - target: {fileID: 6719054261099984846, guid: 243045209936d1a4ca5b65b24601c278, type: 3}
       propertyPath: m_LocalRotation.w
@@ -376,7 +396,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6719054261099984847, guid: 243045209936d1a4ca5b65b24601c278, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 243045209936d1a4ca5b65b24601c278, type: 3}
 --- !u!4 &2028665617799138543 stripped
 Transform:

@@ -57,10 +57,15 @@ public class Gun : MonoBehaviour
     public void Equip()
     {
         equip.Play();
+        CancelReload();
+        fireTimer = equipTime;
+    }
+
+    public void CancelReload()
+    {
         isReloading = false;
         reloadTime = reloadDuration;
         reloadProgress = 1;
-        fireTimer = equipTime;
     }
 
     // Update is called once per frame
