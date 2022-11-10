@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.InputSystem;
 public class Dash : MonoBehaviour
 {
+    
+
+
     [Header("Dash Variables")]
     [SerializeField] float dashForce;
     [SerializeField] float dashDuration,iFrames;
     [SerializeField] bool dashOnMouse;
+
+
 
     [Header("Stamina")]
     public float maxStamina = 100;
@@ -25,6 +30,23 @@ public class Dash : MonoBehaviour
     PlayerMove mv;
     PlayerAim aim;
 
+
+    PlayerInputs inputActions;
+    InputAction dash;
+    private void Awake()
+    {
+        inputActions = new PlayerInputs();
+    }
+    private void OnEnable()
+    {
+        dash = inputActions.Player.Dash;
+        dash.Enable();
+        dash.performed += DoDash;
+    }
+    private void OnDisable()
+    {
+        dash.Disable();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -39,9 +61,17 @@ public class Dash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dashDir = dashOnMouse ? aim.aimDir : mv.inputDir;
+        
         //dashDir = Vector3.one;
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !dashing && dashDir != Vector3.zero && stamina >= staminaBurnedOnDash)
+        
+        stamina = Mathf.Clamp(stamina + staminaGainRate * Time.deltaTime, 0, maxStamina);
+
+    }
+
+    void DoDash(InputAction.CallbackContext context)
+    {
+        dashDir = dashOnMouse ? aim.aimDir : mv.inputDir;
+        if (!dashing && dashDir != Vector3.zero && stamina >= staminaBurnedOnDash)
         {
             health.AddIFrames(iFrames);
             StartCoroutine("PauseMv");
@@ -49,17 +79,15 @@ public class Dash : MonoBehaviour
             stamina -= staminaBurnedOnDash;
             soundPlayer.Play();
         }
-        stamina = Mathf.Clamp(stamina + staminaGainRate * Time.deltaTime, 0, maxStamina);
-
     }
 
     public IEnumerator PauseMv()
     {
         dashing = true;
-        mv.enabled = false;
+        mv.canMove = false;
         yield return new WaitForSeconds(dashDuration);
-        mv.enabled = true;
-        rb.velocity = Vector3.zero;
+        mv.canMove = true;
+        //rb.velocity = Vector3.zero;
         dashing = false;
     }
 }

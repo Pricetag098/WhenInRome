@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 
 public class Execute : MonoBehaviour
 {
@@ -14,7 +14,7 @@ public class Execute : MonoBehaviour
     [SerializeField] Holster holster;
     List<Health> healths = new List<Health>();
     bool running = false;
-
+    public InputAction executeButton;
     [SerializeField] SoundPlayer use, chain, hit;
 
     CombatMeter cm;
@@ -23,28 +23,36 @@ public class Execute : MonoBehaviour
     {
         aim = GetComponentInParent<PlayerAim>();
         cm = GetComponentInParent<CombatMeter>();
+        executeButton.Enable();
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    public void Update()
     {
-		if (Input.GetKey(KeyCode.Space) && !running && cm.meter >= cm.maxMeter)
-		{
-            
+        if (executeButton.triggered)
+        {
+            Debug.Log("AAA");
+        }
+        
+       
+        if (executeButton.triggered && !running && cm.meter >= cm.maxMeter)
+        {
+
             healths.Clear();
             RaycastHit hit;
-            if(Physics.Raycast(transform.position + Vector3.up * aim.offset, aim.GetAssistedDir(20), out hit, float.PositiveInfinity))
-			{
-                if(hit.collider.gameObject != gameObject && hit.collider.gameObject.GetComponent<Health>())
-				{
+            if (Physics.Raycast(transform.position + Vector3.up * aim.offset, aim.GetAssistedDir(20), out hit, float.PositiveInfinity))
+            {
+                if (hit.collider.gameObject != gameObject && hit.collider.gameObject.GetComponent<Health>())
+                {
                     healths.Add(hit.collider.gameObject.GetComponent<Health>());
                     holster.transform.GetChild(holster.selectedWeapon).GetComponent<Gun>().CancelReload();
                     StartCoroutine("Run");
                     particles.DespawnAllActive();
                     cm.meter = 0;
                 }
-			}
-		}
+            }
+        }
     }
     //List<GameObject> lineList = new List<GameObject>();
     IEnumerator Run()
