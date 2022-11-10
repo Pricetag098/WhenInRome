@@ -31,9 +31,9 @@ public class CamFollow : MonoBehaviour
             aimPoint.y = transform.position.y;
             Vector3 vectToAim = playerAim.aimDir * (Vector3.Distance(transform.position, aimPoint))* followPercent;
             idealVect = player.position + offset + vectToAim;
-            
-            
 
+
+            
         }
         
     }
