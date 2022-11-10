@@ -5399,6 +5399,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &753690757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4841520489656503741, guid: 3712255652d91c646b4b077742c45565, type: 3}
+  m_PrefabInstance: {fileID: 7087901594047804848}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &786995138 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5669802189447298969, guid: 58bb0ae413032e945bf505297b21f99e, type: 3}
@@ -8292,6 +8297,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1142203533, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 459036990}
     - target: {fileID: 1854532579, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: holster
       value: 
@@ -8300,6 +8309,10 @@ PrefabInstance:
       propertyPath: cm
       value: 
       objectReference: {fileID: 459036994}
+    - target: {fileID: 354247763071470067, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: filled
+      value: 
+      objectReference: {fileID: 753690757}
     - target: {fileID: 354247763120779365, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8396,6 +8409,10 @@ PrefabInstance:
       propertyPath: dash
       value: 
       objectReference: {fileID: 459036987}
+    - target: {fileID: 4841520489656503741, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6217790812377984174, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: holster
       value: 
