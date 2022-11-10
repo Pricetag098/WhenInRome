@@ -990,22 +990,22 @@ ParticleSystem:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.9829854
-          value: 0.7243452
-          inSlope: -0.74373794
-          outSlope: -0.74373794
+          time: 0.8724202
+          value: 0.62975216
+          inSlope: -0.55175585
+          outSlope: -0.55175585
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.13675462
-          outWeight: 0.8186088
+          outWeight: 1
         - serializedVersion: 3
           time: 1
           value: 0
-          inSlope: -18.97284
-          outSlope: -18.97284
+          inSlope: -7.227786
+          outSlope: -7.227786
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.24185365
+          inWeight: 0.65946764
           outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -1304,15 +1304,15 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
-      minMaxState: 1
+      minMaxState: 3
       minColor: {r: 1, g: 1, b: 1, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 0.48472303, b: 0, a: 1}
         key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -1341,7 +1341,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 0.5660378, g: 0.5295844, b: 0.4565682, a: 1}
         key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -4767,7 +4767,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
+  - {fileID: 2100000, guid: b14e59504d882e246a3b2749ca8b2d90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
