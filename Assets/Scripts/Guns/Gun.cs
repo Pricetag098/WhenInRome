@@ -70,7 +70,7 @@ public class Gun : MonoBehaviour
 
         bool fire = (auto && Input.GetMouseButton(0)) || (!auto && Input.GetMouseButtonDown(0));
 
-        if (fire && fireTimer < 0 && !isReloading)
+        if (fire && fireTimer < 0 && !isReloading && Time.timeScale ==1)
         {
             
             

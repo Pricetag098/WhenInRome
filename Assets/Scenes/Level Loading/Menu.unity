@@ -153,7 +153,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1720168853}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -705,6 +705,7 @@ MonoBehaviour:
   fadeObj: {fileID: 1302257768}
   transitionTime: 2
   level: 0
+  fadeIn: 1
 --- !u!114 &588609177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,7 +833,7 @@ RectTransform:
   m_Children:
   - {fileID: 1825447156}
   m_Father: {fileID: 1720168853}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -848,10 +849,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 592430300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afe52d611607ce94cafb18ae9bf4cd30, type: 3}
+  m_Script: {fileID: 11500000, guid: cd20288cab04fde4dbe86fd57c4f623a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
+  fadeObj: {fileID: 1302257768}
+  transitionTime: 0.5
+  level: 0
+  fadeIn: 0
 --- !u!114 &592430303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -897,7 +901,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 592430302}
-        m_TargetAssemblyTypeName: LoadSpecificLevel, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
         m_MethodName: Load
         m_Mode: 1
         m_Arguments:
@@ -1383,7 +1387,7 @@ RectTransform:
   m_Children:
   - {fileID: 1918245180}
   m_Father: {fileID: 1720168853}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1399,10 +1403,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1152537658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afe52d611607ce94cafb18ae9bf4cd30, type: 3}
+  m_Script: {fileID: 11500000, guid: cd20288cab04fde4dbe86fd57c4f623a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 2
+  fadeObj: {fileID: 1302257768}
+  transitionTime: 0.5
+  level: 1
+  fadeIn: 0
 --- !u!114 &1152537661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1448,7 +1455,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1152537660}
-        m_TargetAssemblyTypeName: LoadSpecificLevel, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
         m_MethodName: Load
         m_Mode: 1
         m_Arguments:
@@ -1948,11 +1955,11 @@ RectTransform:
   - {fileID: 588609175}
   - {fileID: 495676522}
   - {fileID: 770014502}
-  - {fileID: 1302257767}
   - {fileID: 199445869}
   - {fileID: 592430301}
   - {fileID: 1152537659}
   - {fileID: 1803719540}
+  - {fileID: 1302257767}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1994,7 +2001,7 @@ RectTransform:
   m_Children:
   - {fileID: 656245085}
   m_Father: {fileID: 1720168853}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2010,10 +2017,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1803719539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afe52d611607ce94cafb18ae9bf4cd30, type: 3}
+  m_Script: {fileID: 11500000, guid: cd20288cab04fde4dbe86fd57c4f623a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 3
+  fadeObj: {fileID: 1302257768}
+  transitionTime: 0.5
+  level: 2
+  fadeIn: 0
 --- !u!114 &1803719542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2059,7 +2069,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1803719541}
-        m_TargetAssemblyTypeName: LoadSpecificLevel, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
         m_MethodName: Load
         m_Mode: 1
         m_Arguments:
@@ -2480,7 +2490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6701155285679287674, guid: ad41537b8b221c847be1d726a0249878, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6701155285679287674, guid: ad41537b8b221c847be1d726a0249878, type: 3}
       propertyPath: m_AnchorMax.x

@@ -40,5 +40,12 @@ public class SpawnParticlesOnHit : MonoBehaviour
         go.transform.position = data.position;
         go.transform.forward = data.dir;
         go.GetComponent<FxPlayer>().Play();
+        StartCoroutine("DespawnLater",go);
+    }
+
+    IEnumerator DespawnLater(GameObject obj)
+    {
+        yield return new WaitForSeconds(3);
+        obj.GetComponent<PooledObj>().Despawn();
     }
 }
