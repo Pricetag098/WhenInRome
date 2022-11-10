@@ -77,6 +77,9 @@ public class LevelLoader : MonoBehaviour
         }
         else
         {
+            MuffleMusic muffleMusic = FindObjectOfType<MuffleMusic>();
+            if (muffleMusic != null)
+                muffleMusic.VolDown();
             SceneManager.LoadScene(0);
         }
             
