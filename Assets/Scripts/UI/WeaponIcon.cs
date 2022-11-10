@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class WeaponIcon : MonoBehaviour
 {
-    Image image;
+    GameObject icon;
     Gun gun;
     public Holster holster;
 
     private void Start()
     {
-        image = GetComponent<Image>();
+        icon = GetComponent <GameObject> ();
     }
 
     // Update is called once per frame
@@ -19,8 +19,9 @@ public class WeaponIcon : MonoBehaviour
     {
         if (holster.transform.childCount == 0)
         {
-            //image.
+          icon.
+            
         }
-
+        gun = holster.transform.GetChild(holster.selectedWeapon).GetComponent<Gun>();
     }
 }
