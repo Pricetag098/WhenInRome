@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7160605135416040978}
   - component: {fileID: 7160605135416040980}
   - component: {fileID: 7160605135416040981}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: CloseSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 7160605136401374254}
   - component: {fileID: 7160605136401374224}
   - component: {fileID: 7160605136401374225}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: OpenSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 7160605136715452967}
   - component: {fileID: 7160605136715452969}
   - component: {fileID: 7160605136715452966}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,8 +336,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4, y: 5, z: 1}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!114 &7160605136715452966
 MonoBehaviour:
   m_ObjectHideFlags: 0

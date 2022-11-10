@@ -11,6 +11,7 @@ public class Execute : MonoBehaviour
     [SerializeField] float soundTime, timebetweenhits,timeAfterDmg;
     [SerializeField] GameObject volume;
     [SerializeField] ObjectPooler lines, particles;
+    [SerializeField] Holster holster;
     List<Health> healths = new List<Health>();
     bool running = false;
 
@@ -37,6 +38,7 @@ public class Execute : MonoBehaviour
                 if(hit.collider.gameObject != gameObject && hit.collider.gameObject.GetComponent<Health>())
 				{
                     healths.Add(hit.collider.gameObject.GetComponent<Health>());
+                    holster.transform.GetChild(holster.selectedWeapon).GetComponent<Gun>().CancelReload();
                     StartCoroutine("Run");
                     particles.DespawnAllActive();
                     cm.meter = 0;

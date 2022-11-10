@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2577849200578478788, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -7654656865433023914, guid: 1302a876e7971634d9b1124a73282664, type: 2}
     - target: {fileID: 5439782351993991432, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: pitchRange
       value: 0.1
@@ -18,7 +22,7 @@ PrefabInstance:
     - target: {fileID: 5439782351993991432, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: clips.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: cb7d71142df3f7446b447526d5343404, type: 3}
+      objectReference: {fileID: 8300000, guid: 75f6ace493f27aa44abe51c23203c13b, type: 3}
     - target: {fileID: 5439782351993991432, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: clips.Array.data[1]
       value: 
@@ -27,13 +31,17 @@ PrefabInstance:
       propertyPath: clips.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: 7dcf3755457c98449b5e8d24d1962956, type: 3}
+    - target: {fileID: 6142553598410898472, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 1771455977996517589, guid: 1302a876e7971634d9b1124a73282664, type: 2}
     - target: {fileID: 7655701113825755792, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: owner
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: damage
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: maxAmmo
@@ -46,6 +54,10 @@ PrefabInstance:
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: equipTime
       value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: aimAssistAngle
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: reloadDuration
@@ -119,6 +131,10 @@ PrefabInstance:
       propertyPath: clips.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 83dcc8311742fc14dab24e02d0a4d210, type: 3}
+    - target: {fileID: 8610915590691598656, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2492898839852036491, guid: 1302a876e7971634d9b1124a73282664, type: 2}
     - target: {fileID: 9116617862233190276, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: clips.Array.size
       value: 1

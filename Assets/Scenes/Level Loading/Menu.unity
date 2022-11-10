@@ -153,7 +153,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1720168853}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -632,7 +632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   muffler: {fileID: 0}
   songs:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 243d60d050bc7bb448bca19b72f62d57, type: 3}
   - {fileID: 8300000, guid: d99982ff8a8bfc44c91bf9c57ed08cfd, type: 3}
   - {fileID: 8300000, guid: 3dfaf8f338c77a14cae5c923d22e19da, type: 3}
   - {fileID: 8300000, guid: 4891f370e3aa91941a2dd7c4b3aba68f, type: 3}
@@ -705,6 +705,7 @@ MonoBehaviour:
   fadeObj: {fileID: 1302257768}
   transitionTime: 2
   level: 0
+  fadeIn: 1
 --- !u!114 &588609177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -818,7 +819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &592430301
 RectTransform:
   m_ObjectHideFlags: 0
@@ -832,7 +833,7 @@ RectTransform:
   m_Children:
   - {fileID: 1825447156}
   m_Father: {fileID: 1720168853}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -852,8 +853,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeObj: {fileID: 1302257768}
-  transitionTime: 2
+  transitionTime: 0.5
   level: 0
+  fadeIn: 0
 --- !u!114 &592430303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1371,7 +1373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1152537659
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1385,7 +1387,7 @@ RectTransform:
   m_Children:
   - {fileID: 1918245180}
   m_Father: {fileID: 1720168853}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1405,8 +1407,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeObj: {fileID: 1302257768}
-  transitionTime: 2
-  level: 0
+  transitionTime: 0.5
+  level: 1
+  fadeIn: 0
 --- !u!114 &1152537661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1513,13 +1516,14 @@ GameObject:
   - component: {fileID: 1248853952}
   - component: {fileID: 1248853951}
   - component: {fileID: 1248853950}
+  - component: {fileID: 1248853953}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1248853949
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1583,7 +1587,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1248853951}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1248853953}
+        m_TargetAssemblyTypeName: ExitButton, Assembly-CSharp
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1248853951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,6 +1638,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248853948}
   m_CullTransparentMesh: 1
+--- !u!114 &1248853953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248853948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6e98deebe753448af1b90c55ab93d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1302257767 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6701155285679287674, guid: ad41537b8b221c847be1d726a0249878, type: 3}
@@ -1927,11 +1955,11 @@ RectTransform:
   - {fileID: 588609175}
   - {fileID: 495676522}
   - {fileID: 770014502}
-  - {fileID: 1302257767}
   - {fileID: 199445869}
   - {fileID: 592430301}
   - {fileID: 1152537659}
   - {fileID: 1803719540}
+  - {fileID: 1302257767}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1959,7 +1987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1803719540
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1973,7 +2001,7 @@ RectTransform:
   m_Children:
   - {fileID: 656245085}
   m_Father: {fileID: 1720168853}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1993,8 +2021,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeObj: {fileID: 1302257768}
-  transitionTime: 2
-  level: 0
+  transitionTime: 0.5
+  level: 2
+  fadeIn: 0
 --- !u!114 &1803719542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2461,7 +2490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6701155285679287674, guid: ad41537b8b221c847be1d726a0249878, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6701155285679287674, guid: ad41537b8b221c847be1d726a0249878, type: 3}
       propertyPath: m_AnchorMax.x

@@ -6,7 +6,8 @@ public class HealPickup : MonoBehaviour
 {
     SoundPlayer sound;
     public float healAmount;
-    [SerializeField] LayerMask playerLayer;
+    
+     [SerializeField] GameObject model;
     private void Start()
     {
         sound = GetComponent<SoundPlayer>();
@@ -24,8 +25,9 @@ public class HealPickup : MonoBehaviour
             health.Heal(healAmount);
             Debug.Log("healed");
             GetComponent<Collider>().enabled = false;
-            GetComponent<MeshRenderer>().enabled = false;
-            GetComponent<ObjectSpin>().enabled = false;
+            //GetComponent<MeshRenderer>().enabled = false;
+            model.SetActive(false);
+            //GetComponent<ObjectSpin>().enabled = false;
             sound.Play();
             enabled = false;
             Destroy(gameObject,2);

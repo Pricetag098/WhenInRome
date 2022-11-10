@@ -7,10 +7,10 @@ public class CombatMeter : MonoBehaviour
     public float meter;
     public float maxMeter;
     [SerializeField] float decayRate = 1, decayDelay = 1;
-    [SerializeField] float chargePerHit = 10;
+    [SerializeField] float chargePerDamage = 10;
     public bool inCombat;
     
-    [SerializeField] float enemyDetectRad = 100;
+    //[SerializeField] float enemyDetectRad = 100;
     [SerializeField] LayerMask enemyLayer = 8;
     OnHit oh;
     float timeSinceLastHit;
@@ -56,9 +56,9 @@ public class CombatMeter : MonoBehaviour
         
     }
 
-    public void Charge()
+    public void Charge(HitData data)
     {
-        meter += chargePerHit;
+        meter += chargePerDamage * data.damage;
         if(meter > maxMeter)
         {
             meter = maxMeter;
