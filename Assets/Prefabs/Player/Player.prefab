@@ -1067,6 +1067,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 20
+  controls:
+    m_Name: Controls
+    m_Type: 0
+    m_ExpectedControlType: Vector2
+    m_Id: c9389c85-e005-468f-9ba8-e29033a59f81
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector
+      m_Id: 4e1e2369-90ba-46b3-841b-be2a36318e18
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Controls
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 15d0262a-72bf-43da-99d8-81ac3fddd189
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Controls
+      m_Flags: 8
+    - m_Name: down
+      m_Id: a506d658-8f13-4be8-bccb-4f4f4066fb2e
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Controls
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 2a8763df-8178-4bbb-98ac-bcfa4880684b
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Controls
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 737bc9d8-1afe-4c5a-97d3-dfa2eb1aedcc
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Controls
+      m_Flags: 8
+    - m_Name: 
+      m_Id: 994f2ba1-4654-4f9c-b535-a8ce761af9ca
+      m_Path: <Gamepad>/leftStick
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Controls
+      m_Flags: 0
   inputDir: {x: 0, y: 0, z: 0}
 --- !u!114 &3852320075814450743
 MonoBehaviour:
@@ -1904,6 +1960,30 @@ MonoBehaviour:
   lines: {fileID: 1132447263158886197}
   particles: {fileID: 1132447264160744011}
   holster: {fileID: 1132447264297382749}
+  executeButton:
+    m_Name: Execute Button
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 97ee3c32-ef10-4ab2-a74a-a813043efbfb
+    m_Processors: 
+    m_Interactions: Hold
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 21f87f93-e9e0-44be-9290-0a685991b902
+      m_Path: <Keyboard>/space
+      m_Interactions: Press
+      m_Processors: 
+      m_Groups: 
+      m_Action: Execute Button
+      m_Flags: 0
+    - m_Name: 
+      m_Id: a36b57cb-a892-4030-b1ed-11f2b3b844c1
+      m_Path: <Gamepad>/rightShoulder
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Execute Button
+      m_Flags: 0
   use: {fileID: 8558148591205726842}
   chain: {fileID: 2554728859753793058}
   hit: {fileID: 6014261207678226350}
