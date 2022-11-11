@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class WeaponPickup : MonoBehaviour
 {
     public Door door;
@@ -13,7 +13,25 @@ public class WeaponPickup : MonoBehaviour
     //float MaxPickUPDist = 5;
     //bool isholding = false;
     bool insideCol = false;
-    
+
+    PlayerInputs inputActions;
+    InputAction interact;
+    private void Awake()
+    {
+        inputActions = new PlayerInputs();
+        interact = inputActions.Player.Interact;
+        interact.performed += Interact;
+    }
+    private void OnEnable()
+    {
+        
+        interact.Enable();
+    }
+    private void OnDisable()
+    {
+        interact.Disable();
+    }
+
     private void Start()
     {
         sound = GetComponent<SoundPlayer>();
@@ -25,25 +43,27 @@ public class WeaponPickup : MonoBehaviour
     {
         GameObject newWeapon = Instantiate(weapon, holster.transform);
         newWeapon.GetComponent<ObjectPooler>().owner = holster.playerAim.gameObject;
+        if(door != null)
         door.Open();
     }
 
-    private void Update()
+    
+
+    void Interact(InputAction.CallbackContext context)
     {
         if (insideCol)
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                SpawnGun();
-                GetComponent<Collider>().enabled = false;
-                //GetComponent<MeshRenderer>().enabled = false;
-                transform.GetChild(0).gameObject.SetActive(false);
-                GetComponent<ObjectSpin>().enabled = false;
-                sound.Play();
-                holster.Equip();
-                enabled = false;
-                weaponHint.SetActive(false);
-            }
+            
+            SpawnGun();
+            GetComponent<Collider>().enabled = false;
+            //GetComponent<MeshRenderer>().enabled = false;
+            transform.GetChild(0).gameObject.SetActive(false);
+            
+            sound.Play();
+            holster.Equip();
+            enabled = false;
+            weaponHint.SetActive(false);
+            
         }
     }
     

@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] float maxSpeed;
+
+    public bool canMove = true;
     //[SerializeField] float acceleration;
     //[SerializeField] float counter;
 
@@ -18,11 +21,32 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+
+    PlayerInputs inputActions;
+    InputAction move;
+    private void Awake()
+    {
+        inputActions = new PlayerInputs();
+        move = inputActions.Player.Move;
+    }
+    private void OnEnable()
+    {
+        
+        move.Enable();
+    }
+    private void OnDisable()
+    {
+        move.Disable();
+    }
     private void Update()
     {
-        inputDir = new Vector3(Input.GetAxisRaw("Horizontal"),0 , Input.GetAxisRaw("Vertical"));
+        //inputDir = new Vector3(Input.GetAxisRaw("Horizontal"),0 , Input.GetAxisRaw("Vertical"));
+        Vector2 contIn = move.ReadValue<Vector2>();
+        inputDir.x = contIn.x;
+        inputDir.z = contIn.y;
         inputDir = inputDir.normalized;
-        rb.velocity = inputDir*maxSpeed;
+        if(canMove)
+            rb.velocity = inputDir*maxSpeed;
     }
 
     // Update is called once per frame

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+
 public class PauseMenu : MonoBehaviour
 {
     CanvasGroup menu;
@@ -15,22 +17,35 @@ public class PauseMenu : MonoBehaviour
         CloseMenu();
     }
 
-    // Update is called once per frame
-    void Update()
+    PlayerInputs inputActions;
+    InputAction menuInput;
+    private void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        inputActions = new PlayerInputs();
+        menuInput = inputActions.Player.OpenMenu;
+
+        menuInput.performed += ToggleMenu;
+    }
+    private void OnEnable()
+    {
+
+        menuInput.Enable();
+    }
+    private void OnDisable()
+    {
+        menuInput.Disable();
+    }
+
+    void ToggleMenu(InputAction.CallbackContext context)
+    {
+        if (menuOpen)
         {
-            if (menuOpen)
-            {
-                CloseMenu();
-            }
-            else 
-            {
-                OpenMenu();
-            }
-            
+            CloseMenu();
         }
-        
+        else
+        {
+            OpenMenu();
+        }
     }
 
     [ContextMenu("Open")]
