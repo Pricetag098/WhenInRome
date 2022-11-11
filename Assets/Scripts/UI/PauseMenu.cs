@@ -55,7 +55,7 @@ public class PauseMenu : MonoBehaviour
         {
             Time.timeScale = 0;
             menuOpen = true;
-            //transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(0).gameObject.SetActive(true);
             StopCoroutine("FadeOut");
             StartCoroutine("FadeIn");
         }
@@ -65,7 +65,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         menuOpen = false;
-        //transform.GetChild(0).gameObject.SetActive(false);
+        transform.GetChild(0).gameObject.SetActive(false);
         StopCoroutine("FadeIn");
         StartCoroutine("FadeOut");
     }
