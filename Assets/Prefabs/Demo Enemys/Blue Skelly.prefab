@@ -135,6 +135,7 @@ MonoBehaviour:
   agent: {fileID: 5669802189447298971}
   rb: {fileID: 8493259702940686750}
   root: {fileID: 11400000, guid: a8eda71de4bc6794aacd158f4f454838, type: 2}
+  body: {fileID: 1217533070959454264}
   health: {fileID: 0}
 --- !u!195 &5669802189447298971
 NavMeshAgent:
@@ -469,6 +470,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a3b61e807acc28e45941ed23ff7864df, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfbed5a1a50a8b54db2c94045496541f, type: 3}
+--- !u!1 &1217533070959454264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dfbed5a1a50a8b54db2c94045496541f, type: 3}
+  m_PrefabInstance: {fileID: 2027994434198115689}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1994632067188814466 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dfbed5a1a50a8b54db2c94045496541f, type: 3}

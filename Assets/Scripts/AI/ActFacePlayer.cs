@@ -15,8 +15,8 @@ public class ActFacePlayer : TreeNode
 
 
         Vector3 dir = ai.transform.position - ai.player.transform.position;
-        dir.Normalize();
-        ai.agent.velocity = dir * speed;
+        dir.y = 0;
+        ai.body.transform.forward = -dir;
 
 
         if (passThrough != null)
