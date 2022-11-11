@@ -6,6 +6,7 @@ public class Holster : MonoBehaviour
 {
     public PlayerAim playerAim;
     public int selectedWeapon;
+    [SerializeField] Animator animator;
     [HideInInspector]
     public float VertOffset;
     int last = -1;
@@ -36,7 +37,7 @@ public class Holster : MonoBehaviour
     void Update()
     {
         VertOffset = playerAim.offset;
-
+        animator.SetBool("HoldingGun",transform.childCount > 0);
         float scrollVal = swap.ReadValue<float>();
         //change the selected weapon
         if(scrollVal > 0 && !swapped)
