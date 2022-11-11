@@ -20,10 +20,10 @@ public class WeaponIcon : MonoBehaviour
     {
         if (holster.transform.childCount == 0)
         {
-          icon[selectedIcon].SetActive (false);
+         
 
 
         }
-        //gun = holster.transform.GetChild(holster.selectedWeapon).GetComponent<Gun>();
+        gun = holster.transform.GetChild(holster.selectedWeapon).GetComponent<Gun>();
     }
 }

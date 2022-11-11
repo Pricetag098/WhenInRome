@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 
 public class Execute : MonoBehaviour
 {
@@ -14,7 +14,7 @@ public class Execute : MonoBehaviour
     [SerializeField] Holster holster;
     List<Health> healths = new List<Health>();
     bool running = false;
-
+    
     [SerializeField] SoundPlayer use, chain, hit;
 
     CombatMeter cm;
@@ -23,28 +23,47 @@ public class Execute : MonoBehaviour
     {
         aim = GetComponentInParent<PlayerAim>();
         cm = GetComponentInParent<CombatMeter>();
+        
+        
+    }
+    PlayerInputs inputActions;
+    InputAction executeInput;
+    private void Awake()
+    {
+        inputActions = new PlayerInputs();
+    }
+    private void OnEnable()
+    {
+        executeInput = inputActions.Player.Execute;
+        executeInput.Enable();
+        executeInput.performed += TryExecute;
+    }
+    private void OnDisable()
+    {
+        executeInput.Disable();
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+    void TryExecute(InputAction.CallbackContext context)
     {
-		if (Input.GetKey(KeyCode.Space) && !running && cm.meter >= cm.maxMeter)
-		{
-            
+        if (!running && cm.meter >= cm.maxMeter)
+        {
+
             healths.Clear();
             RaycastHit hit;
-            if(Physics.Raycast(transform.position + Vector3.up * aim.offset, aim.GetAssistedDir(20), out hit, float.PositiveInfinity))
-			{
-                if(hit.collider.gameObject != gameObject && hit.collider.gameObject.GetComponent<Health>())
-				{
+            if (Physics.Raycast(transform.position + Vector3.up * aim.offset, aim.GetAssistedDir(20), out hit, float.PositiveInfinity))
+            {
+                if (hit.collider.gameObject != gameObject && hit.collider.gameObject.GetComponent<Health>())
+                {
                     healths.Add(hit.collider.gameObject.GetComponent<Health>());
                     holster.transform.GetChild(holster.selectedWeapon).GetComponent<Gun>().CancelReload();
                     StartCoroutine("Run");
                     particles.DespawnAllActive();
                     cm.meter = 0;
                 }
-			}
-		}
+            }
+        }
     }
     //List<GameObject> lineList = new List<GameObject>();
     IEnumerator Run()
