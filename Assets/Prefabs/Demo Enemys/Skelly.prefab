@@ -145,6 +145,23 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5a775b31c4170dc41892b70525f5d20c, type: 3}
   pitchRange: 0.1
   basePitch: 1
+--- !u!114 &7515320857197260162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4874604489073532831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1106cb038fb2a4ca43e61ebb62c55e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emmision: _EmissionColor
+  colour: {r: 1, g: 1, b: 1, a: 1}
+  frequncy: 0
+  flashDuation: 1
+  flashTime: 0
 --- !u!1 &5362543892873009242
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +338,19 @@ MonoBehaviour:
   iFrames: 0
   onHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7515320857197260162}
+        m_TargetAssemblyTypeName: Flash, Assembly-CSharp
+        m_MethodName: FlashColour
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDeath:
     m_PersistentCalls:
       m_Calls:
@@ -479,5 +508,10 @@ GameObject:
 --- !u!4 &20597754961163414 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dfbed5a1a50a8b54db2c94045496541f, type: 3}
+  m_PrefabInstance: {fileID: 559454545644360573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4874604489073532831 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4928492724515802338, guid: dfbed5a1a50a8b54db2c94045496541f, type: 3}
   m_PrefabInstance: {fileID: 559454545644360573}
   m_PrefabAsset: {fileID: 0}
