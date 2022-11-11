@@ -27,10 +27,11 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
         inputActions = new PlayerInputs();
+        move = inputActions.Player.Move;
     }
     private void OnEnable()
     {
-        move = inputActions.Player.Move;
+        
         move.Enable();
     }
     private void OnDisable()

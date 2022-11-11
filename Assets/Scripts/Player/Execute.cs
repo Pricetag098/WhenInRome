@@ -14,7 +14,7 @@ public class Execute : MonoBehaviour
     [SerializeField] Holster holster;
     List<Health> healths = new List<Health>();
     bool running = false;
-    public InputAction executeButton;
+    
     [SerializeField] SoundPlayer use, chain, hit;
 
     CombatMeter cm;
@@ -23,20 +23,31 @@ public class Execute : MonoBehaviour
     {
         aim = GetComponentInParent<PlayerAim>();
         cm = GetComponentInParent<CombatMeter>();
-        executeButton.Enable();
+        
         
     }
-
-    
-    public void Update()
+    PlayerInputs inputActions;
+    InputAction executeInput;
+    private void Awake()
     {
-        if (executeButton.triggered)
-        {
-            Debug.Log("AAA");
-        }
-        
-       
-        if (executeButton.triggered && !running && cm.meter >= cm.maxMeter)
+        inputActions = new PlayerInputs();
+    }
+    private void OnEnable()
+    {
+        executeInput = inputActions.Player.Execute;
+        executeInput.Enable();
+        executeInput.performed += TryExecute;
+    }
+    private void OnDisable()
+    {
+        executeInput.Disable();
+    }
+
+
+
+    void TryExecute(InputAction.CallbackContext context)
+    {
+        if (!running && cm.meter >= cm.maxMeter)
         {
 
             healths.Clear();

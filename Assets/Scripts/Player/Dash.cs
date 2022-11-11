@@ -36,12 +36,14 @@ public class Dash : MonoBehaviour
     private void Awake()
     {
         inputActions = new PlayerInputs();
+        dash = inputActions.Player.Dash;
+
+        dash.performed += DoDash;
     }
     private void OnEnable()
     {
-        dash = inputActions.Player.Dash;
+        
         dash.Enable();
-        dash.performed += DoDash;
     }
     private void OnDisable()
     {

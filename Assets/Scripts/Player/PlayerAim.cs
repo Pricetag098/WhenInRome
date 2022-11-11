@@ -30,13 +30,14 @@ public class PlayerAim : MonoBehaviour
     private void Awake()
     {
         inputActions = new PlayerInputs();
-    }
-    private void OnEnable()
-    {
         aim = inputActions.Player.Look;
+    }
+    public void OnEnable()
+    {
+        
         aim.Enable();
     }
-    private void OnDisable()
+    public void OnDisable()
     {
         aim.Disable();
     }
@@ -56,7 +57,7 @@ public class PlayerAim : MonoBehaviour
         bool useMouse = true;
         if(Gamepad.current != null)
         {
-            if(Gamepad.current.lastUpdateTime < Mouse.current.lastUpdateTime)
+            if(Gamepad.current.lastUpdateTime > Mouse.current.lastUpdateTime)
             {
                 useMouse = false;
             }
@@ -82,13 +83,22 @@ public class PlayerAim : MonoBehaviour
         {
             Mouse.current.WarpCursorPosition(new Vector2(Screen.width/2,Screen.height/2));
             Cursor.visible = false;
-            Debug.Log("AAAA");
             //Debug.Log("AAAA");
-            aimDir = Vector3.zero;
-            aimDir.x = contAimDir.x;
-            aimDir.z = contAimDir.y;
+            //Debug.Log("AAAA");
+            if(contAimDir != Vector2.zero)
+            {
+                aimDir = Vector3.zero;
+                aimDir.x = contAimDir.x;
+                aimDir.z = contAimDir.y;
+                hitPoint = transform.position + aimDir * 10;
+            }
+            else
+            {
+                hitPoint = transform.position + aimDir;
+            }
             
-            hitPoint = transform.position + aimDir * 10;
+            
+            
             aimDir.Normalize();
         }
         
