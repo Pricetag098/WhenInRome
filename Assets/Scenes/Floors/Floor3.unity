@@ -1864,6 +1864,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 354247763120779366, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 354247763120779369, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: m_Name
       value: Canvas (1)
@@ -1885,6 +1889,10 @@ PrefabInstance:
       value: 18.48999
       objectReference: {fileID: 0}
     - target: {fileID: 6217790812377984174, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: holster
+      value: 
+      objectReference: {fileID: 2010655815}
+    - target: {fileID: 7087901594047804850, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: holster
       value: 
       objectReference: {fileID: 2010655815}
@@ -69045,6 +69053,10 @@ PrefabInstance:
     - target: {fileID: 218069325267385821, guid: 2cc9985f1ecf8d14ab03f703f0b7f438, type: 3}
       propertyPath: m_Name
       value: PauseCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517297761221331610, guid: 2cc9985f1ecf8d14ab03f703f0b7f438, type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cc9985f1ecf8d14ab03f703f0b7f438, type: 3}
