@@ -33,6 +33,8 @@ public class Gun : MonoBehaviour
     [SerializeField] SoundPlayer empty;
 
 
+    public Sprite icon;
+
     Holster holster;
     PlayerAim aim;
     ObjectPooler pooler;
@@ -41,6 +43,8 @@ public class Gun : MonoBehaviour
     PlayerInputs inputActions;
     InputAction fireInput;
     InputAction reloadInput;
+
+
     private void Awake()
     {
         inputActions = new PlayerInputs();
