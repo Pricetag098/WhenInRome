@@ -1864,6 +1864,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 354247763120779366, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 354247763120779369, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: m_Name
       value: Canvas (1)
@@ -1885,6 +1889,10 @@ PrefabInstance:
       value: 18.48999
       objectReference: {fileID: 0}
     - target: {fileID: 6217790812377984174, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: holster
+      value: 
+      objectReference: {fileID: 2010655815}
+    - target: {fileID: 7087901594047804850, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: holster
       value: 
       objectReference: {fileID: 2010655815}
@@ -55366,6 +55374,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1132447263103078185, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1400036668115291764, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -55430,6 +55442,10 @@ PrefabInstance:
       propertyPath: floor
       value: 
       objectReference: {fileID: 498269110}
+    - target: {fileID: 5937744080861241804, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: maxMeter
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7655701112638488264, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
       propertyPath: damage
       value: 4
@@ -69045,6 +69061,10 @@ PrefabInstance:
     - target: {fileID: 218069325267385821, guid: 2cc9985f1ecf8d14ab03f703f0b7f438, type: 3}
       propertyPath: m_Name
       value: PauseCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517297761221331610, guid: 2cc9985f1ecf8d14ab03f703f0b7f438, type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cc9985f1ecf8d14ab03f703f0b7f438, type: 3}
