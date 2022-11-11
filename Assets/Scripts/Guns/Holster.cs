@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class Holster : MonoBehaviour
 {
     public PlayerAim playerAim;
@@ -15,26 +15,51 @@ public class Holster : MonoBehaviour
         
     }
 
+    bool swapped = false;
+    PlayerInputs inputActions;
+    InputAction swap;
+    private void Awake()
+    {
+        inputActions = new PlayerInputs();
+        swap = inputActions.Player.ChangeWeapon;
+    }
+    private void OnEnable()
+    {
+        
+        swap.Enable();
+    }
+    private void OnDisable()
+    {
+        swap.Disable();
+    }
     // Update is called once per frame
     void Update()
     {
         VertOffset = playerAim.offset;
+
+        float scrollVal = swap.ReadValue<float>();
         //change the selected weapon
-        if(Input.mouseScrollDelta.y > 0)
+        if(scrollVal > 0 && !swapped)
         {
             selectedWeapon++;
             if(selectedWeapon > transform.childCount - 1)
             {
                 selectedWeapon = 0;
             }
+            swapped = true;
         }
-        if (Input.mouseScrollDelta.y < 0)
+        if (scrollVal < 0 && !swapped)
         {
             selectedWeapon--;
             if(selectedWeapon < 0)
             {
                 selectedWeapon = transform.childCount-1;
             }
+            swapped = true;
+        }
+        if(scrollVal == 0)
+        {
+            swapped = false;
         }
         if(selectedWeapon != last)
         {
