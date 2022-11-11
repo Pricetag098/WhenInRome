@@ -279,7 +279,8 @@ MonoBehaviour:
   player: {fileID: 0}
   agent: {fileID: 7925885164721068123}
   rb: {fileID: 6237299864547065438}
-  root: {fileID: 11400000, guid: 11f79134217f76d4fb57ea9b610a2f3b, type: 2}
+  root: {fileID: 11400000, guid: c8614657aeefb874b8f41cf2af30f260, type: 2}
+  body: {fileID: 1535362239087102806}
   health: {fileID: 0}
 --- !u!195 &7925885164721068123
 NavMeshAgent:
@@ -294,7 +295,7 @@ NavMeshAgent:
   m_Speed: 3.5
   m_Acceleration: 100
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 0
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -470,6 +471,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 12c9bfe15c19ae9449078c93be7abea2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f65dbe235d80c9499878f48ad01f09d, type: 3}
+--- !u!1 &1535362239087102806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f65dbe235d80c9499878f48ad01f09d, type: 3}
+  m_PrefabInstance: {fileID: 1841930482163971591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2163244592141799916 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0f65dbe235d80c9499878f48ad01f09d, type: 3}
