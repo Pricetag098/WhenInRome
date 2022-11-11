@@ -25,6 +25,7 @@ public class Gun : MonoBehaviour
     [SerializeField] int bulletsFired;
     [SerializeField] float bulletVel;
     [SerializeField] float damage;
+    [SerializeField] float spawnOffset = 1f;
 
     [Header("Sounds")]
     [SerializeField] SoundPlayer shoot;
@@ -203,7 +204,7 @@ public class Gun : MonoBehaviour
     void ShootBullet(Vector3 dir)
     {
         GameObject b = pooler.SpawnObj();
-        b.transform.position = holster.playerAim.transform.position + aim.aimDir * .75f + holster.VertOffset * Vector3.up;
+        b.transform.position = holster.playerAim.transform.position + aim.aimDir * spawnOffset + holster.VertOffset * Vector3.up;
         b.GetComponent<Bullet>().Init(dir,damage);
     }
 

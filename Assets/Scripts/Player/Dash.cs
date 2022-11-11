@@ -7,7 +7,7 @@ public class Dash : MonoBehaviour
 {
     
 
-
+    [SerializeField] Animator animator;
     [Header("Dash Variables")]
     [SerializeField] float dashForce;
     [SerializeField] float dashDuration,iFrames;
@@ -80,6 +80,7 @@ public class Dash : MonoBehaviour
             rb.velocity = dashDir * dashForce;
             stamina -= staminaBurnedOnDash;
             soundPlayer.Play();
+            animator.SetTrigger("Dash");
         }
     }
 
