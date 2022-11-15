@@ -7,7 +7,6 @@ public class Indicator : MonoBehaviour
         public Texture Icon = null;
         public Texture Arrow = null;
         public Color Color = Color.white;
-
         void Start()
         {
             var instance = OffscreenMarkers.Instance();
@@ -20,12 +19,13 @@ public class Indicator : MonoBehaviour
 
     class OffscreenMarkers : MonoBehaviour
     {
+        
         public static OffscreenMarkers Instance()
         {
             Camera mc = Camera.main;
             if (!mc)
             {
-                Debug.LogWarning("OffscreenMarkersCameraScript: Couldn't find main camera.");
+                Debug.LogWarning("Couldn't find main camera.");
                 return null;
             }
             var instance = mc.GetComponent<OffscreenMarkers>();
@@ -47,7 +47,7 @@ public class Indicator : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("EntTrackerLib: The tracked objects list already contains " + om, om);
+                Debug.LogWarning("Tracked objects list already contains " + om, om);
             }
         }
 
@@ -143,4 +143,5 @@ public class Indicator : MonoBehaviour
                 }
             }
         }
+
     }
