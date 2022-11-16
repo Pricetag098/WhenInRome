@@ -344,26 +344,37 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "db7f1a52-5ea9-49b6-8806-c866202e95e3",
-                    "path": "<Gamepad>/leftShoulder",
+                    "name": "Button With One Modifier",
+                    "id": "719b8340-c747-47a8-838d-472ec9f74336",
+                    "path": "ButtonWithOneModifier",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
+                    "groups": "",
                     "action": "Execute",
-                    "isComposite": false,
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "16a4a1e5-e575-4ee9-b320-1dc15d8588b3",
+                    "name": "modifier",
+                    "id": "53ca18d3-80fd-4a2f-b567-1078d03e7110",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Execute",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "button",
+                    "id": "3aedeaac-a05d-4432-961e-238bfe48f68f",
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
+                    "groups": "",
                     "action": "Execute",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
