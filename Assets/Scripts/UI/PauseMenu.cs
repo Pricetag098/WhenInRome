@@ -53,6 +53,7 @@ public class PauseMenu : MonoBehaviour
     {
         if(Time.timeScale == 1)
         {
+            Cursor.visible = true;
             Time.timeScale = 0;
             menuOpen = true;
             transform.GetChild(0).gameObject.SetActive(true);
@@ -68,6 +69,7 @@ public class PauseMenu : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(false);
         StopCoroutine("FadeIn");
         StartCoroutine("FadeOut");
+        Cursor.visible = false;
     }
 
 
