@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 8150007879017266781}
   - component: {fileID: 3935974965240978558}
   - component: {fileID: 2686668741409465933}
+  - component: {fileID: -2818657978794744546}
   m_Layer: 7
   m_Name: Skelly
   m_TagString: Untagged
@@ -428,6 +429,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathSound: {fileID: 6533695394753174970}
+--- !u!114 &-2818657978794744546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5362543892873009242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cc2a27e3b8b63042aff838e7acf02fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 2800000, guid: 2e27a82b5cc4e4ef98cbef2d0b324aed, type: 3}
+  Arrow: {fileID: 2800000, guid: 56603bbe7a2b54640bbd90104bea4981, type: 3}
+  Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &559454545644360573
 PrefabInstance:
   m_ObjectHideFlags: 0

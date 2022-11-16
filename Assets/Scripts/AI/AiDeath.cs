@@ -9,6 +9,7 @@ public class AiDeath : MonoBehaviour
     Health health;
     MeshRenderer mr;
     Collider col;
+    Indicator ind;
     public SoundPlayer deathSound;
 
     // Start is called before the first frame update
@@ -19,6 +20,7 @@ public class AiDeath : MonoBehaviour
         health = GetComponent<Health>();
         mr = GetComponent<MeshRenderer>();
         col = GetComponent<Collider>();
+        ind = GetComponent<Indicator>();
     }
     public void Die()
     {
@@ -26,7 +28,10 @@ public class AiDeath : MonoBehaviour
         agent.enabled = false;
         health.enabled = false;
         mr.enabled = false;
-        col.enabled = false;
+        col.enabled = false;        
+        ind.enabled = false;
+        //ind.Arrow = null;
+        //ind.Icon = null;
         deathSound.Play();
     }
 
