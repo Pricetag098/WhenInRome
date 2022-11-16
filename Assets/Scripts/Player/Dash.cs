@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 public class Dash : MonoBehaviour
 {
     
@@ -31,6 +32,7 @@ public class Dash : MonoBehaviour
     PlayerAim aim;
 
 
+    public Smear smear;
     PlayerInputs inputActions;
     InputAction dash;
     private void Awake()
@@ -81,6 +83,7 @@ public class Dash : MonoBehaviour
             stamina -= staminaBurnedOnDash;
             soundPlayer.Play();
             animator.SetTrigger("Dash");
+            smear.SmearModel(dashDir);
         }
     }
 
