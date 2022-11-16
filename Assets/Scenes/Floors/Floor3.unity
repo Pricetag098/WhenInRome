@@ -2020,6 +2020,14 @@ PrefabInstance:
       propertyPath: holster
       value: 
       objectReference: {fileID: 2010655815}
+    - target: {fileID: 1953026193, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: pAim
+      value: 
+      objectReference: {fileID: 783930208}
+    - target: {fileID: 1953026194, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 354247763071470067, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: cm
       value: 
@@ -36256,6 +36264,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1400036668115291764, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
   m_PrefabInstance: {fileID: 1343495520}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &783930208 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1400036668115291775, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+  m_PrefabInstance: {fileID: 1343495520}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783930207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a180b2761763fcf439cdc6f442ea66df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &783930212 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7354178792284838843, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
