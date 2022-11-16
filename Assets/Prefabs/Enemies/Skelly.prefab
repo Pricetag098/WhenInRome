@@ -160,7 +160,7 @@ MonoBehaviour:
   emmision: _EmissionColor
   colour: {r: 1, g: 1, b: 1, a: 1}
   frequncy: 0
-  flashDuation: 1
+  flashDuation: 0.2
   flashTime: 0
 --- !u!1 &5362543892873009242
 GameObject:
@@ -444,6 +444,7 @@ MonoBehaviour:
   Icon: {fileID: 2800000, guid: 2e27a82b5cc4e4ef98cbef2d0b324aed, type: 3}
   Arrow: {fileID: 2800000, guid: 56603bbe7a2b54640bbd90104bea4981, type: 3}
   Color: {r: 1, g: 1, b: 1, a: 1}
+  health: {fileID: 0}
 --- !u!1001 &559454545644360573
 PrefabInstance:
   m_ObjectHideFlags: 0
