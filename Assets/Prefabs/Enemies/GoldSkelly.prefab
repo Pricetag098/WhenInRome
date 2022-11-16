@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 9044453736972665399}
   - component: {fileID: 4966187089102001136}
   - component: {fileID: 3330916956757086157}
+  - component: {fileID: 6336605016413233733}
   m_Layer: 7
   m_Name: GoldSkelly
   m_TagString: Untagged
@@ -428,6 +429,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathSound: {fileID: 793930545839884031}
+--- !u!114 &6336605016413233733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5113111146796311600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cc2a27e3b8b63042aff838e7acf02fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 2800000, guid: 2e27a82b5cc4e4ef98cbef2d0b324aed, type: 3}
+  Arrow: {fileID: 2800000, guid: 56603bbe7a2b54640bbd90104bea4981, type: 3}
+  Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1139249313209333851
 PrefabInstance:
   m_ObjectHideFlags: 0

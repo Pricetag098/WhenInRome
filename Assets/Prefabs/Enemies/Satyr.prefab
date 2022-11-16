@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 103486780110991492}
   - component: {fileID: 1466751291321502009}
   - component: {fileID: 7123366565584774498}
+  - component: {fileID: 646526090200163432}
   m_Layer: 7
   m_Name: Satyr
   m_TagString: Untagged
@@ -428,6 +429,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathSound: {fileID: 6016838495658244663}
+--- !u!114 &646526090200163432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4187953014362953347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cc2a27e3b8b63042aff838e7acf02fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 2800000, guid: 2e27a82b5cc4e4ef98cbef2d0b324aed, type: 3}
+  Arrow: {fileID: 2800000, guid: 56603bbe7a2b54640bbd90104bea4981, type: 3}
+  Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &7651367936340339864
 MonoBehaviour:
   m_ObjectHideFlags: 0
