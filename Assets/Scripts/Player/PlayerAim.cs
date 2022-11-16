@@ -24,7 +24,7 @@ public class PlayerAim : MonoBehaviour
     
     float angleConstant = 1;
 
-
+    PlayerMove playerMove;
     PlayerInputs inputActions;
     InputAction aim;
     private void Awake()
@@ -47,7 +47,7 @@ public class PlayerAim : MonoBehaviour
         angleConstant = Camera.main.transform.rotation.eulerAngles.x;
         angleConstant = Mathf.Tan(angleConstant * Mathf.Deg2Rad);
         angleConstant = 1/angleConstant;
-
+        playerMove = GetComponent<PlayerMove>();
     }
 
     // Update is called once per frame
@@ -94,6 +94,7 @@ public class PlayerAim : MonoBehaviour
             }
             else
             {
+                aimDir = playerMove.inputDir;
                 hitPoint = transform.position + aimDir;
             }
             

@@ -6,7 +6,7 @@ public class Smear : MonoBehaviour
 {
     Material mat;
     
-    public string Value = "SmearDirection";
+    public string Value = "_SmearDirection";
     //public Color colour = Color.white;
 
     public float intencity;
@@ -27,9 +27,9 @@ public class Smear : MonoBehaviour
         
         float smearPerc = smearTime / smearDuation;
 
-        Vector4 vect = Vector4.one; //new Vector4(dashDir.x, dashDir.y, dashDir.z, 0);
-        mat.SetVector(Value, vect * smearPerc * intencity);
-        smearTime = Mathf.Clamp01(smearTime + Time.deltaTime);
+        Vector4 vect = new Vector4(dashDir.x, dashDir.y, dashDir.z, 0);
+        mat.SetVector(Value, vect * intencity * smearPerc);
+        smearTime = Mathf.Clamp01(smearTime - Time.deltaTime);
         
         if (smearTime < 0)
         {
@@ -38,10 +38,18 @@ public class Smear : MonoBehaviour
 
     }
     [ContextMenu("Flash")]
+    public void TestSmear()
+    {
+        SmearModel(transform.forward);
+    }
+
+
     public void SmearModel(Vector3 dir)
     {
 
-        smearTime = 0;
+        smearTime = smearDuation;
         dashDir = dir * intencity;
     }
+
+    
 }

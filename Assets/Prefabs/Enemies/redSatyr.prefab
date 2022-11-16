@@ -299,7 +299,7 @@ MonoBehaviour:
   agent: {fileID: 7925885164721068123}
   rb: {fileID: 6237299864547065438}
   root: {fileID: 11400000, guid: c8614657aeefb874b8f41cf2af30f260, type: 2}
-  body: {fileID: 0}
+  body: {fileID: 911604004667822603}
   health: {fileID: 0}
 --- !u!195 &7925885164721068123
 NavMeshAgent:
@@ -444,6 +444,7 @@ MonoBehaviour:
   Icon: {fileID: 2800000, guid: 2e27a82b5cc4e4ef98cbef2d0b324aed, type: 3}
   Arrow: {fileID: 2800000, guid: 56603bbe7a2b54640bbd90104bea4981, type: 3}
   Color: {r: 1, g: 1, b: 1, a: 1}
+  health: {fileID: 0}
 --- !u!1001 &29206133256335194
 PrefabInstance:
   m_ObjectHideFlags: 0
