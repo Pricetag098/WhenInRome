@@ -10,6 +10,7 @@ public class Ai : MonoBehaviour
     [HideInInspector]
     public Rigidbody rb;
     public TreeNode root;
+    public GameObject body;
     [HideInInspector]
     public Health health;
     // Start is called before the first frame update
