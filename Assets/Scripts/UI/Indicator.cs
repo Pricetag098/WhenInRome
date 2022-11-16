@@ -7,14 +7,17 @@ public class Indicator : MonoBehaviour
         public Texture Icon = null;
         public Texture Arrow = null;
         public Color Color = Color.white;
+        public Health health;
         void Start()
         {
+        health = GetComponent<Health>();
             var instance = OffscreenMarkers.Instance();
             if (instance)
             {
                 instance.Register(this);
             }
         }
+       
 }
 
     class OffscreenMarkers : MonoBehaviour
@@ -105,9 +108,9 @@ public class Indicator : MonoBehaviour
             for (int i = _trackedObjects.Count - 1; i >= 0; i--)
             {
             Indicator marker = _trackedObjects[i];
-                if (marker && marker.gameObject)
+                if (marker && marker.gameObject && marker.health.health > 0)
                 {
-                    if (!IsVisible(marker.gameObject))
+                    if (!IsVisible(marker.gameObject) && marker.gameObject.activeSelf && Time.timeScale !=0)
                     {
                         Vector3 wp = FixBehindCamera(marker.transform.position);
                         Vector2 mrkScrPos = _camera.WorldToScreenPoint(wp);

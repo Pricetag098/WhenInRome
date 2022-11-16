@@ -30,8 +30,8 @@ public class AiDeath : MonoBehaviour
         mr.enabled = false;
         col.enabled = false;        
         ind.enabled = false;
-        ind.Arrow = null;
-        ind.Icon = null;
+        //ind.Arrow = null;
+        //ind.Icon = null;
         deathSound.Play();
     }
 
