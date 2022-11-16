@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 public class Dash : MonoBehaviour
 {
     
 
-
+    [SerializeField] Animator animator;
     [Header("Dash Variables")]
     [SerializeField] float dashForce;
     [SerializeField] float dashDuration,iFrames;
@@ -31,6 +32,7 @@ public class Dash : MonoBehaviour
     PlayerAim aim;
 
 
+    public Smear smear;
     PlayerInputs inputActions;
     InputAction dash;
     private void Awake()
@@ -80,6 +82,8 @@ public class Dash : MonoBehaviour
             rb.velocity = dashDir * dashForce;
             stamina -= staminaBurnedOnDash;
             soundPlayer.Play();
+            animator.SetTrigger("Dash");
+            smear.SmearModel(dashDir);
         }
     }
 
