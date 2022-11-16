@@ -83,7 +83,7 @@ public class Dash : MonoBehaviour
             stamina -= staminaBurnedOnDash;
             soundPlayer.Play();
             animator.SetTrigger("Dash");
-            smear.SmearModel(dashDir);
+            smear.SmearModel(mv.relVect);
         }
     }
 

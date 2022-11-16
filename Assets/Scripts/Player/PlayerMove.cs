@@ -15,7 +15,7 @@ public class PlayerMove : MonoBehaviour
 
     public Vector3 inputDir;
     Rigidbody rb;
-
+    public Vector3 relVect;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +54,8 @@ public class PlayerMove : MonoBehaviour
 
         animator.SetFloat("Vel", rb.velocity.magnitude);
         Vector2 vect = FindVelRelativeToLook().normalized;
+        relVect.x = vect.x;
+        relVect.z = vect.y;
         animator.SetFloat("VelX",vect.x);
         animator.SetFloat("VelY", vect.y);
     }
