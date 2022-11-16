@@ -247,7 +247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7925885164721068121, guid: 2dab0d3ac18a9954daee624a5781e151, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7925885164721068122, guid: 2dab0d3ac18a9954daee624a5781e151, type: 3}
       propertyPath: player
@@ -1421,11 +1421,6 @@ MonoBehaviour:
   Icon: {fileID: 2800000, guid: a940917cc397643afb071010cb2143d9, type: 3}
   Arrow: {fileID: 2800000, guid: 56603bbe7a2b54640bbd90104bea4981, type: 3}
   Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &767954110 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1156827567446564028, guid: 3712255652d91c646b4b077742c45565, type: 3}
-  m_PrefabInstance: {fileID: 1498094084}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &789203785
 GameObject:
   m_ObjectHideFlags: 0
@@ -7562,6 +7557,10 @@ PrefabInstance:
       propertyPath: holster
       value: 
       objectReference: {fileID: 185887906}
+    - target: {fileID: 310602576213356155, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 354247763071470067, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: cm
       value: 
@@ -7570,6 +7569,10 @@ PrefabInstance:
       propertyPath: filled
       value: 
       objectReference: {fileID: 836535121}
+    - target: {fileID: 354247763071470071, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 354247763120779365, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -7654,6 +7657,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 354247763120779366, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 354247763120779369, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: m_Name
       value: Ui
@@ -7666,7 +7673,19 @@ PrefabInstance:
       propertyPath: dash
       value: 
       objectReference: {fileID: 185887909}
+    - target: {fileID: 1784832703761601802, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: cm
+      value: 
+      objectReference: {fileID: 185887908}
     - target: {fileID: 2631533760309202334, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449405618601623781, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: cm
+      value: 
+      objectReference: {fileID: 185887908}
+    - target: {fileID: 4841520489656503741, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -7681,11 +7700,15 @@ PrefabInstance:
     - target: {fileID: 5254545359012644495, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: icon.Array.data[1]
       value: 
-      objectReference: {fileID: 1806544665}
+      objectReference: {fileID: 0}
     - target: {fileID: 5254545359012644495, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: icon.Array.data[2]
       value: 
-      objectReference: {fileID: 767954110}
+      objectReference: {fileID: 0}
+    - target: {fileID: 5711971222214150278, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6217790812377984174, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: holster
       value: 
@@ -7694,6 +7717,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6789253563079252094, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7087901594047804850, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: holster
+      value: 
+      objectReference: {fileID: 185887906}
     - target: {fileID: 7861105956866201955, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: m_Name
       value: HealthVignettes
@@ -7990,11 +8021,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1806544665 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6496866543467707271, guid: 3712255652d91c646b4b077742c45565, type: 3}
-  m_PrefabInstance: {fileID: 1498094084}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1817084583 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4187953014362953347, guid: 09ba7922942e5e94bac86c6971314f49, type: 3}
