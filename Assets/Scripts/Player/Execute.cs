@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class Execute : MonoBehaviour
 {
     PlayerAim aim;
-    [SerializeField] float detectRange,damage;
+    [SerializeField] float detectRange,damage, range;
     [SerializeField] LayerMask enemy;
     [SerializeField] float soundTime, timebetweenhits,timeAfterDmg;
     [SerializeField] GameObject volume;
@@ -52,7 +52,7 @@ public class Execute : MonoBehaviour
 
             healths.Clear();
             RaycastHit hit;
-            if (Physics.Raycast(transform.position + Vector3.up * aim.offset, aim.GetAssistedDir(20), out hit, float.PositiveInfinity))
+            if (Physics.Raycast(transform.position + Vector3.up * aim.offset, aim.GetAssistedDir(20), out hit, range))
             {
                 if (hit.collider.gameObject != gameObject && hit.collider.gameObject.GetComponent<Health>())
                 {

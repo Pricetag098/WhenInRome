@@ -2763,9 +2763,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1132447263103078185, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 862148585777863908, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: range
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1400036668115291764, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
       propertyPath: m_Name
@@ -2816,10 +2816,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4251982014075360451, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: level
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251982014075360451, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
       propertyPath: fadeObj
       value: 
       objectReference: {fileID: 1292653939}
@@ -2827,26 +2823,6 @@ PrefabInstance:
       propertyPath: floor
       value: 
       objectReference: {fileID: 1548197512}
-    - target: {fileID: 5937744080861241804, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: maxMeter
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7650813224667311242, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: Value
-      value: _SmearDirection
-      objectReference: {fileID: 0}
-    - target: {fileID: 7650813224667311242, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: intencity
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7650813224667311242, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: smearDuation
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7655701113255094451, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-      propertyPath: damage
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
 --- !u!1 &87381876 stripped
@@ -33699,28 +33675,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 674515676556466927, guid: 4074251e240fb8e44948d9b17b40d84d, type: 3}
   m_PrefabInstance: {fileID: 1497489173}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &888492309 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5473903960710724015, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
-  m_PrefabInstance: {fileID: 87033648}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &888492313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 888492309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f1106cb038fb2a4ca43e61ebb62c55e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  emmision: _EmissionColor
-  colour: {r: 1, g: 1, b: 1, a: 1}
-  frequncy: 0
-  flashDuation: 1
-  flashTime: 0
 --- !u!4 &889810902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5980024167674850298, guid: b74f146c894dede488e40f6edd511b64, type: 3}
