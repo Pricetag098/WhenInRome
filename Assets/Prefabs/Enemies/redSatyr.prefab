@@ -538,6 +538,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 2800000, guid: a005a05464858dd47864cb705d6c8498, type: 3}
   Arrow: {fileID: 2800000, guid: 2c878b5b9ae76ee4f8d9674d938d333b, type: 3}
+  arrowSize: 1
+  iconSize: 1
   Color: {r: 1, g: 1, b: 1, a: 1}
   health: {fileID: 0}
 --- !u!1001 &29206133256335194
@@ -552,12 +554,24 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba33c9dd6690c3b4ab36084d02225796, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba33c9dd6690c3b4ab36084d02225796, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba33c9dd6690c3b4ab36084d02225796, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba33c9dd6690c3b4ab36084d02225796, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.013792648
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba33c9dd6690c3b4ab36084d02225796, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.25
+      value: -0.159
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba33c9dd6690c3b4ab36084d02225796, type: 3}
       propertyPath: m_LocalPosition.z
