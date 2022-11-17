@@ -11,14 +11,17 @@ public class Ai : MonoBehaviour
     public Rigidbody rb;
     public TreeNode root;
     public GameObject body;
+
     [HideInInspector]
     public Health health;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         health = GetComponent<Health>();
         agent = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
+        
         Reset();
         
     }

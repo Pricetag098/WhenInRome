@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3264d27aa9938674cadb6090a67c19dc, type: 3}
+  m_Name: Play
+  m_EditorClassIdentifier: 
+  waitForEnd: 0
+  passThrough: {fileID: 0}
+  volume: 1
+  pitch: 1
+  pitchRange: 0.1
+  clipList:
+  - {fileID: 8300000, guid: 3f6e31cef9b06ca46a24d3d7b19e35e3, type: 3}
+  - {fileID: 8300000, guid: 4af71491f54fa0a47b8df91ff4048868, type: 3}
+  - {fileID: 8300000, guid: 9e64527c32ae69d4c81270276de5e146, type: 3}
