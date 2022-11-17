@@ -12,7 +12,7 @@ public class ActDie : TreeNode
         health.TakeDmg(health.maxHealth * 2);
         if (passThrough != null)
         {
-            ai.root = passThrough;
+            
             passThrough.Run();
         }
 

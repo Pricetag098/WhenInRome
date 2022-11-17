@@ -4,6 +4,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerAim : MonoBehaviour
 {
+    public enum InputTypes
+    {
+        mouse,
+        gamepad
+    }
+    public InputTypes inputType;
+
     [SerializeField] LayerMask floorLayer = 64;
     [SerializeField] float rotate;
     public float offset = 0.75f;
@@ -24,7 +31,7 @@ public class PlayerAim : MonoBehaviour
     
     float angleConstant = 1;
 
-
+    PlayerMove playerMove;
     PlayerInputs inputActions;
     InputAction aim;
     private void Awake()
@@ -47,27 +54,27 @@ public class PlayerAim : MonoBehaviour
         angleConstant = Camera.main.transform.rotation.eulerAngles.x;
         angleConstant = Mathf.Tan(angleConstant * Mathf.Deg2Rad);
         angleConstant = 1/angleConstant;
-
+        playerMove = GetComponent<PlayerMove>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector2 contAimDir = aim.ReadValue<Vector2>();
-        bool useMouse = true;
+        inputType = InputTypes.mouse;
         if(Gamepad.current != null)
         {
             if(Gamepad.current.lastUpdateTime > Mouse.current.lastUpdateTime)
             {
-                useMouse = false;
+                inputType = InputTypes.gamepad;
             }
         }
-        if(useMouse) 
+        if(inputType == InputTypes.mouse) 
         {
             
             float y = 0;
             RaycastHit hit;
-            Cursor.visible = true;
+            //Cursor.visible = true;
             Vector2 mPos = Mouse.current.position.ReadValue();
             if (Physics.Raycast(Camera.main.ScreenPointToRay(mPos), out hit, float.PositiveInfinity, floorLayer))
             {
@@ -82,7 +89,7 @@ public class PlayerAim : MonoBehaviour
         else
         {
             //Mouse.current.WarpCursorPosition(new Vector2(Screen.width/2,Screen.height/2));
-            Cursor.visible = false;
+            //Cursor.visible = false;
             //Debug.Log("AAAA");
             //Debug.Log("AAAA");
             if(contAimDir != Vector2.zero)
@@ -94,6 +101,7 @@ public class PlayerAim : MonoBehaviour
             }
             else
             {
+                aimDir = playerMove.inputDir;
                 hitPoint = transform.position + aimDir;
             }
             
