@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Yell
   m_EditorClassIdentifier: 
   waitForEnd: 0
-  passThrough: {fileID: 0}
+  passThrough: {fileID: 11400000, guid: 54e18319fbf071942b5bd5fb52656f07, type: 2}
   volume: 1
   pitch: 1
-  pitchRange: 0
-  clipList: []
+  pitchRange: 0.1
+  clipList:
+  - {fileID: 8300000, guid: 05d4715bab6e6fb4aa90df3d4a0d3178, type: 3}
+  - {fileID: 8300000, guid: 4734031b8bb26184e95396442a34866a, type: 3}
+  - {fileID: 8300000, guid: 49afbb1cc31e3154fa20948339f6b343, type: 3}

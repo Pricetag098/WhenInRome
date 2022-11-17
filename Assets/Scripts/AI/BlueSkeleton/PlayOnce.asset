@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4abfcacb80363774d99a4f18ec50bc0e, type: 3}
   m_Name: PlayOnce
   m_EditorClassIdentifier: 
-  passThrough: {fileID: 0}
+  passThrough: {fileID: 11400000, guid: 04d78f93bd6973b4eb7e669f554fb20b, type: 2}
   volume: 1
   pitch: 1
   pitchRange: 0
-  clipList: []
+  clipList:
+  - {fileID: 8300000, guid: 979fc93802f92bf4e9e95c6968e77b49, type: 3}
