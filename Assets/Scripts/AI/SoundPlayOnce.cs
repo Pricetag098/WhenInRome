@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Audio;
 [CreateAssetMenu(fileName = "PlayOnce", menuName = "Ai/Sound/PlayOnce")]
 public class SoundPlayOnce : TreeNode
 {
@@ -9,6 +9,7 @@ public class SoundPlayOnce : TreeNode
     public TreeNode passThrough;
     public float volume =1, pitch =1, pitchRange;
     public List<AudioClip> clipList = new List<AudioClip>();
+    public AudioMixerGroup output;
     AudioSource source;
     public override void Run()
     {
@@ -32,6 +33,7 @@ public class SoundPlayOnce : TreeNode
 
         source = ai.gameObject.AddComponent<AudioSource>();
         source.volume = volume;
+        source.outputAudioMixerGroup = output;
         if (passThrough != null)
         {
             passThrough = Instantiate(passThrough);
