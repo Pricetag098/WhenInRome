@@ -1195,7 +1195,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 590533360}
+      - m_Target: {fileID: 888492313}
         m_TargetAssemblyTypeName: Flash, Assembly-CSharp
         m_MethodName: FlashColour
         m_Mode: 1
@@ -1458,7 +1458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emmision: _EmissionColor
-  colour: {r: 1, g: 1, b: 1, a: 1}
+  colour: {r: 0.87843144, g: 0.24705884, b: 0.121568635, a: 1}
   frequncy: 0
   flashDuation: 1
   flashTime: 0
@@ -1478,23 +1478,6 @@ MonoBehaviour:
   intencity: 3
   smearDuation: 0.1
   smearTime: 0
---- !u!114 &590533360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5473903960710724015}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f1106cb038fb2a4ca43e61ebb62c55e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  emmision: _EmissionColor
-  colour: {r: 1, g: 1, b: 1, a: 1}
-  frequncy: 0
-  flashDuation: 0
-  flashTime: 0
 --- !u!1 &5652371633843435357
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,6 +2086,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 228f279028fdb5944955713b71da2b76, type: 3}
+--- !u!4 &9153931139799860440 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7197397438854406626, guid: 228f279028fdb5944955713b71da2b76, type: 3}
+  m_PrefabInstance: {fileID: 7139611644286376646}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &3638463606475859799 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 228f279028fdb5944955713b71da2b76, type: 3}
@@ -2111,11 +2099,6 @@ Animator:
 --- !u!4 &7250311116420807981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 228f279028fdb5944955713b71da2b76, type: 3}
-  m_PrefabInstance: {fileID: 7139611644286376646}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &9153931139799860440 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -7197397438854406626, guid: 228f279028fdb5944955713b71da2b76, type: 3}
   m_PrefabInstance: {fileID: 7139611644286376646}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &5473903960710724015 stripped
