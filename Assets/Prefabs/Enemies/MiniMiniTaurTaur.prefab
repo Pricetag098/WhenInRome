@@ -667,7 +667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 250
+  maxHealth: 400
   iFrames: 0
   onHit:
     m_PersistentCalls:
@@ -792,7 +792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 6059645527504600587}
   agent: {fileID: 8027981062567467022}
-  timeBetween: 0.1
+  timeBetween: 0.5
   ground:
     serializedVersion: 2
     m_Bits: 1
