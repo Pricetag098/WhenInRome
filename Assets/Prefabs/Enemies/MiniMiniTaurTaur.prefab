@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emmision: _EmissionColor
-  colour: {r: 1, g: 1, b: 1, a: 1}
+  colour: {r: 1, g: 1, b: 0.49411765, a: 1}
   frequncy: 0
   flashDuation: 0.2
   flashTime: 0
@@ -444,9 +444,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 2800000, guid: a005a05464858dd47864cb705d6c8498, type: 3}
   Arrow: {fileID: 2800000, guid: 2c878b5b9ae76ee4f8d9674d938d333b, type: 3}
-  arrowSize: 2
-  iconSize: 2
-  Color: {r: 1, g: 1, b: 1, a: 0.6117647}
+  arrowSize: 1
+  iconSize: 1
+  Color: {r: 1, g: 1, b: 1, a: 1}
   health: {fileID: 0}
 --- !u!1001 &1438877697101519201
 PrefabInstance:

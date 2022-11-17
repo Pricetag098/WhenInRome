@@ -1106,6 +1106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a180b2761763fcf439cdc6f442ea66df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputType: 0
   floorLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -1185,6 +1186,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6510642768996951821}
         m_TargetAssemblyTypeName: SoundPlayer, Assembly-CSharp
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 888492313}
+        m_TargetAssemblyTypeName: Flash, Assembly-CSharp
+        m_MethodName: FlashColour
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1445,7 +1458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emmision: _EmissionColor
-  colour: {r: 1, g: 1, b: 1, a: 1}
+  colour: {r: 0.87843144, g: 0.24705884, b: 0.121568635, a: 1}
   frequncy: 0
   flashDuation: 1
   flashTime: 0
