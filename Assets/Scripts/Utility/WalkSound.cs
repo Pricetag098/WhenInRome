@@ -8,6 +8,7 @@ public class WalkSound : MonoBehaviour
     [SerializeField] float timeBetween;
     [SerializeField] LayerMask ground = 1;
     [SerializeField] SoundPlayer defSound,waterSound;
+    [SerializeField] ParticleSystem waterSplash;
     SoundPlayer player;
     float timer;
     // Start is called before the first frame update
@@ -34,6 +35,7 @@ public class WalkSound : MonoBehaviour
                         break;
                     case FloorType.Types.water:
                         player = waterSound;
+                        waterSplash.Play();
                         break;
                 }
             }
