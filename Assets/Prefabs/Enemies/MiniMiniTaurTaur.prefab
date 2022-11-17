@@ -301,6 +301,7 @@ MonoBehaviour:
   root: {fileID: 11400000, guid: 63c0ae63a19f6c347b70558913a4bbb6, type: 2}
   body: {fileID: 4244975512464558368}
   health: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!195 &8027981062567467022
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -443,7 +444,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 2800000, guid: a005a05464858dd47864cb705d6c8498, type: 3}
   Arrow: {fileID: 2800000, guid: 2c878b5b9ae76ee4f8d9674d938d333b, type: 3}
-  Color: {r: 1, g: 1, b: 1, a: 1}
+  arrowSize: 2
+  iconSize: 2
+  Color: {r: 1, g: 1, b: 1, a: 0.6117647}
   health: {fileID: 0}
 --- !u!1001 &1438877697101519201
 PrefabInstance:
