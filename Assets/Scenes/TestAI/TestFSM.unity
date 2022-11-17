@@ -614,6 +614,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1400036668115291764, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
   m_PrefabInstance: {fileID: 185887905}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &185887913 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1400036668115291775, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+  m_PrefabInstance: {fileID: 185887905}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185887911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a180b2761763fcf439cdc6f442ea66df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &317563501 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8027981062567467020, guid: 7c95a83c4477cc34f99cadc34809b15a, type: 3}
@@ -634,6 +645,7 @@ MonoBehaviour:
   Icon: {fileID: 2800000, guid: a940917cc397643afb071010cb2143d9, type: 3}
   Arrow: {fileID: 2800000, guid: 56603bbe7a2b54640bbd90104bea4981, type: 3}
   Color: {r: 1, g: 1, b: 1, a: 1}
+  health: {fileID: 0}
 --- !u!1 &328023944
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +848,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3837191207125801881, guid: 0e0a37e88b3ca3c4c857051481177db1, type: 3}
+      propertyPath: pickupEffect
+      value: 
+      objectReference: {fileID: 1242419491}
     - target: {fileID: 3837191207125801888, guid: 0e0a37e88b3ca3c4c857051481177db1, type: 3}
       propertyPath: m_Name
       value: MedikBag
@@ -1401,11 +1417,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &767954110 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1156827567446564028, guid: 3712255652d91c646b4b077742c45565, type: 3}
-  m_PrefabInstance: {fileID: 1498094084}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &789203785
 GameObject:
   m_ObjectHideFlags: 0
@@ -7147,6 +7158,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46dce781d3d1d844da972d43c52f53df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1242419491 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1420358094890960769, guid: 0e0a37e88b3ca3c4c857051481177db1, type: 3}
+  m_PrefabInstance: {fileID: 464979053}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1389663507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7302,6 +7318,7 @@ MonoBehaviour:
   Icon: {fileID: 2800000, guid: a940917cc397643afb071010cb2143d9, type: 3}
   Arrow: {fileID: 2800000, guid: 56603bbe7a2b54640bbd90104bea4981, type: 3}
   Color: {r: 1, g: 1, b: 1, a: 1}
+  health: {fileID: 0}
 --- !u!1 &1416480965
 GameObject:
   m_ObjectHideFlags: 0
@@ -7542,6 +7559,10 @@ PrefabInstance:
       propertyPath: holster
       value: 
       objectReference: {fileID: 185887906}
+    - target: {fileID: 1953026193, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: pAim
+      value: 
+      objectReference: {fileID: 185887913}
     - target: {fileID: 354247763071470067, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: cm
       value: 
@@ -7661,11 +7682,11 @@ PrefabInstance:
     - target: {fileID: 5254545359012644495, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: icon.Array.data[1]
       value: 
-      objectReference: {fileID: 1806544665}
+      objectReference: {fileID: 0}
     - target: {fileID: 5254545359012644495, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: icon.Array.data[2]
       value: 
-      objectReference: {fileID: 767954110}
+      objectReference: {fileID: 0}
     - target: {fileID: 6217790812377984174, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: holster
       value: 
@@ -7674,6 +7695,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7087901594047804850, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: holster
+      value: 
+      objectReference: {fileID: 185887906}
     - target: {fileID: 7861105956866201955, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: m_Name
       value: HealthVignettes
@@ -7970,11 +7995,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1806544665 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6496866543467707271, guid: 3712255652d91c646b4b077742c45565, type: 3}
-  m_PrefabInstance: {fileID: 1498094084}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1874578639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8117,6 +8137,7 @@ MonoBehaviour:
   Icon: {fileID: 2800000, guid: 2e27a82b5cc4e4ef98cbef2d0b324aed, type: 3}
   Arrow: {fileID: 2800000, guid: 56603bbe7a2b54640bbd90104bea4981, type: 3}
   Color: {r: 1, g: 1, b: 1, a: 1}
+  health: {fileID: 0}
 --- !u!1 &1985235630 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2631533760309202334, guid: 3712255652d91c646b4b077742c45565, type: 3}
