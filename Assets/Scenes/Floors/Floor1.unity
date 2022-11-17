@@ -1994,7 +1994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1427737629}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &67371528
@@ -2825,6 +2825,17 @@ PrefabInstance:
       objectReference: {fileID: 1548197512}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+--- !u!114 &87033649 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1400036668115291775, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+  m_PrefabInstance: {fileID: 87033648}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77994251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a180b2761763fcf439cdc6f442ea66df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &87381876 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6464496017318539584, guid: b74f146c894dede488e40f6edd511b64, type: 3}
@@ -20202,6 +20213,10 @@ PrefabInstance:
       propertyPath: holster
       value: 
       objectReference: {fileID: 1774496416}
+    - target: {fileID: 1953026193, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: pAim
+      value: 
+      objectReference: {fileID: 87033649}
     - target: {fileID: 354247763071470067, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: cm
       value: 
@@ -56887,6 +56902,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 362070222659209121, guid: c07b83e12d4c27d4fb9eadd495c264cc, type: 3}
   m_PrefabInstance: {fileID: 1427701831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1427737629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 218069324916183052, guid: 2cc9985f1ecf8d14ab03f703f0b7f438, type: 3}
+  m_PrefabInstance: {fileID: 1110344765}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1427867580
 GameObject:
