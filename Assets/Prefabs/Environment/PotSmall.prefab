@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 558682001823186375}
   - component: {fileID: 2316012512501549325}
   - component: {fileID: 5299434345478274782}
+  - component: {fileID: 3011386989230208298}
   m_Layer: 0
   m_Name: PotSmall
   m_TagString: Untagged
@@ -96,3 +97,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4057635256152971149, guid: f918a34db6a878c4f962f63c55a2a3ff, type: 3}
+--- !u!208 &3011386989230208298
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4261774602414090456}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.33900002, y: 0.261, z: 0.33900002}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.003, y: 0, z: 0}
+  m_TimeToStationary: 0.5

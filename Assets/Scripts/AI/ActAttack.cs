@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ShootAtPlayer", menuName = "Ai/Attack/ShootAtPlayer")]
 public class ActAttack : TreeNode
 {
-    public TreeNode passThrough;
+    public TreeNode passThrough,onShoot;
 
     [Header("Gun Settings")]
     [SerializeField] float fireRate;
@@ -29,12 +29,14 @@ public class ActAttack : TreeNode
             Fire(dir);
                 
             fireTimer = 0;
-            
+            if (onShoot != null)
+                onShoot.Run();
 
         }
 
         if(passThrough != null)
             passThrough.Run();
+        
     }
     public override void Innit(Ai owner)
     {
@@ -48,6 +50,11 @@ public class ActAttack : TreeNode
         {
             passThrough = Instantiate(passThrough);
             passThrough.Innit(owner);
+        }
+        if (onShoot != null)
+        {
+            onShoot = Instantiate(onShoot);
+            onShoot.Innit(owner);
         }
     }
 
@@ -70,6 +77,10 @@ public class ActAttack : TreeNode
         if (passThrough != null)
         {
             passThrough.Tick();
+        }
+        if (onShoot != null)
+        {
+            onShoot.Tick();
         }
     }
 

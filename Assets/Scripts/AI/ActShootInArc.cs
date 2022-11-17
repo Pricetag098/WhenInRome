@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ShootInArc", menuName = "Ai/Attack/ShootInArc")]
 public class ActShootInArc : TreeNode
 {
-    public TreeNode passThrough;
+    public TreeNode passThrough, onShoot;
 
     [Header("Gun Settings")]
     [SerializeField] float fireRate;
@@ -31,7 +31,8 @@ public class ActShootInArc : TreeNode
             
             fireTimer = 0;
 
-
+            if (onShoot != null)
+                onShoot.Run();
         }
         
         if (passThrough != null)
@@ -50,6 +51,11 @@ public class ActShootInArc : TreeNode
         {
             passThrough = Instantiate(passThrough);
             passThrough.Innit(owner);
+        }
+        if (onShoot != null)
+        {
+            onShoot = Instantiate(onShoot);
+            onShoot.Innit(owner);
         }
     }
 
@@ -73,6 +79,10 @@ public class ActShootInArc : TreeNode
         if (passThrough != null)
         {
             passThrough.Tick();
+        }
+        if (onShoot != null)
+        {
+            onShoot.Tick();
         }
     }
 

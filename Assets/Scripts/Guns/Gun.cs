@@ -161,7 +161,7 @@ public class Gun : MonoBehaviour
 
     void TryFire()
     {
-        if (fireTimer < 0 && !isReloading && Time.timeScale == 1)
+        if (fireTimer < 0 && !isReloading && Time.timeScale == 1 && ammo >0)
         {
 
 
@@ -169,15 +169,16 @@ public class Gun : MonoBehaviour
             Fire();
             ammo--;
             fireTimer = fireRate;
-            if (ammo <= 0)
-            {
-                reloadTime = 0;
-                isReloading = true;
-                reload.Play();
-            }
+            
 
         }
-        
+        if (ammo <= 0 && !isReloading)
+        {
+            reloadTime = 0;
+            isReloading = true;
+            reload.Play();
+        }
+
     }
     void Fire()
     {
@@ -190,6 +191,10 @@ public class Gun : MonoBehaviour
         if(aimAssistAngle > 0)
         {
             shootDir = aim.GetAssistedDir(aimAssistAngle);
+        }
+        if(shootDir == Vector3.zero)
+        {
+            shootDir = holster.playerAim.transform.forward;
         }
 
         for(int i = 0; i< bulletsFired; i++)
