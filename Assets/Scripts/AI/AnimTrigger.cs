@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Die", menuName = "Ai/Action/Die")]
-public class ActDie : TreeNode
+[CreateAssetMenu(fileName = "Trigger", menuName = "Ai/Animation/Trigger")]
+public class AnimTrigger : TreeNode
 {
+    public string triggerName = "";
     public TreeNode passThrough;
-    Health health;
+    
     public override void Run()
     {
-        health.TakeDmg(health.maxHealth * 2);
+        if(ai.animator != null)
+        {
+            ai.animator.SetTrigger(triggerName);
+        }
         if (passThrough != null)
         {
             
@@ -20,7 +24,7 @@ public class ActDie : TreeNode
     public override void Innit(Ai owner)
     {
         ai = owner;
-        health = ai.GetComponent<Health>();
+        
         if (passThrough != null)
         {
             passThrough = Instantiate(passThrough);
