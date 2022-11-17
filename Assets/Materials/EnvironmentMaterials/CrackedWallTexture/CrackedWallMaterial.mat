@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1382801668612201753
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 4
 --- !u!21 &2100000
 Material:
   serializedVersion: 6
@@ -7,25 +20,36 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: hole side FLR2
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Name: CrackedWallMaterial
+  m_Shader: {fileID: -6465566751694194690, guid: a797a707518e54345898d4fe6c0abadc, type: 3}
   m_ShaderKeywords: _METALLICSPECGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_1d7ff85f1c4c47e78219e07bcf608e36:
+        m_Texture: {fileID: 2800000, guid: 9f269e1cc4be25048a15ff974e7c51ed, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_38dbee6ae6104f9d8555109f92a78604:
+        m_Texture: {fileID: 2800000, guid: dda42f6ec5faf2548ab5dda5d0328b4c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_9e7aca0741e44f99a173ba1242537521:
+        m_Texture: {fileID: 2800000, guid: a833fac29f6e81b429f3cc171664879e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 0dc0d49dbbe86564b833aa768550fabf, type: 3}
+        m_Texture: {fileID: 2800000, guid: dda42f6ec5faf2548ab5dda5d0328b4c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: bce1eeb7ffc2168428c8add9b2aa3d4c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9f269e1cc4be25048a15ff974e7c51ed, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -45,11 +69,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 0dc0d49dbbe86564b833aa768550fabf, type: 3}
+        m_Texture: {fileID: 2800000, guid: dda42f6ec5faf2548ab5dda5d0328b4c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 1ec66e97c715e4e48bd62461e5d1b336, type: 3}
+        m_Texture: {fileID: 2800000, guid: a833fac29f6e81b429f3cc171664879e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -77,6 +101,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_1d4925e1279f4867a0b1803947a986c2: 0.75
+    - Vector1_a35501c9f9044d529e007e781540bceb: -6.65
+    - Vector1_c9015a5a38b84807998b8a31dd46b255: -38.6
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -97,7 +124,7 @@ Material:
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0
+    - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -106,21 +133,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Vector2_93f2095cdb9e462cba5ac35e780387e0: {r: 0, g: 4.6, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.19450876, g: 0.4704, b: 0.048451196, a: 1}
+    - _Color: {r: 0.11836463, g: 0.073876, b: 0.2024, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &1243573625976248419
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 4
