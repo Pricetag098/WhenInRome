@@ -6,7 +6,7 @@ public class HealPickup : MonoBehaviour
 {
     SoundPlayer sound;
     public float healAmount;
-    public GameObject pickupEffect;
+    //public GameObject pickupEffect;
     
      [SerializeField] GameObject model;
     private void Start()
@@ -28,7 +28,7 @@ public class HealPickup : MonoBehaviour
             GetComponent<Collider>().enabled = false;
             //GetComponent<MeshRenderer>().enabled = false;
             model.SetActive(false);
-            Instantiate(pickupEffect, transform.position, transform.rotation);
+            //Instantiate(pickupEffect, transform.position, transform.rotation);
             //GetComponent<ObjectSpin>().enabled = false;
             sound.Play();
             enabled = false;
