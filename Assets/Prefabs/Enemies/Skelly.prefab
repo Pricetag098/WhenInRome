@@ -186,7 +186,7 @@ AudioSource:
   m_GameObject: {fileID: 3899827718746001501}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7308728237902420620, guid: 1302a876e7971634d9b1124a73282664, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -560,9 +560,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 2800000, guid: a005a05464858dd47864cb705d6c8498, type: 3}
   Arrow: {fileID: 2800000, guid: 2c878b5b9ae76ee4f8d9674d938d333b, type: 3}
-  arrowSize: 1
-  iconSize: 1
-  Color: {r: 1, g: 1, b: 1, a: 1}
+  arrowSize: 2
+  iconSize: 2
+  Color: {r: 1, g: 1, b: 1, a: 0.6117647}
   health: {fileID: 0}
 --- !u!114 &4018342045376894620
 MonoBehaviour:
@@ -578,7 +578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8150007879017266781}
   agent: {fileID: 5362543892873009240}
-  timeBetween: 0.1
+  timeBetween: 0.4
   ground:
     serializedVersion: 2
     m_Bits: 1
@@ -655,7 +655,7 @@ AudioSource:
   m_GameObject: {fileID: 5996169325275124715}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 4279076008633356284, guid: 1302a876e7971634d9b1124a73282664, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -805,8 +805,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0.92403173, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Intensity: 0.5
+  m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
