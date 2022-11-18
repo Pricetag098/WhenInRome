@@ -8,9 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Blue Skeley Texture
-  m_Shader: {fileID: 4800000, guid: 0e9d5a909a1f7e84882a534d0d11e49f, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: ddcf20f2233429b419d065291e4399f2, type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -19,6 +19,22 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_1e05d3a0c9a7476594fe9617682ae340:
+        m_Texture: {fileID: 2800000, guid: 8997c5a04bbfe9f45843d3775257c079, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_36e1cb490d5e4565be0997d7fd01a92b:
+        m_Texture: {fileID: 2800000, guid: e97d9a573dbfba34589288a8bc1899b2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_7484c8fec2ea4a3dbc02b1b4d6ecb32c:
+        m_Texture: {fileID: 2800000, guid: 5169a8a4a5b300d43adc4ed49e8198fa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_9f642bcb3fa14c0593da922549747337:
+        m_Texture: {fileID: 2800000, guid: 1d5a28bc29e26e94b97d1b151ebe59de, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -76,6 +92,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_333b67b1d4fe431eb8ab044e2abc7a4e: 30
+    - Vector1_be60d9f2b01542eb999a99477257e712: 0.01
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -85,6 +103,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
+    - _Dissolve: 0
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
@@ -109,6 +128,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_c75c4280f67547eea87a5c8164584b5e: {r: 0, g: 10.10196, b: 16, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
