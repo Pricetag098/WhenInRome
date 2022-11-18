@@ -17,6 +17,19 @@ MonoBehaviour:
   frequncy: 0
   flashDuation: 1
   flashTime: 0
+--- !u!114 &3993101151704999798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945866945811080350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae8984707f5d2e54e9c08a95a4bda71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveRate: 1
 --- !u!1 &1587197938686585618
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathSound: {fileID: 793930545839884031}
+  dissolve: {fileID: 3993101151704999798}
 --- !u!114 &6336605016413233733
 MonoBehaviour:
   m_ObjectHideFlags: 0

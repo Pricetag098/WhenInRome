@@ -11,6 +11,7 @@ public class AiDeath : MonoBehaviour
     Collider col;
     Indicator ind;
     public SoundPlayer deathSound;
+    public Dissolver dissolve;
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -37,6 +38,7 @@ public class AiDeath : MonoBehaviour
         //ind.Arrow = null;
         //ind.Icon = null;
         deathSound.Play();
+        dissolve.Dissolve();
     }
 
 }
