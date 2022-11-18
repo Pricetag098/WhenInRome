@@ -577,7 +577,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathSound: {fileID: 4415169163264549937}
-  dissolve: {fileID: 5580735926864952415}
+  dissolvers:
+  - {fileID: 5580735926864952415}
 --- !u!114 &-3295452346558730173
 MonoBehaviour:
   m_ObjectHideFlags: 0

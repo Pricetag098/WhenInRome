@@ -2763,6 +2763,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 862148585777863908, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: detectRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1400036668115291764, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2819,6 +2823,10 @@ PrefabInstance:
       propertyPath: floor
       value: 
       objectReference: {fileID: 1548197512}
+    - target: {fileID: 5937744080861241804, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: maxMeter
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
 --- !u!114 &87033649 stripped
@@ -43073,6 +43081,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6378118550237515594, guid: cb83e8a6b14a61a44b4b50cb0f778f2f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b8cd1ae366eee24b9f696f6cf593e67, type: 2}
     - target: {fileID: 7160605136715452964, guid: cb83e8a6b14a61a44b4b50cb0f778f2f, type: 3}
       propertyPath: m_Name
       value: GunPickupDoor
@@ -43161,6 +43173,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.3746895
       objectReference: {fileID: 0}
+    - target: {fileID: 7869286614708321591, guid: cb83e8a6b14a61a44b4b50cb0f778f2f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b8cd1ae366eee24b9f696f6cf593e67, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb83e8a6b14a61a44b4b50cb0f778f2f, type: 3}
 --- !u!1001 &1092447256

@@ -62,6 +62,19 @@ Transform:
   m_Father: {fileID: 5113111146796311607}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4192457989163344633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2303193297632089613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae8984707f5d2e54e9c08a95a4bda71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveRate: 1
 --- !u!1 &2814938450604909783
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +732,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathSound: {fileID: 793930545839884031}
-  dissolve: {fileID: 3993101151704999798}
+  dissolvers:
+  - {fileID: 4192457989163344633}
+  - {fileID: 3993101151704999798}
 --- !u!114 &6336605016413233733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1047,13 +1062,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a340b665fd60a3a42a1520b32e3c164f, type: 3}
   m_PrefabInstance: {fileID: 5279875712386787452}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1742742789864969709 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: a340b665fd60a3a42a1520b32e3c164f, type: 3}
+--- !u!1 &2303193297632089613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6247465636959436401, guid: a340b665fd60a3a42a1520b32e3c164f, type: 3}
   m_PrefabInstance: {fileID: 5279875712386787452}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &945866945811080350 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4928492724515802338, guid: a340b665fd60a3a42a1520b32e3c164f, type: 3}
+  m_PrefabInstance: {fileID: 5279875712386787452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1742742789864969709 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: a340b665fd60a3a42a1520b32e3c164f, type: 3}
   m_PrefabInstance: {fileID: 5279875712386787452}
   m_PrefabAsset: {fileID: 0}
