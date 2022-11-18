@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 9029005076778271903}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.07, y: 0.04, z: -0.13}
-  m_LocalScale: {x: 0.5314534, y: 0.5314534, z: 0.5314534}
+  m_LocalScale: {x: 0.33902404, y: 0.33902404, z: 0.33902404}
   m_Children: []
   m_Father: {fileID: 9029005077978010891}
   m_RootOrder: 0
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 9029005077978010889}
   - component: {fileID: 9029005077978010888}
   m_Layer: 0
-  m_Name: portal
+  m_Name: Gay Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,7 +128,7 @@ Transform:
   - {fileID: 9029005076778271900}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &9029005077978010889
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4098,20 +4098,20 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 0.015625002, b: 0, a: 1}
-        key1: {r: 1, g: 0.70198673, b: 0, a: 1}
-        key2: {r: 0.24060154, g: 1, b: 0, a: 0}
-        key3: {r: 0, g: 1, b: 0.66666675, a: 0}
+        key1: {r: 1, g: 0.04892756, b: 0, a: 1}
+        key2: {r: 1, g: 0.70198673, b: 0, a: 0}
+        key3: {r: 0.24060154, g: 1, b: 0, a: 0}
         key4: {r: 0, g: 0.6296296, b: 1, a: 0}
         key5: {r: 0.27027035, g: 0, b: 1, a: 0}
         key6: {r: 0.7407408, g: 0, b: 1, a: 0}
         key7: {r: 1, g: 0, b: 0.32167816, a: 0}
         ctime0: 0
-        ctime1: 10023
-        ctime2: 19275
-        ctime3: 27563
-        ctime4: 36044
-        ctime5: 44911
-        ctime6: 55512
+        ctime1: 32382
+        ctime2: 38357
+        ctime3: 47031
+        ctime4: 54356
+        ctime5: 58211
+        ctime6: 62066
         ctime7: 65535
         atime0: 0
         atime1: 65535
