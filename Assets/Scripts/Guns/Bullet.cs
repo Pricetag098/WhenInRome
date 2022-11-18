@@ -36,21 +36,28 @@ public class Bullet : MonoBehaviour
         GameObject owner = GetComponent<PooledObj>().owner.owner;
         if (collision.gameObject != owner)
         {
+            HitData hitData = new HitData();
+            hitData.damage = 0;
+            ContactPoint contactPoint = collision.GetContact(0);
+            hitData.hitObject = collision.gameObject;
+            hitData.position = contactPoint.point;
+            hitData.dir = contactPoint.normal;
             Health health = collision.gameObject.GetComponent<Health>();
 
             //check if we hit a valid target
             if (health != null)
             {
                 health.TakeDmg(damage);
-
-                //reflect any on-hit effects 
-                if(owner != null)
+                hitData.damage = damage;
+                
+            }
+            //reflect any on-hit effects 
+            if (owner != null)
+            {
+                OnHit onHit = owner.GetComponent<OnHit>();
+                if (onHit != null)
                 {
-                    OnHit onHit = owner.GetComponent<OnHit>();
-                    if (onHit != null)
-                    {
-                        onHit.Hit();
-                    }
+                    onHit.Hit(hitData);
                 }
             }
         }

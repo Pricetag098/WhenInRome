@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2577849200578478788, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -2119811134226547668, guid: 1302a876e7971634d9b1124a73282664, type: 2}
     - target: {fileID: 5439782351993991432, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: pitchRange
       value: 0.2
@@ -27,6 +31,10 @@ PrefabInstance:
       propertyPath: clips.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: c3ee0b7fa7e9721439f1b5f6c5f96a14, type: 3}
+    - target: {fileID: 6142553598410898472, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -5856247476199042071, guid: 1302a876e7971634d9b1124a73282664, type: 2}
     - target: {fileID: 7655701113825755792, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: owner
       value: 
@@ -35,6 +43,10 @@ PrefabInstance:
       propertyPath: auto
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 00f35db8dfdb59b408a9ce3643d4ab56, type: 3}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: damage
       value: 4
@@ -49,15 +61,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: fireRate
-      value: 0.2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: bulletVel
-      value: 35
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: equipTime
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: spawnOffset
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7655701113825755793, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: bulletsFired
@@ -139,6 +155,10 @@ PrefabInstance:
       propertyPath: clips.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 83dcc8311742fc14dab24e02d0a4d210, type: 3}
+    - target: {fileID: 8610915590691598656, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -530720022994789795, guid: 1302a876e7971634d9b1124a73282664, type: 2}
     - target: {fileID: 9116617862233190276, guid: 0c8c034ef7ecdcf40b875d13d338ba5b, type: 3}
       propertyPath: clips.Array.size
       value: 1

@@ -1,17 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class PlayerAim : MonoBehaviour
 {
+    public enum InputTypes
+    {
+        mouse,
+        gamepad
+    }
+    public InputTypes inputType;
+
     [SerializeField] LayerMask floorLayer = 64;
     [SerializeField] float rotate;
     public float offset = 0.75f;
     float debugAngle = 1;
 
-    Vector3 hitPoint;
+
+
+    public Vector3 hitPoint;
     [SerializeField] LayerMask targetableLayers;
     [SerializeField] int assistRays = 20;
+
+    
     /// <summary>
     /// Direction Player is aiming in
     /// </summary>
@@ -19,38 +30,98 @@ public class PlayerAim : MonoBehaviour
 
     
     float angleConstant = 1;
-    
+
+    PlayerMove playerMove;
+    PlayerInputs inputActions;
+    InputAction aim;
+    private void Awake()
+    {
+        inputActions = new PlayerInputs();
+        aim = inputActions.Player.Look;
+    }
+    public void OnEnable()
+    {
+        
+        aim.Enable();
+    }
+    public void OnDisable()
+    {
+        aim.Disable();
+    }
     // Start is called before the first frame update
     void Start()
     {
         angleConstant = Camera.main.transform.rotation.eulerAngles.x;
         angleConstant = Mathf.Tan(angleConstant * Mathf.Deg2Rad);
         angleConstant = 1/angleConstant;
-
+        playerMove = GetComponent<PlayerMove>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float y = 0;
-        RaycastHit hit;
-        if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, float.PositiveInfinity,floorLayer))
+        Vector2 contAimDir = aim.ReadValue<Vector2>();
+        inputType = InputTypes.mouse;
+        if(Gamepad.current != null)
         {
-            hitPoint = hit.point;
-            y = hitPoint.y;
-            hitPoint.y = 0;
+            if(Gamepad.current.lastUpdateTime > Mouse.current.lastUpdateTime)
+            {
+                inputType = InputTypes.gamepad;
+            }
         }
-        Vector3 playerPos = transform.position;
-        playerPos.y = 0;
-        aimDir = (hitPoint - playerPos - Vector3.forward * ((transform.position.y + offset) - y) * angleConstant).normalized;
+        if(inputType == InputTypes.mouse) 
+        {
+            
+            float y = 0;
+            RaycastHit hit;
+            //Cursor.visible = true;
+            Vector2 mPos = Mouse.current.position.ReadValue();
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(mPos), out hit, float.PositiveInfinity, floorLayer))
+            {
+                hitPoint = hit.point;
+                y = hitPoint.y;
+                hitPoint.y = 0;
+            }
+            Vector3 playerPos = transform.position;
+            playerPos.y = 0;
+            aimDir = (hitPoint - playerPos - Vector3.forward * ((transform.position.y + offset) - y) * angleConstant).normalized;
+        }
+        else
+        {
+            //Mouse.current.WarpCursorPosition(new Vector2(Screen.width/2,Screen.height/2));
+            //Cursor.visible = false;
+            //Debug.Log("AAAA");
+            //Debug.Log("AAAA");
+            if(contAimDir != Vector2.zero)
+            {
+                aimDir = Vector3.zero;
+                aimDir.x = contAimDir.x;
+                aimDir.z = contAimDir.y;
+                hitPoint = transform.position + aimDir * 10;
+            }
+            else
+            {
+                aimDir = playerMove.inputDir;
+                hitPoint = transform.position + aimDir;
+            }
+            
+            
+            
+            aimDir.Normalize();
+        }
+        
 
         if (rotate > 0)
             transform.forward = Vector3.Slerp(transform.forward,aimDir,rotate * Time.deltaTime);
     }
+
+    
+
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        
+        Gizmos.DrawWireSphere(hitPoint, 1);
 
         Vector3 playerPos = transform.position;
         playerPos.y = 0;
