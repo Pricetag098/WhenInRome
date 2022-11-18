@@ -62,6 +62,19 @@ Transform:
   m_Father: {fileID: 5113111146796311607}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4192457989163344633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2303193297632089613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae8984707f5d2e54e9c08a95a4bda71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveRate: 1
 --- !u!1 &2814938450604909783
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +732,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathSound: {fileID: 793930545839884031}
-  dissolve: {fileID: 3993101151704999798}
+  dissolvers:
+  - {fileID: 4192457989163344633}
+  - {fileID: 3993101151704999798}
 --- !u!114 &6336605016413233733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,19 +773,6 @@ MonoBehaviour:
     m_Bits: 1
   defSound: {fileID: 2714886284461369239}
   waterSound: {fileID: 8572712432174678994}
---- !u!114 &4192457989163344633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2303193297632089613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae8984707f5d2e54e9c08a95a4bda71a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dissolveRate: 1
 --- !u!1 &6325914274979329428
 GameObject:
   m_ObjectHideFlags: 0
