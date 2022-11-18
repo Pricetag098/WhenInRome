@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5992446360465446118}
   - component: {fileID: 5992446360465446113}
   m_Layer: 0
-  m_Name: e
+  m_Name: Sparky bois
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ ParticleSystem:
   m_GameObject: {fileID: 5992446360465446115}
   serializedVersion: 7
   lengthInSec: 5
-  simulationSpeed: 1
+  simulationSpeed: 0.55
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -981,8 +981,8 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0.40000153
-          value: 1
+          time: 0.42577362
+          value: 0.33783722
           inSlope: -2
           outSlope: -2
           tangentMode: 0
