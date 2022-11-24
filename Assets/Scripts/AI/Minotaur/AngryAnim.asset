@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72eb8448b2543f9419c355751cd2ecab, type: 3}
-  m_Name: LowMoveToPlayer
+  m_Script: {fileID: 11500000, guid: 755f049705a99ee4fa223c4586610dd1, type: 3}
+  m_Name: AngryAnim
   m_EditorClassIdentifier: 
-  passThrough: {fileID: 11400000, guid: 213980f0b984a2c449cd060e39b539ba, type: 2}
-  stoppingDist: 5
-  speed: 14
+  triggerName: Angry
+  passThrough: {fileID: 0}
