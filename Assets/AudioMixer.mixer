@@ -1366,19 +1366,16 @@ AudioMixerController:
     - d0f3788ef424d30459163621c576dd7a
     - 62fe42288bfb7c84ba2ea7d65d745e18
     - f5fee4cb80ba50b4c9b7d03b8c4c5061
-    - c92f57e9fb4823d4591ff889dd0d5bb5
     - dfc16a30d02db234daf0b3ab28c769d5
     - f7e270181bcdf8140b82459f1fdee8f0
     - 374a72336f43f934fb6d4b537c2333a1
     - ec24c2dc865894e498794b7f74685556
     - 265f59f2606b5304981df20213e5256a
-    - 3685c6a1b38d75a4baa81e2b660bd0b4
     - e5094d5c340870f4a911eb93029bec5a
     - acb52c2f4c5e928499bb1bbe9ff0a622
     - c671b93e7f3595149b852bda89a72eb2
     - 62b20b1d0bd59094a80bb9edc168dfa8
     - b0611a139fd4bba4fadabb3d065dcf7c
-    - 3d827bb7012e85141bee82f36e5ac9c6
     - ed0a754e0e5e81a4b8fcaf82346af718
     - 97f63c4fd18a71340b03c5af1d8572ce
     - 39e22f4b0326b42479b02862daaf2187
@@ -1406,7 +1403,103 @@ AudioMixerController:
     - 6fa8713f804294846ac69e552f2c3d20
     - 50a51e149c7d57248bf7199b75d6363e
     name: View
-  m_CurrentViewIndex: 0
+  - guids:
+    - ab6394c13b9e08b4c893ad16e730cd93
+    - e432710f93e71fa42ac511bd83594f7a
+    - d526090592f0cd14b874cad8854ae1b7
+    - f6c0b4b23face6e4ca3ffd932c74d71d
+    - f5fee4cb80ba50b4c9b7d03b8c4c5061
+    - 5c50c42002abcff42a525d179b5892fe
+    - 537c9ce783f3f9844b72805fa7965147
+    name: TypeView
+  - guids:
+    - ab6394c13b9e08b4c893ad16e730cd93
+    - e432710f93e71fa42ac511bd83594f7a
+    - 537c9ce783f3f9844b72805fa7965147
+    - ed9df569cf4c41a478091453309ecd67
+    name: UIView
+  - guids:
+    - d526090592f0cd14b874cad8854ae1b7
+    - 94289c9f06a16ca489f53c5173e8fe8b
+    - 8f32e91e0de8a2b4bb74e921effc3ad6
+    - 68a61321ac978b4438a10f9d77b3e8c4
+    - cab8f1228834e824286714c18ee7b5d1
+    - bd889d31deba66447a2fbeed5c849680
+    name: PlayerView
+  - guids:
+    - ec24c2dc865894e498794b7f74685556
+    - 265f59f2606b5304981df20213e5256a
+    - 5ce6d27af03ab3b4baa0148690f8bece
+    - 374a72336f43f934fb6d4b537c2333a1
+    - 305ef9807d761aa41866919642b0b811
+    - 6fa8713f804294846ac69e552f2c3d20
+    - f7e270181bcdf8140b82459f1fdee8f0
+    - dfc16a30d02db234daf0b3ab28c769d5
+    name: MinotaurView
+  - guids:
+    - 2218ddec055e53842be6c347fc518a18
+    - ed22c344cacb87c47b0b84d5dd5bbd66
+    - a212058f913faf04eb42096fe08954e6
+    - 39e22f4b0326b42479b02862daaf2187
+    - 50a51e149c7d57248bf7199b75d6363e
+    - 97f63c4fd18a71340b03c5af1d8572ce
+    - ed0a754e0e5e81a4b8fcaf82346af718
+    name: SatyrView
+  - guids:
+    - 62b20b1d0bd59094a80bb9edc168dfa8
+    - b0611a139fd4bba4fadabb3d065dcf7c
+    - 8d0b9faa99c637443a26d92b5c53cd07
+    - c671b93e7f3595149b852bda89a72eb2
+    - acb52c2f4c5e928499bb1bbe9ff0a622
+    - e5094d5c340870f4a911eb93029bec5a
+    name: SkeletonView
+  - guids:
+    - b01d0c0a673198045a3b3e09e8cea088
+    - fcd2b9e6d47b46942b1620b04141e338
+    - 68f4c86d69f7e8a4bb716ea8e96429c9
+    - 06c71298f835bc4469d32b5f75edd74d
+    - 5ed36ec929b3527438ed81b4bac4e5a4
+    - b6cc331df10d7194688ccc4a496a4e5a
+    name: EnvironmentView
+  - guids:
+    - f6c0b4b23face6e4ca3ffd932c74d71d
+    - b01d0c0a673198045a3b3e09e8cea088
+    - fcd2b9e6d47b46942b1620b04141e338
+    - 873bd998ec3a39d44ac296c1ae1bb765
+    - 04effa54425c14d49bc722aa169d9d45
+    - 8995a0320b6e2134e842a8a08ccc7520
+    name: GunView
+  - guids:
+    - fca3017268360f3418cfe9883ed061c0
+    - d615257b102b7f24984be7abc2bf3e4e
+    - d0f3788ef424d30459163621c576dd7a
+    name: SMGView
+  - guids:
+    - c538e81eafa81aa48996f23689819af3
+    - e7daebbd6c3d9a544b8a2d618256e543
+    - 62fe42288bfb7c84ba2ea7d65d745e18
+    name: PistolView
+  - guids:
+    - f69955732dcbeb54f9fce8eb58d1599f
+    - 57179b4c33c884144b8572b4cec335df
+    - 204a4c18661fe834da986c1351da10a7
+    name: ShotgunView
+  - guids:
+    - f5fee4cb80ba50b4c9b7d03b8c4c5061
+    - 67c8b54c9f1deea47ac9803181e6a258
+    - c39a2be59b05828419b86cb451c491fa
+    - 840bae725846dec488c6824b31a76fbd
+    - 3f94efcbc026b42409b6dcefcc08da98
+    - b7e2e5d313afae741b99c8ce58354736
+    - 188136effd40db14e98c3e29be807d29
+    name: EnemyView
+  - guids:
+    - 80b1d713991a1e24084fb58143ad310c
+    - 2c00d57973bc1744a963fdd774604881
+    - 0e6ebdb140eaa8b4d86ee5641785d639
+    - 1cbe22b936bd917408cd715da50cc121
+    name: StyleMeterView
+  m_CurrentViewIndex: 8
   m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
 AudioMixerGroupController:
@@ -1461,7 +1554,7 @@ AudioMixerSnapshotController:
     1d2bf0219daab9f47869885218204da9: 5.67851
     4fe4f32100073434787f505539db7b58: 8.614072
     ad2e8a61ce6be214a8064d3751948161: 3500
-    8e9cb581202b59545808dd21edd86ecb: -2.2889833
+    8e9cb581202b59545808dd21edd86ecb: -10.867776
     df791a81ab3df6e4cac2833d5adc15cc: -0.037667945
     1cab34a1786cc2d4f94ce2779ed6f771: -17.938717
     83fd25c192445dd4aae5a19399a5a37f: 0
@@ -1700,9 +1793,6 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: f5fee4cb80ba50b4c9b7d03b8c4c5061
   m_Children:
-  - {fileID: -1316694223390575934}
-  - {fileID: -8588411431495296967}
-  - {fileID: 7740174948064362793}
   - {fileID: -6011432667431461309}
   - {fileID: -4806368631606512832}
   - {fileID: -2589028564693398898}
