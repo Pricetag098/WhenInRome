@@ -80,8 +80,8 @@ public class MuffleMusic : MonoBehaviour
     public void VolDown()
     {
         StopCoroutine("VolumeUp");
-        Debug.Log(gameObject);
-        //StartCoroutine("VolumeDown");
+        //Debug.Log(gameObject);
+        StartCoroutine("VolumeDown");
     }
     
     IEnumerator VolumeUp()
