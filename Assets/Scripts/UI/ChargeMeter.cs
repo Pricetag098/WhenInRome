@@ -8,6 +8,7 @@ public class ChargeMeter : MonoBehaviour
     public CombatMeter cm;
     public Image bar,bar2;
     public GameObject filled;
+    public GameObject filledGlow;
 
     private void Start()
     {
@@ -19,5 +20,6 @@ public class ChargeMeter : MonoBehaviour
         bar.fillAmount = cm.meter / cm.maxMeter;
         bar2.fillAmount = cm.meter / cm.maxMeter;
         filled.SetActive(cm.meter >= cm.maxMeter);
+        filledGlow.SetActive(cm.meter >= cm.maxMeter);
     }
 }
