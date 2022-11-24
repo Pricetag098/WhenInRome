@@ -102,8 +102,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9102333424084885649}
+  - component: {fileID: 4983398822424584102}
   m_Layer: 0
-  m_Name: Hallway_Torch
+  m_Name: Hallway_Torch_Floor_Three
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,6 +126,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!114 &4983398822424584102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9102333424084885648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7234b2141977d6040a869c41fec79aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 8954969500875801834}
+  smoothing:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  RangeMax: 15
+  RangeMin: 10
 --- !u!1001 &9102333424313690163
 PrefabInstance:
   m_ObjectHideFlags: 0
