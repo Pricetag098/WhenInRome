@@ -11,11 +11,13 @@ public class AimReticle : MonoBehaviour
     PlayerInputs inputActions;
     InputAction aim;
     public float contAimScale;
+    public float angleConstant = 0;
     Image img;
     private void Awake()
     {
         inputActions = new PlayerInputs();
         aim = inputActions.Player.Look;
+
     }
     public void OnEnable()
     {
@@ -30,6 +32,9 @@ public class AimReticle : MonoBehaviour
     void Start()
     {
         img = GetComponent<Image>();
+        angleConstant = Camera.main.transform.rotation.eulerAngles.x;
+        angleConstant = Mathf.Tan(angleConstant * Mathf.Deg2Rad);
+        //angleConstant = 1 / angleConstant;
     }
 
     // Update is called once per frame
@@ -44,8 +49,11 @@ public class AimReticle : MonoBehaviour
                 break;
             case PlayerAim.InputTypes.gamepad:
                 Vector3 center = new Vector3(Screen.width / 2, Screen.height / 2, 0);
-                transform.position = center + (Vector3)aim.ReadValue<Vector2>() * contAimScale;
+                Vector3 aimVal = (Vector3)aim.ReadValue<Vector2>();
+                aimVal.y = aimVal.y * angleConstant;
+                Vector3 pos = center + aimVal * contAimScale;
                 
+                transform.position = pos;
                 img.enabled = transform.position != center && Time.timeScale != 0;
                 
                 break;

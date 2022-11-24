@@ -71,8 +71,13 @@ public class LevelLoader : MonoBehaviour
         {
             SceneManager.LoadScene(level);
             MuffleMusic muffleMusic = FindObjectOfType<MuffleMusic>();
-            if (muffleMusic != null)
+            if (muffleMusic != null) 
+            {
+                muffleMusic.Muffle();
                 muffleMusic.VolDown();
+            }
+                
+
             return;
         }
 
@@ -80,14 +85,20 @@ public class LevelLoader : MonoBehaviour
         {
             SceneManager.LoadScene(level + 1);
             MuffleMusic muffleMusic = FindObjectOfType<MuffleMusic>();
-                if(muffleMusic != null)
-            muffleMusic.VolDown();
+            if (muffleMusic != null)
+            {
+                muffleMusic.Muffle();
+                muffleMusic.VolDown();
+            }
         }
         else
         {
             MuffleMusic muffleMusic = FindObjectOfType<MuffleMusic>();
             if (muffleMusic != null)
+            {
+                muffleMusic.Muffle();
                 muffleMusic.VolDown();
+            }
             SceneManager.LoadScene(0);
         }
             
