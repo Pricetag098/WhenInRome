@@ -39,6 +39,7 @@ public class PlayerDeath : MonoBehaviour
             rb.velocity = Vector3.zero;
             animator.SetTrigger("Die");
             dead = true;
+            FindObjectOfType<MuffleMusic>().Muffle();
         }
         
     }

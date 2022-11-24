@@ -74,7 +74,7 @@ public class LevelLoader : MonoBehaviour
             if (muffleMusic != null) 
             {
                 muffleMusic.Muffle();
-                muffleMusic.VolDown();
+                //muffleMusic.VolDown();
             }
                 
 
