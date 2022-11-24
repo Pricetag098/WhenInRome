@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6715724526174453217}
+  - component: {fileID: 501161938909074516}
   m_Layer: 0
   m_Name: PinkLight
   m_TagString: Untagged
@@ -31,6 +32,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 135, z: 0}
+--- !u!114 &501161938909074516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6715724526174453216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7234b2141977d6040a869c41fec79aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 6715724527288050924}
+  smoothing:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  RangeMax: 11.5
+  RangeMin: 5.5
 --- !u!1 &6715724526995340665
 GameObject:
   m_ObjectHideFlags: 0
