@@ -162,6 +162,20 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &-7738090482711544234
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 2c882172169bc034398d49f97d8a895a
+  m_EffectName: Attenuation
+  m_MixLevel: 46a74872f6158bf42970bad13ca1d63d
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &-7654656865433023914
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -1445,6 +1459,7 @@ AudioMixerController:
     - cab8f1228834e824286714c18ee7b5d1
     - bd889d31deba66447a2fbeed5c849680
     - e04d4d5b6be35ac4ea2b13d23cae001b
+    - 61a90634893a7fe42a05006977d165e1
     name: PlayerView
   - guids:
     - ec24c2dc865894e498794b7f74685556
@@ -1622,6 +1637,7 @@ AudioMixerSnapshotController:
     fa99707c16aec8f4c8ea2f5ce49fe474: 3.704152
     9144bfacd974d6c41be06f2a98af721a: 3500
     0bc550bcb65ac034a88bf143880bf722: 0
+    35e7c9cce1c334e4a89925c8aaabf863: 8.614072
     ead629dceb59f0b48ba25eb63aa8fd10: 1
     b0350b2d5e7f96942837023cb13040b9: 0.2
     13f88e2da8207774484a71c07e867434: 30
@@ -2220,6 +2236,25 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &4848942084637392181
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Portal
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 61a90634893a7fe42a05006977d165e1
+  m_Children: []
+  m_Volume: 35e7c9cce1c334e4a89925c8aaabf863
+  m_Pitch: 57b8584f19004b34ca0b2126cea935eb
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -7738090482711544234}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &4904561005461120090
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -2487,6 +2522,7 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 5c50c42002abcff42a525d179b5892fe
   m_Children:
+  - {fileID: 4848942084637392181}
   - {fileID: 1878672882346837426}
   - {fileID: 6589709675996429554}
   - {fileID: -6661198471114012981}
