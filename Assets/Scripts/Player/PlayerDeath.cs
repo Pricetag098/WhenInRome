@@ -8,6 +8,7 @@ public class PlayerDeath : MonoBehaviour
     public float delay;
     public Animator animator;
     LevelLoader levelLoader;
+    public SoundPlayer deathSound;
     Rigidbody rb;
     bool dead = false;
     public float timer = 0;
@@ -40,6 +41,7 @@ public class PlayerDeath : MonoBehaviour
             animator.SetTrigger("Die");
             dead = true;
             FindObjectOfType<MuffleMusic>().Muffle();
+            deathSound.Play();
         }
         
     }
