@@ -29,16 +29,22 @@ public class AiDeath : MonoBehaviour
     public void Die()
     {
         ai.enabled = false;
+        if(rb != null)
         rb.isKinematic = true;
+        if(ai.animator != null)
         ai.animator.SetTrigger("Die");
         agent.enabled = false;
         health.enabled = false;
         //mr.enabled = false;
+        if(col)
         col.enabled = false;        
+        if(ind != null)
         ind.enabled = false;
         //ind.Arrow = null;
         //ind.Icon = null;
+        if(deathSound != null)
         deathSound.Play();
+        if(dropShadow != null)
         dropShadow.SetActive(false);
         foreach(Dissolver disolver in dissolvers)
         {
