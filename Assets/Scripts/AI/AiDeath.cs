@@ -7,10 +7,12 @@ public class AiDeath : MonoBehaviour
     Ai ai;
     NavMeshAgent agent;
     Health health;
+    public GameObject dropShadow;
     //MeshRenderer mr;
     Collider col;
     Indicator ind;
     public SoundPlayer deathSound;
+    public List<Dissolver> dissolvers = new List<Dissolver>();
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -37,6 +39,12 @@ public class AiDeath : MonoBehaviour
         //ind.Arrow = null;
         //ind.Icon = null;
         deathSound.Play();
+        dropShadow.SetActive(false);
+        foreach(Dissolver disolver in dissolvers)
+        {
+            disolver.Dissolve();
+        }
+       
     }
 
 }

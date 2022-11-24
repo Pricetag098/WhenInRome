@@ -54,6 +54,11 @@ public class LevelLoader : MonoBehaviour
     [ContextMenu("Run")]
     public void Load()
     {
+        if(level+1 == SceneManager.GetActiveScene().buildIndex)
+        {
+            level = level+1;
+            Reload();
+        }
         transitionOut = true;
     }
     [ContextMenu("ForceLoad")]
