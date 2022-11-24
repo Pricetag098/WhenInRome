@@ -21,9 +21,15 @@ public class Destructable : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         pot.SetActive(false);
+        if(particle != null)
         particle.Play();
+        if(audioSource != null)
         audioSource.Play();
         col.enabled = false;
         enabled = false;
+        if(GetComponent<AiDeath>() != null)
+        {
+            GetComponent<AiDeath>().Die();
+        }
     }
 }
