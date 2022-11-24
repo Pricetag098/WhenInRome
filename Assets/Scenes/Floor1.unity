@@ -2825,7 +2825,11 @@ PrefabInstance:
       objectReference: {fileID: 1548197512}
     - target: {fileID: 5937744080861241804, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
       propertyPath: maxMeter
-      value: 500
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354178792284838843, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
+      propertyPath: maxHealth
+      value: 10000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7c3bfa6f202b274d9b8e37d7e834b9f, type: 3}
@@ -20062,10 +20066,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1068016972, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: pAim
+      value: 
+      objectReference: {fileID: 87033649}
     - target: {fileID: 1142203533, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: health
       value: 
       objectReference: {fileID: 77994256}
+    - target: {fileID: 1364245122, guid: 3712255652d91c646b4b077742c45565, type: 3}
+      propertyPath: cm
+      value: 
+      objectReference: {fileID: 77994257}
     - target: {fileID: 1854532579, guid: 3712255652d91c646b4b077742c45565, type: 3}
       propertyPath: holster
       value: 
