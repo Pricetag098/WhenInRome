@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MuffleMusic : MonoBehaviour
 {
     private AudioMixer output;
+    [SerializeField]
     private AudioSource music;
     public float muffledVol;
     public float unMuffledVol;
@@ -79,7 +80,8 @@ public class MuffleMusic : MonoBehaviour
     public void VolDown()
     {
         StopCoroutine("VolumeUp");
-        StartCoroutine("VolumeDown");
+        Debug.Log(gameObject);
+        //StartCoroutine("VolumeDown");
     }
     
     IEnumerator VolumeUp()
