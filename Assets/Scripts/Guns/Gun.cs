@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(ObjectPooler))]
 public class Gun : MonoBehaviour
@@ -24,6 +25,7 @@ public class Gun : MonoBehaviour
     [SerializeField] int bulletsFired;
     [SerializeField] float bulletVel;
     [SerializeField] float damage;
+    [SerializeField] float spawnOffset = 1f;
 
     [Header("Sounds")]
     [SerializeField] SoundPlayer shoot;
@@ -32,12 +34,44 @@ public class Gun : MonoBehaviour
     [SerializeField] SoundPlayer empty;
 
 
+    public Sprite icon;
+
     Holster holster;
     PlayerAim aim;
     ObjectPooler pooler;
-    
+    bool fire = false;
 
-    
+    PlayerInputs inputActions;
+    InputAction fireInput;
+    InputAction reloadInput;
+
+
+    private void Awake()
+    {
+        inputActions = new PlayerInputs();
+        fireInput = inputActions.Player.Fire;
+        fireInput.performed += InputOn;
+        fireInput.canceled += InputOff;
+
+        reloadInput = inputActions.Player.Reload;
+        reloadInput.performed += TryReload;
+    }
+    private void OnEnable()
+    {
+        
+        fireInput.Enable();
+        
+        
+        reloadInput.Enable();
+        
+    }
+    private void OnDisable()
+    {
+        fireInput.Disable();
+        reloadInput.Disable();
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,44 +91,58 @@ public class Gun : MonoBehaviour
     public void Equip()
     {
         equip.Play();
-        isReloading = false;
-        reloadTime = reloadDuration;
-        reloadProgress = 1;
+        CancelReload();
         fireTimer = equipTime;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CancelReload()
     {
+        isReloading = false;
+        reloadTime = reloadDuration;
+        reloadProgress = 1;
+    }
 
-
-        bool fire = (auto && Input.GetMouseButton(0)) || (!auto && Input.GetMouseButtonDown(0));
-
-        if (fire && fireTimer < 0 && !isReloading)
-        {
-            if(ammo <= 0)
-            {
-                reloadTime = 0;
-                isReloading = true;
-                reload.Play();
-            }
-            else
-            {
-                Fire();
-                ammo--;
-                fireTimer = fireRate;
-            }
-            
-        }
-        fireTimer -= Time.deltaTime;
-
-
-        if (Input.GetKeyDown(KeyCode.R) && !isReloading && ammo != maxAmmo)
+    void TryReload(InputAction.CallbackContext context)
+    {
+        if (!isReloading && ammo != maxAmmo)
         {
             reloadTime = 0;
             isReloading = true;
             reload.Play();
         }
+    }
+
+    void InputOn(InputAction.CallbackContext context)
+    {
+        Debug.Log("Pressed");
+        if (!auto)
+        {
+            TryFire();
+        }
+        else
+        {
+            fire = true;
+        }
+    }
+
+    void InputOff(InputAction.CallbackContext context)
+    {
+        Debug.Log("Release");
+        fire = false;
+    }
+    // Update is called once per frame
+    void Update()
+    {
+
+        if (fire)
+        {
+            TryFire();
+        }
+
+
+
+        fireTimer -= Time.deltaTime;
+
 
         if (isReloading)
         {
@@ -111,6 +159,27 @@ public class Gun : MonoBehaviour
         
     }
 
+    void TryFire()
+    {
+        if (fireTimer < 0 && !isReloading && Time.timeScale == 1 && ammo >0)
+        {
+
+
+
+            Fire();
+            ammo--;
+            fireTimer = fireRate;
+            
+
+        }
+        if (ammo <= 0 && !isReloading)
+        {
+            reloadTime = 0;
+            isReloading = true;
+            reload.Play();
+        }
+
+    }
     void Fire()
     {
         shoot.Play();
@@ -122,6 +191,10 @@ public class Gun : MonoBehaviour
         if(aimAssistAngle > 0)
         {
             shootDir = aim.GetAssistedDir(aimAssistAngle);
+        }
+        if(shootDir == Vector3.zero)
+        {
+            shootDir = holster.playerAim.transform.forward;
         }
 
         for(int i = 0; i< bulletsFired; i++)
@@ -136,7 +209,7 @@ public class Gun : MonoBehaviour
     void ShootBullet(Vector3 dir)
     {
         GameObject b = pooler.SpawnObj();
-        b.transform.position = holster.playerAim.transform.position + aim.aimDir * .75f + holster.VertOffset * Vector3.up;
+        b.transform.position = holster.playerAim.transform.position + aim.aimDir * spawnOffset + holster.VertOffset * Vector3.up;
         b.GetComponent<Bullet>().Init(dir,damage);
     }
 

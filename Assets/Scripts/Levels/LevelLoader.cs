@@ -12,8 +12,11 @@ public class LevelLoader : MonoBehaviour
     bool reloading = false;
     public int level;
 
+    public bool fadeIn;
+
     private void Start()
     {
+        if(fadeIn)
         transitionIn = true;
     }
     private void Update()
@@ -30,7 +33,7 @@ public class LevelLoader : MonoBehaviour
                 transitionIn = false;
                 transitionTimer = 0;
             }
-            transitionTimer += Time.deltaTime;
+            transitionTimer += Time.unscaledDeltaTime;
         }
         if (transitionOut)
         {
@@ -44,18 +47,24 @@ public class LevelLoader : MonoBehaviour
                 
                 LoadLvl();
             }
-            transitionTimer += Time.deltaTime;
+            transitionTimer += Time.unscaledDeltaTime;
         }
     }
 
     [ContextMenu("Run")]
     public void Load()
     {
+        if(level+1 == SceneManager.GetActiveScene().buildIndex)
+        {
+            level = level+1;
+            Reload();
+        }
         transitionOut = true;
     }
     [ContextMenu("ForceLoad")]
     void LoadLvl()
     {
+        Time.timeScale = 1;
         //todo check if the level is unlocked
 
         if (reloading)
@@ -67,10 +76,15 @@ public class LevelLoader : MonoBehaviour
         if (SceneManager.sceneCountInBuildSettings > level + 1)
         {
             SceneManager.LoadScene(level + 1);
-            FindObjectOfType<MuffleMusic>().VolDown();
+            MuffleMusic muffleMusic = FindObjectOfType<MuffleMusic>();
+            if(muffleMusic != null)
+            muffleMusic.VolDown();
         }
         else
         {
+            MuffleMusic muffleMusic = FindObjectOfType<MuffleMusic>();
+            if (muffleMusic != null)
+                muffleMusic.VolDown();
             SceneManager.LoadScene(0);
         }
             

@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6073517931565389777
 Transform:
@@ -94,9 +94,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3354431674132672760, guid: 728d5615797fac848a54f585ac4b57df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -2763448909758247307, guid: 728d5615797fac848a54f585ac4b57df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 728d5615797fac848a54f585ac4b57df, type: 3}
       propertyPath: m_Name
       value: door with animations
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 728d5615797fac848a54f585ac4b57df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5723623106617691631, guid: 728d5615797fac848a54f585ac4b57df, type: 3}
       propertyPath: m_Materials.Array.data[0]

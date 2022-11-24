@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class PlayerDeath : MonoBehaviour
 {
     PlayerMove move;
+    public Animator animator;
     LevelLoader levelLoader;
     Rigidbody rb;
     private void Start()
@@ -21,6 +22,7 @@ public class PlayerDeath : MonoBehaviour
         move.enabled = false;
         levelLoader.Reload();
         rb.velocity = Vector3.zero;
+        animator.SetTrigger("Die");
     }
 
 }

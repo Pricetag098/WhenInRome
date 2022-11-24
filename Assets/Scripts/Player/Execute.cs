@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 
 public class Execute : MonoBehaviour
 {
     PlayerAim aim;
-    [SerializeField] float detectRange,damage;
+    [SerializeField] float detectRange,damage, range;
     [SerializeField] LayerMask enemy;
     [SerializeField] float soundTime, timebetweenhits,timeAfterDmg;
     [SerializeField] GameObject volume;
     [SerializeField] ObjectPooler lines, particles;
+    [SerializeField] Holster holster;
     List<Health> healths = new List<Health>();
     bool running = false;
-
+    
     [SerializeField] SoundPlayer use, chain, hit;
 
     CombatMeter cm;
@@ -22,27 +23,47 @@ public class Execute : MonoBehaviour
     {
         aim = GetComponentInParent<PlayerAim>();
         cm = GetComponentInParent<CombatMeter>();
+        
+        
+    }
+    PlayerInputs inputActions;
+    InputAction executeInput;
+    private void Awake()
+    {
+        inputActions = new PlayerInputs();
+    }
+    private void OnEnable()
+    {
+        executeInput = inputActions.Player.Execute;
+        executeInput.Enable();
+        executeInput.performed += TryExecute;
+    }
+    private void OnDisable()
+    {
+        executeInput.Disable();
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+    void TryExecute(InputAction.CallbackContext context)
     {
-		if (Input.GetKey(KeyCode.Space) && !running && cm.meter >= cm.maxMeter)
-		{
-            
+        if (!running && cm.meter >= cm.maxMeter)
+        {
+
             healths.Clear();
             RaycastHit hit;
-            if(Physics.Raycast(transform.position + Vector3.up * aim.offset, aim.GetAssistedDir(20), out hit, float.PositiveInfinity))
-			{
-                if(hit.collider.gameObject != gameObject && hit.collider.gameObject.GetComponent<Health>())
-				{
+            if (Physics.Raycast(transform.position + Vector3.up * aim.offset, aim.GetAssistedDir(20), out hit, range))
+            {
+                if (hit.collider.gameObject != gameObject && hit.collider.gameObject.GetComponent<Health>())
+                {
                     healths.Add(hit.collider.gameObject.GetComponent<Health>());
+                    holster.transform.GetChild(holster.selectedWeapon).GetComponent<Gun>().CancelReload();
                     StartCoroutine("Run");
                     particles.DespawnAllActive();
                     cm.meter = 0;
                 }
-			}
-		}
+            }
+        }
     }
     //List<GameObject> lineList = new List<GameObject>();
     IEnumerator Run()
@@ -52,6 +73,7 @@ public class Execute : MonoBehaviour
         Time.timeScale = 0;
         volume.SetActive(true);
         use.Play();
+        SpawnLine(transform.position, healths[0].transform.position);
         yield return new WaitForSecondsRealtime(soundTime);
         
         

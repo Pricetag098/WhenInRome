@@ -7,16 +7,17 @@ using UnityEngine.SceneManagement;
 public class MuffleMusic : MonoBehaviour
 {
     private AudioMixer output;
+    [SerializeField]
     private AudioSource music;
     public float muffledVol;
     public float unMuffledVol;
-    private bool muffled = true;
+    //private bool muffled = true;
     public float highpass;
     public float lowpass;
     public float frequencyGain;
     public float transitionTime;
     public float volumeTime;
-    private bool loud;
+    //private bool loud;
     //public AudioClip[] songs;
     // Start is called before the first frame update
     void Start()
@@ -51,7 +52,7 @@ public class MuffleMusic : MonoBehaviour
             music.volume = Mathf.Lerp(muffledVol, unMuffledVol, 1 - timer);
             yield return null;
         }
-        muffled = true;
+        //muffled = true;
         
         
        
@@ -68,7 +69,7 @@ public class MuffleMusic : MonoBehaviour
             music.volume = Mathf.Lerp(muffledVol, unMuffledVol, timer);
             yield return null;
         }
-        muffled = false;
+        //muffled = false;
     }
 
     public void VolUp()
@@ -79,7 +80,8 @@ public class MuffleMusic : MonoBehaviour
     public void VolDown()
     {
         StopCoroutine("VolumeUp");
-        StartCoroutine("VolumeDown");
+        Debug.Log(gameObject);
+        //StartCoroutine("VolumeDown");
     }
     
     IEnumerator VolumeUp()
@@ -92,7 +94,7 @@ public class MuffleMusic : MonoBehaviour
             music.volume = Mathf.Lerp(0, 1, timer);
             yield return null;
         }
-        loud = true;
+        //loud = true;
     }
     IEnumerator VolumeDown()
     {
@@ -104,6 +106,6 @@ public class MuffleMusic : MonoBehaviour
             music.volume = Mathf.Lerp(0, 1, 1 - timer);
             yield return null;
         }
-        loud = false;
+        //loud = false;
     }
 }
