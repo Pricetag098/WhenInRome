@@ -15,8 +15,8 @@ MonoBehaviour:
   emmision: _EmissionColor
   colour: {r: 1, g: 1, b: 0.49411765, a: 1}
   frequncy: 0
+  pulseColour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   flashDuation: 1
-  flashTime: 0
 --- !u!114 &3993101151704999798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,6 +602,7 @@ MonoBehaviour:
   rb: {fileID: 9044453736972665399}
   root: {fileID: 11400000, guid: 339e8b265aabf724eb650343e4e2432b, type: 2}
   body: {fileID: 5009281712594343213}
+  flash: {fileID: 1385356242895963620}
   health: {fileID: 0}
   animator: {fileID: 1742742789864969709}
 --- !u!195 &5113111146796311602
@@ -646,7 +647,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1385356242895963620}
         m_TargetAssemblyTypeName: Flash, Assembly-CSharp
-        m_MethodName: FlashColour
+        m_MethodName: DoFlash
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

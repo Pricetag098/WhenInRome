@@ -26,10 +26,15 @@ public class Flash : MonoBehaviour
     void Update()
     {
         Color col = Color.clear;
-        List<FlashData> temp = flashes;
+        List<FlashData> temp = new List<FlashData>();
+        foreach(FlashData data in flashes)
+        {
+            temp.Add(data);
+        }
         
         foreach(FlashData data in flashes)
         {
+            Debug.Log(data.color);
             data.time += Time.deltaTime;
             col += (data.color * (1 - (data.time / data.duration)));
             if(data.time > flashDuation)
@@ -37,8 +42,12 @@ public class Flash : MonoBehaviour
                 temp.Remove(data);
             }
         }
-        flashes = temp;
-
+        flashes.Clear();
+        foreach(FlashData data in temp)
+        {
+            flashes.Add(data);
+        }
+        Debug.Log(col);
 
 
         mat.SetColor(emmision, col + pulseColour * (1-(Mathf.Cos(Time.time * frequncy)/2 + .5f)));
@@ -53,6 +62,16 @@ public class Flash : MonoBehaviour
         data.color = colour;
         data.time = 0;
         data.duration = flashDuation;
+        flashes.Add(data);
+    }
+
+    public void FlashColour(Color col,float time)
+    {
+        FlashData data = new FlashData();
+        data.color = col;
+        data.time = 0;
+        data.duration = time;
+        flashes.Add(data);
     }
     class FlashData 
     {

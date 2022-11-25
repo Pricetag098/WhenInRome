@@ -1149,7 +1149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meter: 0
-  maxMeter: 500
+  maxMeter: 10
   decayRate: 1
   decayDelay: 1
   chargePerDamage: 3.5
@@ -1172,7 +1172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 100
+  maxHealth: 10000
   iFrames: 0
   onHit:
     m_PersistentCalls:
@@ -1203,7 +1203,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 888492313}
         m_TargetAssemblyTypeName: Flash, Assembly-CSharp
-        m_MethodName: FlashColour
+        m_MethodName: DoFlash
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1489,7 +1489,6 @@ MonoBehaviour:
   frequncy: 0
   pulseColour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   flashDuation: 1
-  flashTime: 0
 --- !u!114 &7650813224667311242
 MonoBehaviour:
   m_ObjectHideFlags: 0
