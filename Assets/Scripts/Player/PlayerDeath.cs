@@ -36,12 +36,13 @@ public class PlayerDeath : MonoBehaviour
         if (!dead)
         {
             //enabled = false;
+            deathSound.Play();
             move.enabled = false;
             rb.velocity = Vector3.zero;
             animator.SetTrigger("Die");
             dead = true;
             FindObjectOfType<MuffleMusic>().Muffle();
-            deathSound.Play();
+            
         }
         
     }
