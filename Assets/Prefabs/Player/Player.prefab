@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meter: 0
-  maxMeter: 500
+  maxMeter: 10
   decayRate: 1
   decayDelay: 1
   chargePerDamage: 3.5
@@ -1221,7 +1221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 10000
+  maxHealth: 100
   iFrames: 0
   onHit:
     m_PersistentCalls:
@@ -1294,7 +1294,7 @@ MonoBehaviour:
   animator: {fileID: 3638463606475859799}
   deathSound: {fileID: 4709323440112409311}
   deathPP: {fileID: 6248984736761729990}
-  greySpeed: 0
+  greySpeed: 1
   timer: 9.03
 --- !u!114 &4251982014075360451
 MonoBehaviour:
