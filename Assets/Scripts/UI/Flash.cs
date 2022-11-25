@@ -34,7 +34,7 @@ public class Flash : MonoBehaviour
         
         foreach(FlashData data in flashes)
         {
-            Debug.Log(data.color);
+            //Debug.Log(data.color);
             data.time += Time.deltaTime;
             col += (data.color * (1 - (data.time / data.duration)));
             if(data.time > flashDuation)
@@ -47,7 +47,7 @@ public class Flash : MonoBehaviour
         {
             flashes.Add(data);
         }
-        Debug.Log(col);
+        //Debug.Log(col);
 
 
         mat.SetColor(emmision, col + pulseColour * (1-(Mathf.Cos(Time.time * frequncy)/2 + .5f)));
