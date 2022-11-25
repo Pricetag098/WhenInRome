@@ -7,8 +7,12 @@ public class ChargeMeter : MonoBehaviour
 {
     public CombatMeter cm;
     public Image bar,bar2;
-    public GameObject filled;
-
+    public Image filled;
+    public CanvasGroup glow;
+    public CanvasGroup vinete;
+    public float vineteFillSpeed;
+    public float freq;
+    
     private void Start()
     {
         //bar = GetComponent<Image>();
@@ -18,6 +22,10 @@ public class ChargeMeter : MonoBehaviour
     {
         bar.fillAmount = cm.meter / cm.maxMeter;
         bar2.fillAmount = cm.meter / cm.maxMeter;
-        filled.SetActive(cm.meter >= cm.maxMeter);
+        filled.enabled = (cm.meter >= cm.maxMeter);
+
+        float goal = cm.meter >= cm.maxMeter ? 1 : 0;
+        vinete.alpha = Mathf.Lerp(vinete.alpha, goal, vineteFillSpeed * Time.deltaTime);
+        glow.alpha = goal == 1?Mathf.Sin(Time.time * freq): 0;
     }
 }
