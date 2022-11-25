@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4abfcacb80363774d99a4f18ec50bc0e, type: 3}
   m_Name: Angry
   m_EditorClassIdentifier: 
-  passThrough: {fileID: 0}
+  passThrough: {fileID: 11400000, guid: 019507266b2c8d44e95573e231a96a6a, type: 2}
   volume: 1
   pitch: 1
   pitchRange: 0
   clipList:
   - {fileID: 8300000, guid: 0384c12d6e7def047a99f492b63dddd1, type: 3}
+  output: {fileID: 0}
