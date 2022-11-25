@@ -60,7 +60,7 @@ public class Execute : MonoBehaviour
                     holster.transform.GetChild(holster.selectedWeapon).GetComponent<Gun>().CancelReload();
                     StartCoroutine("Run");
                     particles.DespawnAllActive();
-                    cm.meter = 0;
+                    cm.Discharge();
                 }
             }
         }

@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 755f049705a99ee4fa223c4586610dd1, type: 3}
-  m_Name: AngryAnim
+  m_Script: {fileID: 11500000, guid: 94f475bc4dc7c2648bc5672125785090, type: 3}
+  m_Name: FlashColourOnce
   m_EditorClassIdentifier: 
-  triggerName: Angry
-  passThrough: {fileID: 11400000, guid: 43cee24501073264f8eaf3a03b973281, type: 2}
+  color: {r: 1, g: 0, b: 0, a: 1}
+  duration: 1
+  passThrough: {fileID: 0}

@@ -12,7 +12,8 @@ public class Flash : MonoBehaviour
     [HideInInspector]
     public Color pulseColour = Color.grey;
     public float flashDuation =1;
-    public float flashTime;
+    
+    List<FlashData> flashes = new List<FlashData>();
     // Start is called before the first frame update
     void Start()
     {
@@ -24,18 +25,60 @@ public class Flash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        mat.SetColor(emmision, (colour * flashTime / flashDuation) + pulseColour * (1-(Mathf.Cos(Time.time * frequncy)/2 + .5f)));
-        flashTime -= Time.deltaTime;
-        if(flashTime < 0)
+        Color col = Color.clear;
+        List<FlashData> temp = new List<FlashData>();
+        foreach(FlashData data in flashes)
         {
-            flashTime = 0;
+            temp.Add(data);
         }
+        
+        foreach(FlashData data in flashes)
+        {
+            Debug.Log(data.color);
+            data.time += Time.deltaTime;
+            col += (data.color * (1 - (data.time / data.duration)));
+            if(data.time > flashDuation)
+            {
+                temp.Remove(data);
+            }
+        }
+        flashes.Clear();
+        foreach(FlashData data in temp)
+        {
+            flashes.Add(data);
+        }
+        Debug.Log(col);
+
+
+        mat.SetColor(emmision, col + pulseColour * (1-(Mathf.Cos(Time.time * frequncy)/2 + .5f)));
+        
+        
         
     }
     [ContextMenu("Flash")]
-    public void FlashColour()
+    public void DoFlash()
     {
-        flashTime = flashDuation;
+        FlashData data = new FlashData();
+        data.color = colour;
+        data.time = 0;
+        data.duration = flashDuation;
+        flashes.Add(data);
     }
+
+    public void FlashColour(Color col,float time)
+    {
+        FlashData data = new FlashData();
+        data.color = col;
+        data.time = 0;
+        data.duration = time;
+        flashes.Add(data);
+    }
+    class FlashData 
+    {
+        public Color color;
+        public float duration;
+        public float time;
+
+    }
+
 }
