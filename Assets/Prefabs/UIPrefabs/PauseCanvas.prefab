@@ -45,7 +45,7 @@ AudioSource:
   m_GameObject: {fileID: 2114850289}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2570323016805983098, guid: 1302a876e7971634d9b1124a73282664, type: 2}
   m_audioClip: {fileID: 8300000, guid: 5b69f3dcc58188a409953aef32e83854, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1771,6 +1771,18 @@ MonoBehaviour:
       - m_Target: {fileID: 5793481928696062904}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: CloseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1507742973881618376}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

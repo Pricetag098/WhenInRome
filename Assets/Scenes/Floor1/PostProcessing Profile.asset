@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1513237252326735969
+--- !u!114 &-6160073174534188937
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb4b772797da9440885e8bd939e9560, type: 3}
   m_Name: ColorCurves
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   master:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value:
       <length>k__BackingField: 2
       m_Loop: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   hueVsSat:
     m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 4
+      <length>k__BackingField: 1
       m_Loop: 1
       m_ZeroValue: 0.5
       m_Range: 1
@@ -162,35 +162,8 @@ MonoBehaviour:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0.47550976
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 0.47560975
-          value: 0.51794875
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 0.5926829
-          value: 0.5128205
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 0.5927829
-          value: 0
+          time: 0.44768855
+          value: 0.5333333
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -226,25 +199,6 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
---- !u!114 &-92761207381614104
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
-  m_Name: ChromaticAberration
-  m_EditorClassIdentifier: 
-  active: 0
-  m_AdvancedMode: 0
-  intensity:
-    m_OverrideState: 1
-    m_Value: 0.829
-    min: 0
-    max: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,68 +209,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: Main Camera Profile
+  m_Name: PostProcessing Profile
   m_EditorClassIdentifier: 
   components:
-  - {fileID: -1513237252326735969}
-  - {fileID: -92761207381614104}
-  - {fileID: 6257734849517646780}
---- !u!114 &6257734849517646780
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfbdbb87d3286943a057f7791b43141, type: 3}
-  m_Name: ChannelMixer
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  redOutRedIn:
-    m_OverrideState: 0
-    m_Value: 100
-    min: -200
-    max: 200
-  redOutGreenIn:
-    m_OverrideState: 0
-    m_Value: 0
-    min: -200
-    max: 200
-  redOutBlueIn:
-    m_OverrideState: 0
-    m_Value: 0
-    min: -200
-    max: 200
-  greenOutRedIn:
-    m_OverrideState: 0
-    m_Value: 0
-    min: -200
-    max: 200
-  greenOutGreenIn:
-    m_OverrideState: 0
-    m_Value: 100
-    min: -200
-    max: 200
-  greenOutBlueIn:
-    m_OverrideState: 0
-    m_Value: 0
-    min: -200
-    max: 200
-  blueOutRedIn:
-    m_OverrideState: 0
-    m_Value: 0
-    min: -200
-    max: 200
-  blueOutGreenIn:
-    m_OverrideState: 0
-    m_Value: 0
-    min: -200
-    max: 200
-  blueOutBlueIn:
-    m_OverrideState: 0
-    m_Value: 100
-    min: -200
-    max: 200
+  - {fileID: -6160073174534188937}
