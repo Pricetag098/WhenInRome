@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
 public class PlayerDeath : MonoBehaviour
 {
     PlayerMove move;
@@ -9,6 +10,8 @@ public class PlayerDeath : MonoBehaviour
     public Animator animator;
     LevelLoader levelLoader;
     public SoundPlayer deathSound;
+    public Volume deathPP;
+    public float greySpeed;
     Rigidbody rb;
     bool dead = false;
     public float timer = 0;
@@ -28,6 +31,7 @@ public class PlayerDeath : MonoBehaviour
                 levelLoader.Reload();
             }
             timer += Time.deltaTime;
+            deathPP.weight += Time.deltaTime * greySpeed;
         }
     }
 
