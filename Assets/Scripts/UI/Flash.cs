@@ -12,7 +12,8 @@ public class Flash : MonoBehaviour
     [HideInInspector]
     public Color pulseColour = Color.grey;
     public float flashDuation =1;
-    public float flashTime;
+    
+    List<FlashData> flashes = new List<FlashData>();
     // Start is called before the first frame update
     void Start()
     {
@@ -24,18 +25,41 @@ public class Flash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Color col = Color.clear;
+        List<FlashData> temp = flashes;
         
-        mat.SetColor(emmision, (colour * flashTime / flashDuation) + pulseColour * (1-(Mathf.Cos(Time.time * frequncy)/2 + .5f)));
-        flashTime -= Time.deltaTime;
-        if(flashTime < 0)
+        foreach(FlashData data in flashes)
         {
-            flashTime = 0;
+            data.time += Time.deltaTime;
+            col += (data.color * (1 - (data.time / data.duration)));
+            if(data.time > flashDuation)
+            {
+                temp.Remove(data);
+            }
         }
+        flashes = temp;
+
+
+
+        mat.SetColor(emmision, col + pulseColour * (1-(Mathf.Cos(Time.time * frequncy)/2 + .5f)));
+        
+        
         
     }
     [ContextMenu("Flash")]
-    public void FlashColour()
+    public void DoFlash()
     {
-        flashTime = flashDuation;
+        FlashData data = new FlashData();
+        data.color = colour;
+        data.time = 0;
+        data.duration = flashDuation;
     }
+    class FlashData 
+    {
+        public Color color;
+        public float duration;
+        public float time;
+
+    }
+
 }
