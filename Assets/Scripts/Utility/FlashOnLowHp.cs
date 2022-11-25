@@ -9,6 +9,7 @@ public class FlashOnLowHp : MonoBehaviour
     Health health;
     public float freq;
     public Color color;
+    public AudioSource heartBeat;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +23,12 @@ public class FlashOnLowHp : MonoBehaviour
         if(health.health < threshold)
         {
             flash.frequncy = freq;
+            heartBeat.gameObject.SetActive(true);
         }
         else
         {
             flash.frequncy = 0;
+            heartBeat.gameObject.SetActive(false);
         }
     }
 }
