@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 public class Execute : MonoBehaviour
 {
@@ -9,9 +10,10 @@ public class Execute : MonoBehaviour
     [SerializeField] float detectRange,damage, range;
     [SerializeField] LayerMask enemy;
     [SerializeField] float soundTime, timebetweenhits,timeAfterDmg;
-    [SerializeField] GameObject volume;
+    [SerializeField] Volume volume;
     [SerializeField] ObjectPooler lines, particles;
     [SerializeField] Holster holster;
+    [SerializeField] float ppSpeed= 1;
     List<Health> healths = new List<Health>();
     bool running = false;
     
@@ -43,7 +45,10 @@ public class Execute : MonoBehaviour
         executeInput.Disable();
     }
 
-
+    private void Update()
+    {
+        volume.weight = running ? Mathf.Lerp(volume.weight, 1, Time.unscaledDeltaTime * ppSpeed) : Mathf.Lerp(volume.weight, 0, Time.unscaledDeltaTime * ppSpeed);
+    }
 
     void TryExecute(InputAction.CallbackContext context)
     {
@@ -71,7 +76,7 @@ public class Execute : MonoBehaviour
         running = true;
         particles.DespawnAllActive();
         Time.timeScale = 0;
-        volume.SetActive(true);
+        //volume.SetActive(true);
         use.Play();
         SpawnLine(transform.position, healths[0].transform.position);
         yield return new WaitForSecondsRealtime(soundTime);
@@ -137,7 +142,7 @@ public class Execute : MonoBehaviour
         healths.Clear();
         Time.timeScale = 1;
         running = false;
-        volume.SetActive(false);
+        //volume.SetActive(false);
     }
 	private void OnDrawGizmos()
 	{
