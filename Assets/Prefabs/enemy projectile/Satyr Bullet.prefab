@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &8728147461077614787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4247992094506710468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbd696a49ca00e44a3445c3e952ab7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7620795311625374743
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,13 +2459,18 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 5c13e4d365537444ea12ef52ae7b8931, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6ae55365c85e3d04eaa90c085d9231bf, type: 2}
+      objectReference: {fileID: 2100000, guid: fb101b8f611c8ce45a64504859a1e214, type: 2}
     - target: {fileID: 919132149155446097, guid: 5c13e4d365537444ea12ef52ae7b8931, type: 3}
       propertyPath: m_Name
       value: Arrow Projectile
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c13e4d365537444ea12ef52ae7b8931, type: 3}
+--- !u!1 &4247992094506710468 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5c13e4d365537444ea12ef52ae7b8931, type: 3}
+  m_PrefabInstance: {fileID: 3905341729170016405}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3582673843619966846 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5c13e4d365537444ea12ef52ae7b8931, type: 3}

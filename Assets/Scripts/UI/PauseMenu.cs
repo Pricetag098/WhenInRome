@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     public float fadeTime;
    
     public bool menuOpen;
+    public SoundPlayer menuSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +47,8 @@ public class PauseMenu : MonoBehaviour
         {
             OpenMenu();
         }
+
+        menuSound.Play();
     }
 
     [ContextMenu("Open")]
