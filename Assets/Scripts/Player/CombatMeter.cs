@@ -8,6 +8,7 @@ public class CombatMeter : MonoBehaviour
     public float maxMeter;
     [SerializeField] float decayRate = 1, decayDelay = 1;
     [SerializeField] float chargePerDamage = 10;
+    [SerializeField] SoundPlayer chargerdSound;
     public bool inCombat;
     
     //[SerializeField] float enemyDetectRad = 100;
@@ -15,6 +16,7 @@ public class CombatMeter : MonoBehaviour
     OnHit oh;
     float timeSinceLastHit;
     public Floor floor;
+    bool wasCharged = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,10 +54,18 @@ public class CombatMeter : MonoBehaviour
             }
         }
         */
-
+        if(meter == maxMeter && !wasCharged)
+        {
+            wasCharged = true;
+            chargerdSound.Play();
+        }
         
     }
-
+    public void Discharge()
+    {
+        meter = 0;
+        wasCharged=false;
+    }
     public void Charge(HitData data)
     {
         meter += chargePerDamage * data.damage;

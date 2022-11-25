@@ -11,6 +11,7 @@ public class Ai : MonoBehaviour
     public Rigidbody rb;
     public TreeNode root;
     public GameObject body;
+    public Flash flash;
 
     [HideInInspector]
     public Health health;

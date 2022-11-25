@@ -459,8 +459,8 @@ MonoBehaviour:
   emmision: _EmissionColor
   colour: {r: 1, g: 1, b: 0.49411765, a: 1}
   frequncy: 0
+  pulseColour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   flashDuation: 1
-  flashTime: 0
 --- !u!1 &7570293058874135253
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,6 +751,7 @@ MonoBehaviour:
   rb: {fileID: 6237299864547065438}
   root: {fileID: 11400000, guid: c8614657aeefb874b8f41cf2af30f260, type: 2}
   body: {fileID: 4890736305115696886}
+  flash: {fileID: 6633385960291051020}
   health: {fileID: 0}
   animator: {fileID: 2194553439118855734}
 --- !u!195 &7925885164721068123
@@ -795,7 +796,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6633385960291051020}
         m_TargetAssemblyTypeName: Flash, Assembly-CSharp
-        m_MethodName: FlashColour
+        m_MethodName: DoFlash
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
