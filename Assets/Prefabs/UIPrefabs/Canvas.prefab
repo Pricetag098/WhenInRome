@@ -337,6 +337,7 @@ GameObject:
   - component: {fileID: 7253550063627760625}
   - component: {fileID: 8018580400617999226}
   - component: {fileID: 8608396005264546666}
+  - component: {fileID: 5780392902378647315}
   m_Layer: 5
   m_Name: PlayerDamage (2)
   m_TagString: Untagged
@@ -413,6 +414,20 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &5780392902378647315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189016765541101401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60353d704a11bf841819edf4ecaffaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 0}
+  duration: 1
 --- !u!1 &354247762586723700
 GameObject:
   m_ObjectHideFlags: 0
