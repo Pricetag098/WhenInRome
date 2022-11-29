@@ -235,6 +235,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   root: {fileID: 11400000, guid: 02060b6c764ee884a99c9282d85b208f, type: 2}
   body: {fileID: 4505936725449976521}
+  flash: {fileID: 0}
   health: {fileID: 0}
   animator: {fileID: 0}
 --- !u!195 &4505936725449976520
@@ -5227,7 +5228,7 @@ PrefabInstance:
     - target: {fileID: -8769661528982303890, guid: 2e9b75d141774f545a9bdbd6290992d0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 11cf33f3a7762814daa9a1c2f212966b, type: 2}
+      objectReference: {fileID: 2100000, guid: 8a1eff75965e0914ea0312c5a5c94c72, type: 2}
     - target: {fileID: -8679921383154817045, guid: 2e9b75d141774f545a9bdbd6290992d0, type: 3}
       propertyPath: m_RootOrder
       value: 0
