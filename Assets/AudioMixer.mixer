@@ -231,6 +231,25 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &-7509953285338005362
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BonePiles
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 71da264a1e303d84f82bc24c5936e995
+  m_Children: []
+  m_Volume: bc5efc834d1e52042aa729b3ede96c7b
+  m_Pitch: e83055a406b7cb348b3f449f86da6ede
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -12663394117570183}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &-7308728237902420620
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -1436,6 +1455,20 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &-12663394117570183
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: a6011584e84c12044b3a64d64e5a3c27
+  m_EffectName: Attenuation
+  m_MixLevel: 3c85b548520a4394fba5f01ac9f8a98a
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -1522,6 +1555,7 @@ AudioMixerController:
     - 305ef9807d761aa41866919642b0b811
     - 6fa8713f804294846ac69e552f2c3d20
     - 50a51e149c7d57248bf7199b75d6363e
+    - 71da264a1e303d84f82bc24c5936e995
     name: View
   - guids:
     - ab6394c13b9e08b4c893ad16e730cd93
@@ -1548,6 +1582,7 @@ AudioMixerController:
     - cab8f1228834e824286714c18ee7b5d1
     - bd889d31deba66447a2fbeed5c849680
     - e04d4d5b6be35ac4ea2b13d23cae001b
+    - 6f12032401f203445bdbaf380e2fa8fd
     name: PlayerView
   - guids:
     - ec24c2dc865894e498794b7f74685556
@@ -1584,6 +1619,8 @@ AudioMixerController:
     - 06c71298f835bc4469d32b5f75edd74d
     - 5ed36ec929b3527438ed81b4bac4e5a4
     - b6cc331df10d7194688ccc4a496a4e5a
+    - 53b99d81c527b9942b748d7978721899
+    - 71da264a1e303d84f82bc24c5936e995
     name: EnvironmentView
   - guids:
     - f6c0b4b23face6e4ca3ffd932c74d71d
@@ -1624,7 +1661,6 @@ AudioMixerController:
     - 1cbe22b936bd917408cd715da50cc121
     name: StyleMeterView
   - guids:
-    - 6f12032401f203445bdbaf380e2fa8fd
     - a83cd5d04d27e1641adc1fa8cf449238
     - ab2c2c4e13fd7664789847486daf0f4c
     - f392244846bb88e47b0761de7ab196ad
@@ -2712,6 +2748,7 @@ AudioMixerGroupController:
   - {fileID: -6661198471114012981}
   - {fileID: -4935500016616897997}
   - {fileID: -1016655916644296191}
+  - {fileID: -7509953285338005362}
   m_Volume: 4f647ff80f287624b9465ccf638158fb
   m_Pitch: 78d67ea08d7638f4ab211bde2c94d80a
   m_Send: 00000000000000000000000000000000
