@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1261713613851090565}
   m_Layer: 0
-  m_Name: Wall 1
+  m_Name: Candle against wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,6 +40,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1261713613851090565}
     m_Modifications:
+    - target: {fileID: 6856897863917727490, guid: 55fe72fffd2607b4aa885c475e5c44b2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8168805229488195047, guid: 55fe72fffd2607b4aa885c475e5c44b2, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -102,6 +106,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1261713613851090565}
     m_Modifications:
+    - target: {fileID: 6856897863917727490, guid: 55fe72fffd2607b4aa885c475e5c44b2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8168805229488195047, guid: 55fe72fffd2607b4aa885c475e5c44b2, type: 3}
       propertyPath: m_RootOrder
       value: 2
