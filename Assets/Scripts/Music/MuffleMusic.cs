@@ -46,6 +46,7 @@ public class MuffleMusic : MonoBehaviour
         while (timer < 1)
         {
             timer += Time.deltaTime / transitionTime;
+            
             output.SetFloat("Lowpass Simple", Mathf.Lerp(lowpass, 22000, 1 - timer));
             output.SetFloat("Highpass Simple", Mathf.Lerp(highpass, 0, 1 - timer));
             output.SetFloat("FrequencyGain", Mathf.Lerp(frequencyGain, 1, 1 - timer));
