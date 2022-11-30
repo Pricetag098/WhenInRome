@@ -14,6 +14,7 @@ public class FaceVel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(rb != null)
         transform.forward = rb.velocity;
     }
 }

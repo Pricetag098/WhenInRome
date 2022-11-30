@@ -26,7 +26,6 @@ public class ChargeMeter : MonoBehaviour
 
         float goal = cm.meter >= cm.maxMeter ? 1 : 0;
         vinete.alpha = Mathf.Lerp(vinete.alpha, goal, vineteFillSpeed * Time.deltaTime);
-        glow.alpha = goal == 1?Mathf.Sin(Time.time * freq): 0;
+        glow.alpha = goal == 1?Mathf.Sin(Time.time * freq)/2 + .5f: 0;
     }
 }
-s
