@@ -1291,12 +1291,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19412ccabfd922d42a5fe0e63692a828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 6
+  timeBeforeFade: 3
   animator: {fileID: 3638463606475859799}
   deathSound: {fileID: 4709323440112409311}
   deathPP: {fileID: 6248984736761729990}
-  greySpeed: 1
-  timer: 9.03
+  fadeTime: 2.5
+  waitTimer: 0
+  timeBeforeAnim: 1.3
+  fadeTimer: 0
+  heartbeat: {fileID: 640445643198579642}
 --- !u!114 &4251982014075360451
 MonoBehaviour:
   m_ObjectHideFlags: 0

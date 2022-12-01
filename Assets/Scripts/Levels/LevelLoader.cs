@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LevelLoader : MonoBehaviour
 {
     [SerializeField] CanvasGroup fadeObj;
-    [SerializeField] float transitionTime;
+    [SerializeField] public float transitionTime;
     float transitionTimer = 0;
     bool transitionOut = false,transitionIn = false;
     bool reloading = false;

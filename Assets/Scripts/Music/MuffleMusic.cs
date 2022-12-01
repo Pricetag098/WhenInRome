@@ -41,11 +41,12 @@ public class MuffleMusic : MonoBehaviour
 
     IEnumerator MuffleIE()
     {
+       
         float timer = 0;
         float currentVol = music.volume;
         while (timer < 1)
         {
-            timer += Time.deltaTime / transitionTime;
+            timer += Time.unscaledDeltaTime / transitionTime;
             
             output.SetFloat("Lowpass Simple", Mathf.Lerp(lowpass, 22000, 1 - timer));
             output.SetFloat("Highpass Simple", Mathf.Lerp(highpass, 0, 1 - timer));
@@ -53,10 +54,14 @@ public class MuffleMusic : MonoBehaviour
             music.volume = Mathf.Lerp(muffledVol, unMuffledVol, 1 - timer);
             yield return null;
         }
+        if (!music.isPlaying)
+        {
+            music.UnPause();
+        }
         //muffled = true;
-        
-        
-       
+
+
+
     }
     IEnumerator UnMuffleIE()
     {
