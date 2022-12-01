@@ -44,7 +44,7 @@ public class LevelLoader : MonoBehaviour
             }
             if(transitionTimer >= transitionTime)
             {
-                
+                Debug.Log("loaded");
                 LoadLvl();
             }
             transitionTimer += Time.unscaledDeltaTime;
@@ -57,9 +57,13 @@ public class LevelLoader : MonoBehaviour
         if(level+1 == SceneManager.GetActiveScene().buildIndex)
         {
             MuffleMusic muffleMusic = FindObjectOfType<MuffleMusic>();
-            muffleMusic.VolDown();
+            //muffleMusic.Muffle();
             level = level+1;
             Reload();
+            if(muffleMusic.music.volume == muffleMusic.unMuffledVol)
+            {
+                muffleMusic.Muffle();
+            }
         }
         transitionOut = true;
     }
@@ -68,17 +72,15 @@ public class LevelLoader : MonoBehaviour
     {
         Time.timeScale = 1;
         //todo check if the level is unlocked
-
+        
         if (reloading)
         {
             SceneManager.LoadScene(level);
             MuffleMusic muffleMusic = FindObjectOfType<MuffleMusic>();
             if (muffleMusic != null) 
             {
-                muffleMusic.Muffle();
-                //muffleMusic.VolDown();
+                muffleMusic.UnPause();
             }
-                
 
             return;
         }
@@ -90,7 +92,7 @@ public class LevelLoader : MonoBehaviour
             if (muffleMusic != null)
             {
                 //muffleMusic.Muffle();
-                muffleMusic.VolDown();
+                //muffleMusic.VolDown();
             }
         }
         else

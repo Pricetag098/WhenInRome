@@ -8,7 +8,7 @@ public class MuffleMusic : MonoBehaviour
 {
     private AudioMixer output;
     [SerializeField]
-    private AudioSource music;
+    public AudioSource music;
     public float muffledVol;
     public float unMuffledVol;
     //private bool muffled = true;
@@ -48,7 +48,24 @@ public class MuffleMusic : MonoBehaviour
         StopCoroutine("MuffleIE");
         StartCoroutine("UnMuffleIE");
     }
+    public void UnPause()
+    {
+        if (!music.isPlaying)
+        {
+            Debug.Log("respawn");
+            music.UnPause();
+            StartMuffled();
+            VolUp();
+        }
+    }
 
+    void StartMuffled()
+    {
+        output.SetFloat("Lowpass Simple", lowpass);
+        output.SetFloat("Highpass Simple", highpass);
+        output.SetFloat("FrequencyGain", frequencyGain);
+        music.volume = unMuffledVol;
+    }
     IEnumerator MuffleIE()
     {
        
@@ -64,12 +81,11 @@ public class MuffleMusic : MonoBehaviour
             music.volume = Mathf.Lerp(muffledVol, unMuffledVol, 1 - timer);
             yield return null;
         }
-        if (!music.isPlaying)
-        {
-            music.UnPause();
-        }
+       
         //muffled = true;
     }
+
+ 
     IEnumerator UnMuffleIE()
     {
         float timer = 0;
@@ -103,7 +119,7 @@ public class MuffleMusic : MonoBehaviour
         
         while (timer < 1)
         {
-            timer += Time.deltaTime / volumeTime;
+            timer += Time.unscaledDeltaTime / volumeTime;
             music.volume = Mathf.Lerp(0, 1, timer);
             yield return null;
         }
@@ -115,7 +131,7 @@ public class MuffleMusic : MonoBehaviour
 
         while (timer < 1)
         {
-            timer += Time.deltaTime / volumeTime;
+            timer += Time.unscaledDeltaTime / volumeTime;
             music.volume = Mathf.Lerp(0, 1, 1 - timer);
             yield return null;
         }
