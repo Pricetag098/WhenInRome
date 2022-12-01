@@ -2267,6 +2267,7 @@ GameObject:
   - component: {fileID: 6708927899788858006}
   - component: {fileID: 7739646519024643464}
   - component: {fileID: 7632443308972559601}
+  - component: {fileID: 7733913657411272943}
   m_Layer: 9
   m_Name: Skeleton Bullet
   m_TagString: Untagged
@@ -2381,6 +2382,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAge: 5
+--- !u!114 &7733913657411272943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8019073263587438894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbd696a49ca00e44a3445c3e952ab7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3905341729170016405
 PrefabInstance:
   m_ObjectHideFlags: 0

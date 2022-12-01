@@ -28,7 +28,15 @@ public class CombatMeter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        inCombat = floor.inCombat; //Physics.CheckSphere(transform.position, enemyDetectRad, enemyLayer);
+        if (floor != null)
+        {
+            inCombat = floor.inCombat; //Physics.CheckSphere(transform.position, enemyDetectRad, enemyLayer);
+        }
+        else
+        {
+            inCombat = true;
+        }
+        
 
         if (inCombat)
         {

@@ -8,12 +8,13 @@ public class FaceVel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(rb != null)
         transform.forward = rb.velocity;
     }
 }
