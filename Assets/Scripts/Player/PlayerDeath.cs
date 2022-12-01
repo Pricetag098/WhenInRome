@@ -33,40 +33,19 @@ public class PlayerDeath : MonoBehaviour
         {
             if (wait)
             {
-                Debug.Log("ran twice");
                 while (waitTimer < timeBeforeAnim)
                 {
                     deathPP.weight = 1;// += Time.unscaledDeltaTime * fadeTime;
                     waitTimer += Time.unscaledDeltaTime;
                     yield return null;
                 }
-                Debug.Log("start anim");
-                //Time.timeScale = 1;
                 animator.SetTrigger("Die");
                 animator.updateMode = AnimatorUpdateMode.UnscaledTime;
-                
                 wait = false;
-                Debug.Log("not waiting");
-                /*while (fadeTimer < 1)
-                {
-                    fadeTimer += Time.unscaledDeltaTime / fadeTime;
-                    //deathPP.weight -= Time.unscaledDeltaTime / fadeTime;
-                    yield return null;
-
-                }*/
                 levelLoader.transitionTime = fadeTime;
                 levelLoader.Reload();
-                //MuffleMusic mm = FindObjectOfType<MuffleMusic>();
-                //if (mm != null)
-                   // mm.GetComponent<AudioSource>().UnPause();
                 yield return null;
             }
-            else
-            {
-               
-            }
-
-
         }
     }
 

@@ -59,9 +59,6 @@ public class MuffleMusic : MonoBehaviour
             music.UnPause();
         }
         //muffled = true;
-
-
-
     }
     IEnumerator UnMuffleIE()
     {
