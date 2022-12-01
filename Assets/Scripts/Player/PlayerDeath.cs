@@ -35,7 +35,7 @@ public class PlayerDeath : MonoBehaviour
             {
                 while (waitTimer < timeBeforeAnim)
                 {
-                    deathPP.weight = 1;// += Time.unscaledDeltaTime * fadeTime;
+                    deathPP.weight = 1;
                     waitTimer += Time.unscaledDeltaTime;
                     yield return null;
                 }
@@ -53,8 +53,6 @@ public class PlayerDeath : MonoBehaviour
     {
         if (!dead)
         {
-
-            //enabled = false;
             deathSound.Play();
             move.enabled = false;
             rb.velocity = Vector3.zero;
@@ -63,7 +61,6 @@ public class PlayerDeath : MonoBehaviour
             dead = true;
             MuffleMusic mm = FindObjectOfType<MuffleMusic>();
             if (mm != null)
-            //mm.Muffle();
             mm.GetComponent<AudioSource>().Pause();
             heartbeat.volume = 0;
             heartbeat.loop = false;

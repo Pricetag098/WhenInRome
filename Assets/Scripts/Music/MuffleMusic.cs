@@ -28,6 +28,16 @@ public class MuffleMusic : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        //Debug.Log(music.volume);
+        if(Time.deltaTime > 0.3)
+        {
+            Debug.Log(music.volume);
+        }
+        
+    }
+
     public void Muffle()
     {
         StopCoroutine("UnMuffleIE");

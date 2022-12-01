@@ -56,6 +56,8 @@ public class LevelLoader : MonoBehaviour
     {
         if(level+1 == SceneManager.GetActiveScene().buildIndex)
         {
+            MuffleMusic muffleMusic = FindObjectOfType<MuffleMusic>();
+            muffleMusic.VolDown();
             level = level+1;
             Reload();
         }
@@ -87,7 +89,7 @@ public class LevelLoader : MonoBehaviour
             MuffleMusic muffleMusic = FindObjectOfType<MuffleMusic>();
             if (muffleMusic != null)
             {
-                muffleMusic.Muffle();
+                //muffleMusic.Muffle();
                 muffleMusic.VolDown();
             }
         }
@@ -96,7 +98,7 @@ public class LevelLoader : MonoBehaviour
             MuffleMusic muffleMusic = FindObjectOfType<MuffleMusic>();
             if (muffleMusic != null)
             {
-                muffleMusic.Muffle();
+                //muffleMusic.Muffle();
                 muffleMusic.VolDown();
             }
             SceneManager.LoadScene(0);
