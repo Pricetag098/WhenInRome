@@ -29,4 +29,3 @@ public class ChargeMeter : MonoBehaviour
         glow.alpha = goal == 1?Mathf.Sin(Time.time * freq): 0;
     }
 }
-s
