@@ -8,6 +8,7 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] CanvasGroup fadeObj;
     [SerializeField] public float transitionTime;
     float transitionTimer = 0;
+    public int lastLevel;
     bool transitionOut = false,transitionIn = false;
     bool reloading = false;
     public int level;
@@ -84,7 +85,16 @@ public class LevelLoader : MonoBehaviour
 
             return;
         }
-
+        if(level == lastLevel)
+        {
+            MuffleMusic muffleMusic = FindObjectOfType<MuffleMusic>();
+            if (muffleMusic != null)
+            {
+                //muffleMusic.Muffle();
+                muffleMusic.VolDown();
+            }
+            SceneManager.LoadScene(0);
+        }
         if (SceneManager.sceneCountInBuildSettings > level + 1)
         {
             SceneManager.LoadScene(level + 1);

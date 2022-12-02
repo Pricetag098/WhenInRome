@@ -8,6 +8,7 @@ public class Dissolver : MonoBehaviour
     float dissolve = 0;
     public float dissolveRate = 1;
     bool doDissolve = false;
+    bool dissolveIn = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,14 +19,29 @@ public class Dissolver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (doDissolve)
+        if (dissolveIn)
+        {
+            dissolve -= Time.deltaTime * dissolveRate;
+            if(dissolve < 0)
+            {
+                dissolveIn = false;
+            }
+        }
+        else if (doDissolve)
         {
             dissolve += Time.deltaTime * dissolveRate;
         }
+
+        dissolve = Mathf.Clamp01(dissolve);
         mat.SetFloat("_Dissolve", dissolve);
     }
     public void Dissolve()
     {
         doDissolve = true;
+    }
+    private void OnEnable()
+    {
+        dissolveIn = true;
+        dissolve = 1;
     }
 }
