@@ -8,11 +8,14 @@ public class Spawner : MonoBehaviour
     public GameObject player;
     public WaveDisp waveDisp;
     public int wave =0;
+    public float waveWaitTime = 5;
+
+    MuffleMusic muffleMusic;
     Room room;
     // Start is called before the first frame update
     void Start()
     {
-        
+        muffleMusic = FindObjectOfType<MuffleMusic>();
     }
 
     // Update is called once per frame
@@ -48,11 +51,21 @@ public class Spawner : MonoBehaviour
     void OnClearWave()
     {
         Destroy(room);
+        StartCoroutine("WaitBetweenLevels");
+    }
+    IEnumerator WaitBetweenLevels()
+    {
+        if (muffleMusic != null)
+            muffleMusic.Muffle();
+        yield return new WaitForSeconds(waveWaitTime);
         Spawn();
         wave++;
         if (waveDisp != null)
         {
             waveDisp.UpdateText(wave);
         }
+        if(muffleMusic != null)
+            muffleMusic.UnMuffle();
     }
+
 }
