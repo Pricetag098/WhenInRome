@@ -16,16 +16,14 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         muffleMusic = FindObjectOfType<MuffleMusic>();
+        OnClearWave();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(room == null)
-        {
-            OnClearWave();
-        }
-        else
+        
+        if(room != null)
         {
             if (!room.started)
             {
@@ -36,6 +34,8 @@ public class Spawner : MonoBehaviour
                 OnClearWave();
             }
         }
+            
+        
     }
     public void Spawn()
     {
