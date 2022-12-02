@@ -918,6 +918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeObj: {fileID: 1302257768}
   transitionTime: 1.5
+  lastLevel: 0
   level: 0
   fadeIn: 1
 --- !u!114 &588609177
@@ -1104,6 +1105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeObj: {fileID: 1302257768}
   transitionTime: 0.5
+  lastLevel: 0
   level: 0
   fadeIn: 0
 --- !u!114 &592430303
@@ -2193,6 +2195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeObj: {fileID: 1302257768}
   transitionTime: 0.5
+  lastLevel: 0
   level: 1
   fadeIn: 0
 --- !u!114 &1152537661
@@ -2582,6 +2585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeObj: {fileID: 1302257768}
   transitionTime: 1.5
+  lastLevel: 0
   level: 3
   fadeIn: 1
 --- !u!224 &1302257767 stripped
@@ -2911,6 +2915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeObj: {fileID: 1302257768}
   transitionTime: 2
+  lastLevel: 0
   level: 0
   fadeIn: 1
 --- !u!114 &1410769079
@@ -3979,6 +3984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeObj: {fileID: 1302257768}
   transitionTime: 0.5
+  lastLevel: 0
   level: 2
   fadeIn: 0
 --- !u!114 &1803719542
@@ -4766,6 +4772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeObj: {fileID: 1302257768}
   transitionTime: 0.5
+  lastLevel: 0
   level: 2
   fadeIn: 0
 --- !u!114 &2027141653
@@ -4988,6 +4995,14 @@ PrefabInstance:
       propertyPath: unMuffledVol
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 4325660384027174399, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: songs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325660384027174399, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: songs.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: e2462f27da06f354caebcde9d1f253e7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
 --- !u!1001 &6701155284783189277
