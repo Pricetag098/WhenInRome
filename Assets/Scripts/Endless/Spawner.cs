@@ -50,6 +50,7 @@ public class Spawner : MonoBehaviour
     }
     void OnClearWave()
     {
+        if(room != null)
         Destroy(room.gameObject);
         StartCoroutine("WaitBetweenLevels");
     }
