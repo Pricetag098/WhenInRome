@@ -14,11 +14,15 @@ public class StyleChargedReticle : MonoBehaviour
 
     void Update()
     {
+        if(cm == null)
+        {
+            return;
+        }
        
         if (cm.meter >= cm.maxMeter)
         {
-            reticle.enabled = false;
-            chargedReticle.enabled = true;
+            reticle.enabled=(false);
+            chargedReticle.enabled =(true);
             Vector3 angles = chargedReticle.transform.eulerAngles;
             angles.z = angles.z - rotationSpeed * Time.deltaTime;
             chargedReticle.transform.eulerAngles = angles;
@@ -26,8 +30,8 @@ public class StyleChargedReticle : MonoBehaviour
 
         else
         {
-            reticle.enabled = true;
-            chargedReticle.enabled = false;
+            reticle.enabled = (true);
+            chargedReticle.enabled = (false);
         }
     }
 
