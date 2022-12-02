@@ -63,13 +63,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed55792a2e4972940844f2150ab9d42f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  music: {fileID: 0}
   muffledVol: 1
   unMuffledVol: 0.1
   highpass: 3500
   lowpass: 3500
   frequencyGain: 0.37
   transitionTime: 0.5
-  volumeTime: 2
+  volumeTime: 1.5
 --- !u!82 &4325660384027174397
 AudioSource:
   m_ObjectHideFlags: 0

@@ -697,7 +697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeObj: {fileID: 1302257768}
-  transitionTime: 2
+  transitionTime: 1.5
   level: 0
   fadeIn: 1
 --- !u!114 &588609177
@@ -768,9 +768,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 523369273}
+      - m_Target: {fileID: 1375535005}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Stop
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -780,9 +780,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1375535005}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 523369274}
+        m_TargetAssemblyTypeName: MuffleMusic, Assembly-CSharp
+        m_MethodName: Muffle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1489,6 +1489,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979754236}
   m_CullTransparentMesh: 1
+--- !u!1001 &1032391294
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4325660384027174392, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325660384027174392, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30.56271
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325660384027174392, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.056657
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325660384027174392, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.626234
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325660384027174392, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325660384027174392, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325660384027174392, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325660384027174392, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325660384027174392, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325660384027174392, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325660384027174392, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325660384027174396, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: m_Name
+      value: Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325660384027174396, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
 --- !u!1 &1037040438
 GameObject:
   m_ObjectHideFlags: 0
@@ -2744,7 +2805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 588609174}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1639061898
@@ -4264,6 +4325,14 @@ PrefabInstance:
     - target: {fileID: 4325660384027174396, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
       propertyPath: m_Name
       value: MusicTEST
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325660384027174396, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325660384027174397, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
+      propertyPath: m_audioClip
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4325660384027174398, guid: e258f54f1dd22d34aa930570913708bc, type: 3}
       propertyPath: muffledVol

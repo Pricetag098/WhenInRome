@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LevelLoader : MonoBehaviour
 {
     [SerializeField] CanvasGroup fadeObj;
-    [SerializeField] float transitionTime;
+    [SerializeField] public float transitionTime;
     float transitionTimer = 0;
     bool transitionOut = false,transitionIn = false;
     bool reloading = false;
@@ -44,7 +44,7 @@ public class LevelLoader : MonoBehaviour
             }
             if(transitionTimer >= transitionTime)
             {
-                
+                Debug.Log("loaded");
                 LoadLvl();
             }
             transitionTimer += Time.unscaledDeltaTime;
@@ -56,8 +56,14 @@ public class LevelLoader : MonoBehaviour
     {
         if(level+1 == SceneManager.GetActiveScene().buildIndex)
         {
+            MuffleMusic muffleMusic = FindObjectOfType<MuffleMusic>();
+            //muffleMusic.Muffle();
             level = level+1;
             Reload();
+            if(muffleMusic.music.volume == muffleMusic.unMuffledVol)
+            {
+                muffleMusic.Muffle();
+            }
         }
         transitionOut = true;
     }
@@ -66,17 +72,15 @@ public class LevelLoader : MonoBehaviour
     {
         Time.timeScale = 1;
         //todo check if the level is unlocked
-
+        
         if (reloading)
         {
             SceneManager.LoadScene(level);
             MuffleMusic muffleMusic = FindObjectOfType<MuffleMusic>();
             if (muffleMusic != null) 
             {
-                muffleMusic.Muffle();
-                //muffleMusic.VolDown();
+                muffleMusic.UnPause();
             }
-                
 
             return;
         }
@@ -87,8 +91,8 @@ public class LevelLoader : MonoBehaviour
             MuffleMusic muffleMusic = FindObjectOfType<MuffleMusic>();
             if (muffleMusic != null)
             {
-                muffleMusic.Muffle();
-                muffleMusic.VolDown();
+                //muffleMusic.Muffle();
+                //muffleMusic.VolDown();
             }
         }
         else
@@ -96,7 +100,7 @@ public class LevelLoader : MonoBehaviour
             MuffleMusic muffleMusic = FindObjectOfType<MuffleMusic>();
             if (muffleMusic != null)
             {
-                muffleMusic.Muffle();
+                //muffleMusic.Muffle();
                 muffleMusic.VolDown();
             }
             SceneManager.LoadScene(0);

@@ -24,5 +24,9 @@ public class Exit : MonoBehaviour
         }
         playerMove.enabled = false;
         playerMove.GetComponent<Rigidbody>().velocity = Vector3.zero;
+
+        MuffleMusic mm = FindObjectOfType<MuffleMusic>();
+        if (mm != null)
+            mm.VolDown();
     }
 }
