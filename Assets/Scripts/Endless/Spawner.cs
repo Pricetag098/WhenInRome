@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
     {
         if(room == null)
         {
-            Spawn();
+            OnClearWave();
         }
         else
         {
