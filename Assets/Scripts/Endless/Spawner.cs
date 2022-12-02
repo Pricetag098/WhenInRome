@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
     {
         if(room == null)
         {
-            Spawn();
+            OnClearWave();
         }
         else
         {
@@ -50,7 +50,8 @@ public class Spawner : MonoBehaviour
     }
     void OnClearWave()
     {
-        Destroy(room);
+        if(room != null)
+        Destroy(room.gameObject);
         StartCoroutine("WaitBetweenLevels");
     }
     IEnumerator WaitBetweenLevels()
