@@ -21,8 +21,8 @@ public class StyleChargedReticle : MonoBehaviour
        
         if (cm.meter >= cm.maxMeter)
         {
-            reticle.gameObject.SetActive(false);
-            chargedReticle.gameObject.SetActive(true);
+            reticle.enabled=(false);
+            chargedReticle.enabled =(true);
             Vector3 angles = chargedReticle.transform.eulerAngles;
             angles.z = angles.z - rotationSpeed * Time.deltaTime;
             chargedReticle.transform.eulerAngles = angles;
@@ -30,8 +30,8 @@ public class StyleChargedReticle : MonoBehaviour
 
         else
         {
-            reticle.gameObject.SetActive(true);
-            chargedReticle.gameObject.SetActive(false);
+            reticle.enabled = (true);
+            chargedReticle.enabled = (false);
         }
     }
 
