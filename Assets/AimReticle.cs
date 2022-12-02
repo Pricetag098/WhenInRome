@@ -12,7 +12,8 @@ public class AimReticle : MonoBehaviour
     InputAction aim;
     public float contAimScale;
     public float angleConstant = 0;
-    Image img;
+    public GameObject img;
+    public GameObject img2;
     private void Awake()
     {
         inputActions = new PlayerInputs();
@@ -31,7 +32,7 @@ public class AimReticle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        img = GetComponent<Image>();
+        //img = GetComponent<Image>();
         angleConstant = Camera.main.transform.rotation.eulerAngles.x;
         angleConstant = Mathf.Tan(angleConstant * Mathf.Deg2Rad);
         //angleConstant = 1 / angleConstant;
@@ -45,7 +46,8 @@ public class AimReticle : MonoBehaviour
             case PlayerAim.InputTypes.mouse:
                 if (Mouse.current != null)
                     transform.position = Mouse.current.position.ReadValue();
-                img.enabled = Time.timeScale != 0;
+                img.SetActive(Time.timeScale != 0);
+                img2.SetActive(Time.timeScale != 0);
                 break;
             case PlayerAim.InputTypes.gamepad:
                 Vector3 center = new Vector3(Screen.width / 2, Screen.height / 2, 0);
@@ -54,8 +56,8 @@ public class AimReticle : MonoBehaviour
                 Vector3 pos = center + aimVal * contAimScale;
                 
                 transform.position = pos;
-                img.enabled = transform.position != center && Time.timeScale != 0;
-                
+                img.SetActive(transform.position != center && Time.timeScale != 0);
+                img2.SetActive(transform.position != center && Time.timeScale != 0);
                 break;
         }
     }
