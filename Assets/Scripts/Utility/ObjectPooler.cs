@@ -89,4 +89,8 @@ public class ObjectPooler : MonoBehaviour
             obj.SetActive(false);
         }
     }
+    private void OnDestroy()
+    {
+        Destroy(container);
+    }
 }
