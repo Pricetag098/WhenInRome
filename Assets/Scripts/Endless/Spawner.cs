@@ -6,6 +6,7 @@ public class Spawner : MonoBehaviour
 {
     public List<GameObject> rooms = new List<GameObject>();
     public GameObject player;
+    public WaveDisp waveDisp;
     public int wave =0;
     Room room;
     // Start is called before the first frame update
@@ -49,5 +50,9 @@ public class Spawner : MonoBehaviour
         Destroy(room);
         Spawn();
         wave++;
+        if (waveDisp != null)
+        {
+            waveDisp.UpdateText(wave);
+        }
     }
 }
