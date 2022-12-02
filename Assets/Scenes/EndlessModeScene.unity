@@ -15743,12 +15743,12 @@ Transform:
   - {fileID: 1341131940}
   - {fileID: 158835709}
   - {fileID: 1223382990}
+  - {fileID: 1439391901}
   - {fileID: 1099130719}
+  - {fileID: 1766176679}
   - {fileID: 1149511859}
   - {fileID: 241949538}
   - {fileID: 996605482}
-  - {fileID: 1439391901}
-  - {fileID: 1766176679}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21284,7 +21284,8 @@ MonoBehaviour:
   - {fileID: 2175501167320283652, guid: 7e6b82d8186568d4eae0320b0d46fa6b, type: 3}
   player: {fileID: 2108680730}
   waveDisp: {fileID: 482050087}
-  wave: 1
+  wave: 0
+  waveWaitTime: 5
 --- !u!1001 &1450308097
 PrefabInstance:
   m_ObjectHideFlags: 0
