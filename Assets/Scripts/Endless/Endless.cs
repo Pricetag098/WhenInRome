@@ -51,7 +51,7 @@ public class Endless : MonoBehaviour
         scores.scores.Sort();
         if(scores.scores.Count > maxScores)
         {
-            scores.scores.Remove(scores.scores.Count - 1);
+            scores.scores.Remove(0);
         }
 
         BinaryFormatter bf = new BinaryFormatter();
@@ -91,7 +91,7 @@ public class Endless : MonoBehaviour
             string text = "";
             for(int i = 0; i < scores.Count; i++)
             {
-                string temp = (i+1).ToString() + ". " + scores[i].ToString() + "\n";
+                string temp = (i + 1).ToString() + ". " + scores[scores.Count - i -1].ToString() + "\n";
                 text += temp;
             }
             return text;
