@@ -888,7 +888,6 @@ AudioMixerGroupController:
   - {fileID: 6197625886148637011}
   - {fileID: 520325872132843421}
   - {fileID: 1997619293411733726}
-  - {fileID: 373148519663541909}
   - {fileID: 7518941999506473603}
   m_Volume: e3695cb051e770143bb40b8f7a76851e
   m_Pitch: 2b580e521f7bdec4fb52055d106d01bf
@@ -1665,7 +1664,7 @@ AudioMixerController:
     - ab2c2c4e13fd7664789847486daf0f4c
     - f392244846bb88e47b0761de7ab196ad
     name: RatView
-  m_CurrentViewIndex: 0
+  m_CurrentViewIndex: 1
   m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
 AudioMixerGroupController:
@@ -1985,6 +1984,7 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: f5fee4cb80ba50b4c9b7d03b8c4c5061
   m_Children:
+  - {fileID: 373148519663541909}
   - {fileID: -6011432667431461309}
   - {fileID: -4806368631606512832}
   - {fileID: -2589028564693398898}
