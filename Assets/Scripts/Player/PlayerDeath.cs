@@ -52,7 +52,7 @@ public class PlayerDeath : MonoBehaviour
                 }
                 else
                 {
-
+                    waves.OnDeath();
                 }
                 
             }
