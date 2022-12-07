@@ -113,6 +113,6 @@ public class ActAttackInV : TreeNode
     {
         GameObject b = pooler.SpawnObj();
         b.transform.position = origin; //+ dir * .75f;
-        b.GetComponent<Bullet>().Init(dir * bulletVel, damage);
+        b.GetComponent<Bullet>().Init(dir * bulletVel, damage,0);
     }
 }

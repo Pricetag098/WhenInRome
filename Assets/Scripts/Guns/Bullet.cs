@@ -5,10 +5,13 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] float maxAge = 1;
+    [SerializeField] float decayRate = 0;
     float age = 0;
     Rigidbody rb;
+    float maxDmg;
     float damage;
     TrailRenderer trailRenderer;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -17,9 +20,11 @@ public class Bullet : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    public void Init(Vector3 vel, float dmg)
+    public void Init(Vector3 vel, float dmg,float fallOff)
     {
         damage = dmg;
+        maxDmg = dmg;
+        decayRate = fallOff;
         rb.velocity = vel;
         if(trailRenderer != null)
         trailRenderer.enabled = true;
@@ -28,6 +33,10 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(decayRate > 0)
+        {
+            damage = maxDmg * (1-Mathf.Pow(age/maxAge,decayRate));
+        }
         if(age > maxAge) { Despawn(); }
         age += Time.deltaTime;
     }
