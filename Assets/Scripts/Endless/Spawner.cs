@@ -10,6 +10,7 @@ public class Spawner : MonoBehaviour
     public int wave =0;
     public float waveWaitTime = 5;
 
+    public Endless endless;
     MuffleMusic muffleMusic;
     Room room;
     // Start is called before the first frame update
