@@ -32,6 +32,8 @@ public class Endless : MonoBehaviour
     public void OnDeath()
     {
         dead = true;
+        deathScreen.gameObject.SetActive(true);
+        Cursor.visible = true;
         score.text = "your score <" + spawner.wave.ToString() + ">";
         hsDisp.text = scores.GiveText();
     }

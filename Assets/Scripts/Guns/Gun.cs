@@ -9,6 +9,7 @@ public class Gun : MonoBehaviour
     [Header("Gun Settings")]
     [SerializeField] float equipTime;
     [SerializeField] float fireRate;
+    
     float fireTimer;
     public int maxAmmo;
     public int ammo;
@@ -190,7 +191,7 @@ public class Gun : MonoBehaviour
         Vector3 shootDir = aim.aimDir;
         if(aimAssistAngle > 0)
         {
-            shootDir = aim.GetAssistedDir(aimAssistAngle);
+            shootDir = aim.GetAssistedDir(aimAssistAngle,bulletVel);
         }
         if(shootDir == Vector3.zero)
         {
