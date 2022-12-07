@@ -1484,12 +1484,18 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
+  - guid: a2e98a887a669844d93ed47985b38654
+    name: MasterVol
+  - guid: d2c61f381804ac74f816cbb3119a7576
+    name: MusicVol
   - guid: 9144bfacd974d6c41be06f2a98af721a
     name: Highpass Simple
   - guid: ad2e8a61ce6be214a8064d3751948161
     name: Lowpass Simple
   - guid: 130da2c938f2cde4a8bf8d4d5e53087e
     name: FrequencyGain
+  - guid: e3695cb051e770143bb40b8f7a76851e
+    name: FxVol
   m_AudioMixerGroupViews:
   - guids:
     - 0df789a86d67b0c489749f2ffaacc4dd
