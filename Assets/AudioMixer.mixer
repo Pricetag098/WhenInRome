@@ -281,6 +281,7 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: 7116276119465098706}
   - {fileID: -2570323016805983098}
+  - {fileID: 404131761691422009}
   m_Volume: b0d05b3ba45a62e49a64c5ba6db725e5
   m_Pitch: 70d6f69e7709d47439c42302d6e41b97
   m_Send: 00000000000000000000000000000000
@@ -1614,6 +1615,7 @@ AudioMixerController:
     - f7e270181bcdf8140b82459f1fdee8f0
     - dfc16a30d02db234daf0b3ab28c769d5
     - 85b4d636afd4e87448e8d8a20fc66c3a
+    - 450cd9d3252222b449213ef9950ec71e
     name: MinotaurView
   - guids:
     - 2218ddec055e53842be6c347fc518a18
@@ -1686,7 +1688,7 @@ AudioMixerController:
     - ab2c2c4e13fd7664789847486daf0f4c
     - f392244846bb88e47b0761de7ab196ad
     name: RatView
-  m_CurrentViewIndex: 4
+  m_CurrentViewIndex: 1
   m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
 AudioMixerGroupController:
@@ -1806,6 +1808,20 @@ AudioMixerSnapshotController:
     7b55519f19746a54d81988606bf9b04e: -17.938717
     b8386acf9dd41934db09fedf37e9affc: 2.4583216
   m_TransitionOverrides: {}
+--- !u!244 &37639167844106463
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 5752ff1be8e2c8a4a86ec4ef27e4cd12
+  m_EffectName: Attenuation
+  m_MixLevel: 574e1f738c0b2cb4480614e54e517bdf
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &119428808619994456
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -1856,6 +1872,25 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -5085912192388516483}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &404131761691422009
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Confetti
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 450cd9d3252222b449213ef9950ec71e
+  m_Children: []
+  m_Volume: 7c72812898537b542afd6a46d7acc0fb
+  m_Pitch: 4fcd6bc438438e7429e4c0da33b71657
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 37639167844106463}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
