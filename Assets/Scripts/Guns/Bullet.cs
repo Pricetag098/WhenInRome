@@ -11,7 +11,8 @@ public class Bullet : MonoBehaviour
     float maxDmg;
     float damage;
     TrailRenderer trailRenderer;
-
+    Material mat;
+    public MeshRenderer renderer;
 
     // Start is called before the first frame update
     void Awake()
@@ -28,6 +29,10 @@ public class Bullet : MonoBehaviour
         rb.velocity = vel;
         if(trailRenderer != null)
         trailRenderer.enabled = true;
+        if(decayRate > 0)
+        {
+            mat = renderer.material;
+        }
     }
 
     // Update is called once per frame
@@ -36,6 +41,7 @@ public class Bullet : MonoBehaviour
         if(decayRate > 0)
         {
             damage = maxDmg * (1-Mathf.Pow(age/maxAge,decayRate));
+            mat.SetFloat("Val", damage/ maxDmg);
         }
         if(age > maxAge) { Despawn(); }
         age += Time.deltaTime;
