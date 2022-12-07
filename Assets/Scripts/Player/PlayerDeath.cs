@@ -19,6 +19,7 @@ public class PlayerDeath : MonoBehaviour
     public float timeBeforeAnim;
     public float fadeTimer = 0;
     public AudioSource heartbeat;
+    public Endless waves;
     private void Start()
     {
         move = GetComponent<PlayerMove>();
@@ -42,9 +43,18 @@ public class PlayerDeath : MonoBehaviour
                 animator.SetTrigger("Die");
                 animator.updateMode = AnimatorUpdateMode.UnscaledTime;
                 wait = false;
-                levelLoader.transitionTime = fadeTime;
-                levelLoader.Reload();
-                yield return null;
+
+                if(waves == null)
+                {
+                    levelLoader.transitionTime = fadeTime;
+                    levelLoader.Reload();
+                    yield return null;
+                }
+                else
+                {
+
+                }
+                
             }
         }
     }
