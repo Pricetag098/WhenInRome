@@ -128,6 +128,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAge: 1
+  decayRate: 0
+  renderer: {fileID: 0}
+  damageChanges: 0
+  sizeOffset: 0.04
 --- !u!96 &747905411773586495
 TrailRenderer:
   serializedVersion: 2
