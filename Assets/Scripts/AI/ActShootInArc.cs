@@ -10,7 +10,8 @@ public class ActShootInArc : TreeNode
     [Header("Gun Settings")]
     [SerializeField] float fireRate;
     float fireTimer;
-    
+    [SerializeField] float waitBeforeFire;
+
 
     [Header("Projectile Settings")]
     [SerializeField] int bulletsFired;
