@@ -144,14 +144,14 @@ public class Execute : MonoBehaviour
         running = false;
         //volume.SetActive(false);
     }
-	private void OnDrawGizmos()
+	/*private void OnDrawGizmos()
 	{
 		Gizmos.color = Color.yellow;
         foreach(Health h in healths)
 		{
             Gizmos.DrawWireSphere(h.transform.position,detectRange);
 		}
-	}
+	}*/
 
     void SpawnLine(Vector3 origin, Vector3 point)
 	{
