@@ -28,7 +28,8 @@ public class HealPickup : MonoBehaviour
             GetComponent<Collider>().enabled = false;
             //GetComponent<MeshRenderer>().enabled = false;
             model.SetActive(false);
-            Instantiate(pickupEffect, transform.position, transform.rotation);
+            GameObject newHealthPickup = Instantiate(pickupEffect, transform.position, transform.rotation);
+            newHealthPickup.GetComponent<ParticleSystem>().Play();
             //GetComponent<ObjectSpin>().enabled = false;
             sound.Play();
             enabled = false;

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   passThrough: {fileID: 0}
   onShoot: {fileID: 11400000, guid: 104bf8b6dab9006449233e30d119474e, type: 2}
-  fireRate: 1.4
+  fireRate: 2
+  waitBeforeFire: 0
   bulletsFired: 30
   bulletVel: 20
   damage: 13
