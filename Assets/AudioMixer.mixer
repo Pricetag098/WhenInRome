@@ -888,8 +888,8 @@ AudioMixerGroupController:
   - {fileID: 6197625886148637011}
   - {fileID: 520325872132843421}
   - {fileID: 1997619293411733726}
-  - {fileID: 373148519663541909}
   - {fileID: 7518941999506473603}
+  - {fileID: -7275336677885138121}
   m_Volume: e3695cb051e770143bb40b8f7a76851e
   m_Pitch: 2b580e521f7bdec4fb52055d106d01bf
   m_Send: 00000000000000000000000000000000
@@ -1176,6 +1176,20 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &-1541242050142321530
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 2ab09181123b3f94c9f61612b2a8e3e7
+  m_EffectName: Attenuation
+  m_MixLevel: 4b58582ac25cd53478e1e6e36002271f
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &-1480476306350398483
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -1485,12 +1499,18 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
+  - guid: a2e98a887a669844d93ed47985b38654
+    name: MasterVol
+  - guid: d2c61f381804ac74f816cbb3119a7576
+    name: MusicVol
   - guid: 9144bfacd974d6c41be06f2a98af721a
     name: Highpass Simple
   - guid: ad2e8a61ce6be214a8064d3751948161
     name: Lowpass Simple
   - guid: 130da2c938f2cde4a8bf8d4d5e53087e
     name: FrequencyGain
+  - guid: e3695cb051e770143bb40b8f7a76851e
+    name: FxVol
   m_AudioMixerGroupViews:
   - guids:
     - 0df789a86d67b0c489749f2ffaacc4dd
@@ -1593,6 +1613,7 @@ AudioMixerController:
     - 6fa8713f804294846ac69e552f2c3d20
     - f7e270181bcdf8140b82459f1fdee8f0
     - dfc16a30d02db234daf0b3ab28c769d5
+    - 85b4d636afd4e87448e8d8a20fc66c3a
     name: MinotaurView
   - guids:
     - 2218ddec055e53842be6c347fc518a18
@@ -1665,7 +1686,7 @@ AudioMixerController:
     - ab2c2c4e13fd7664789847486daf0f4c
     - f392244846bb88e47b0761de7ab196ad
     name: RatView
-  m_CurrentViewIndex: 0
+  m_CurrentViewIndex: 4
   m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
 AudioMixerGroupController:
@@ -1679,7 +1700,6 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: -6064825308838537843}
   - {fileID: -3692133300824623655}
-  - {fileID: -7275336677885138121}
   m_Volume: a2e98a887a669844d93ed47985b38654
   m_Pitch: 4da2527bb342ddd4e973f962dbd8433b
   m_Send: 00000000000000000000000000000000
@@ -1985,6 +2005,7 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: f5fee4cb80ba50b4c9b7d03b8c4c5061
   m_Children:
+  - {fileID: 373148519663541909}
   - {fileID: -6011432667431461309}
   - {fileID: -4806368631606512832}
   - {fileID: -2589028564693398898}
@@ -2674,7 +2695,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HealthPickup
+  m_Name: HealthPickupCollect
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 06c71298f835bc4469d32b5f75edd74d
   m_Children: []
@@ -2720,6 +2741,25 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &7145400615315370110
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HealthPickupAppear
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 85b4d636afd4e87448e8d8a20fc66c3a
+  m_Children: []
+  m_Volume: 4fcc6ec9c4ee3414ea50effd6763a653
+  m_Pitch: 9f8630134240dc445934c7a45c040b88
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -1541242050142321530}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!244 &7476943387539157712
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -2751,6 +2791,7 @@ AudioMixerGroupController:
   - {fileID: -4935500016616897997}
   - {fileID: -1016655916644296191}
   - {fileID: -7509953285338005362}
+  - {fileID: 7145400615315370110}
   m_Volume: 4f647ff80f287624b9465ccf638158fb
   m_Pitch: 78d67ea08d7638f4ab211bde2c94d80a
   m_Send: 00000000000000000000000000000000

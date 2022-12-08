@@ -8,6 +8,10 @@ public class Destructable : MonoBehaviour
     ParticleSystem particle;
     Collider col;
     SoundPlayer audioSource;
+    [SerializeField] GameObject prefab;
+    [Range(0,1)]
+    [SerializeField] float spawnOdds;
+    [SerializeField] Vector3 offset;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +31,10 @@ public class Destructable : MonoBehaviour
         audioSource.Play();
         col.enabled = false;
         enabled = false;
+        if(Random.value <= spawnOdds && prefab != null)
+        {
+            GameObject go = Instantiate(prefab,transform.position + offset, Quaternion.identity);
+        }
         if(GetComponent<AiDeath>() != null)
         {
             GetComponent<AiDeath>().Die();

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.AI;
 public class PlayerAim : MonoBehaviour
 {
     public enum InputTypes
@@ -130,16 +131,16 @@ public class PlayerAim : MonoBehaviour
         Gizmos.DrawLine(transform.position + Vector3.up * offset + aimDir * aimDist, transform.position + Vector3.up * offset + aimDir * aimDist + Vector3.down * transform.position.y);
 
         Gizmos.color = Color.red;
-        DrawVector(GetAssistedDir(debugAngle) * aimDist);
+        DrawVector(GetAssistedDir(debugAngle,float.MaxValue) * aimDist);
         Gizmos.color = Color.blue;
         DrawVector((Quaternion.Euler(0, -debugAngle / 2, 0) * aimDir) * aimDist);
         DrawVector((Quaternion.Euler(0,  debugAngle / 2, 0) * aimDir) * aimDist);
 
     }
-    public Vector3 GetAssistedDir(float angle)
+    public Vector3 GetAssistedDir(float angle,float bulletVel)
     {
         debugAngle = angle;
-        List<Vector3> hits = new List<Vector3>();
+        List<RaycastHit> hits = new List<RaycastHit>();
         float localAngle = angle / assistRays;
         for(int i = -assistRays /2; i< assistRays / 2; i++)
         {
@@ -149,7 +150,7 @@ public class PlayerAim : MonoBehaviour
             {
                 if(hit.collider.gameObject.GetComponent<Health>() != null)
                 {
-                    hits.Add(hit.collider.transform.position);
+                    hits.Add(hit);
                 }
             }
         }
@@ -159,17 +160,18 @@ public class PlayerAim : MonoBehaviour
         }
         Vector3 targetdir = Vector3.zero;
         float bestVal = float.PositiveInfinity;
-        foreach(Vector3 hit in hits)
+        GameObject enemy = null;
+        foreach(RaycastHit hit in hits)
         {
-            Vector3 h = hit;
+            Vector3 h = hit.collider.transform.position;
             Vector3 p = transform.position;
             h.y = 0;
             p.y = 0;
 
 
             Vector3 dir = (h - p);
-            dir.Normalize();
-            float dist = Vector3.Distance(h, p);
+            //dir.Normalize();
+            //float dist = Vector3.Distance(h, p);
             //float ang = Vector3.Distance(aimDir, dir);
 
 
@@ -179,13 +181,43 @@ public class PlayerAim : MonoBehaviour
             {
                 targetdir = dir;
                 bestVal = val;
+                enemy = hit.collider.gameObject;
             }
         }
-        return targetdir;
+
+       
+        Vector3 compDir;
+        Vector3 targetVel = Vector3.zero;
+        NavMeshAgent agent = enemy.GetComponent<NavMeshAgent>();
+        if(agent != null)
+        {
+            targetVel += agent.velocity;
+        }
+        Rigidbody rb = enemy.GetComponent<Rigidbody>();
+        if(rb != null)
+        {
+            targetVel += rb.velocity;
+        }
+        float time = Dist(enemy) / bulletVel;
+        Vector3 newPos = enemy.transform.position + targetVel * time;
+        compDir = newPos - transform.position;
+        compDir.y = 0;
+        compDir.Normalize();
+
+        return compDir;
 
     }
     void DrawVector(Vector3 vect)
     {
         Gizmos.DrawLine(transform.position + Vector3.up * offset, transform.position + Vector3.up * offset + vect);
+    }
+
+    float Dist(GameObject hit)
+    {
+        Vector3 h = hit.transform.position;
+        Vector3 p = transform.position;
+        h.y = 0;
+        p.y = 0;
+        return Vector3.Distance(h, p);
     }
 }

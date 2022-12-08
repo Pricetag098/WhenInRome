@@ -97,7 +97,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &756024308169414127
 Rigidbody:
@@ -128,6 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAge: 1
+  decayRate: 0
+  renderer: {fileID: 6085418023695202703}
 --- !u!96 &747905411773586495
 TrailRenderer:
   serializedVersion: 2
