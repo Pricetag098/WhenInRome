@@ -14,15 +14,39 @@ public class Bullet : MonoBehaviour
     Material mat;
     public MeshRenderer renderer;
 
+    public bool damageChanges;
+    public float sizeOffset;
+
     // Start is called before the first frame update
     void Awake()
     {
         trailRenderer = GetComponent<TrailRenderer>();
         rb = GetComponent<Rigidbody>();
+       
+    }
+    IEnumerator Change()
+    {
+        float trailTime = GetComponent<TrailRenderer>().time;
+        float trailSize = GetComponent<TrailRenderer>().widthMultiplier;
+        while (gameObject.activeSelf && transform.localScale.x > 0)
+        {
+            Debug.Log(damage);
+            float size = damage;//GetComponent<PooledObj>().owner.gameObject.GetComponent<Gun>().damage;
+            transform.localScale = sizeOffset * new Vector3(size, size, size);
+            GetComponent<TrailRenderer>().time = trailTime * (damage / maxDmg);
+            //Debug.Log(GetComponent<TrailRenderer>().time);
+            GetComponent<TrailRenderer>().widthMultiplier = trailSize * (damage / maxDmg);
+            yield return null;
+        }
+        transform.localScale = Vector3.zero;
+        
+
     }
 
     public void Init(Vector3 vel, float dmg,float fallOff)
     {
+        
+
         damage = dmg;
         maxDmg = dmg;
         decayRate = fallOff;
@@ -32,6 +56,16 @@ public class Bullet : MonoBehaviour
         if(decayRate > 0)
         {
             mat = renderer.material;
+        }
+
+        if (damageChanges)
+        {
+            StartCoroutine(Change());
+        }
+        else if(sizeOffset > 0)
+        {
+            float size = damage;//GetComponent<PooledObj>().owner.gameObject.GetComponent<Gun>().damage;
+            transform.localScale = sizeOffset * new Vector3(size, size, size);
         }
     }
 
@@ -75,6 +109,13 @@ public class Bullet : MonoBehaviour
                     onHit.Hit(hitData);
                 }
             }
+
+            if (sizeOffset > 0)
+            {
+                GetComponent<TrailRenderer>().time = 0.1f;
+                GetComponent<TrailRenderer>().widthMultiplier = 0.2f;
+            }
+            
         }
 
         Despawn();
@@ -85,6 +126,12 @@ public class Bullet : MonoBehaviour
         if (trailRenderer != null)
             trailRenderer.enabled = false;
         age = 0;
+        if (sizeOffset > 0)
+        {
+            GetComponent<TrailRenderer>().time = 0.1f;
+            GetComponent<TrailRenderer>().widthMultiplier = 0.2f;
+        }
+
         rb.velocity = Vector3.zero;
         PooledObj obj = GetComponent<PooledObj>();
         if(obj != null) { obj.Despawn(); }

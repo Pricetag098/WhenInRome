@@ -25,7 +25,7 @@ public class Gun : MonoBehaviour
     [Header("Projectile Settings")]
     [SerializeField] int bulletsFired;
     [SerializeField] float bulletVel;
-    [SerializeField] float damage;
+    public float damage;
     [SerializeField] float spawnOffset = 1f;
     [SerializeField] float fallOff = 0;
 
@@ -116,7 +116,7 @@ public class Gun : MonoBehaviour
 
     void InputOn(InputAction.CallbackContext context)
     {
-        Debug.Log("Pressed");
+        //Debug.Log("Pressed");
         if (!auto)
         {
             TryFire();
@@ -129,7 +129,7 @@ public class Gun : MonoBehaviour
 
     void InputOff(InputAction.CallbackContext context)
     {
-        Debug.Log("Release");
+        //Debug.Log("Release");
         fire = false;
     }
     // Update is called once per frame

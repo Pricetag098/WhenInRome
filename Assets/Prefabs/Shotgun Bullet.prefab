@@ -127,9 +127,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ab5a3dd03b9ff48964baf7f21e823e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAge: 1
-  decayRate: 0
+  maxAge: 0.4
+  decayRate: 0.5
   renderer: {fileID: 6085418023695202703}
+  damageChanges: 1
+  sizeOffset: 0.05
 --- !u!96 &747905411773586495
 TrailRenderer:
   serializedVersion: 2
